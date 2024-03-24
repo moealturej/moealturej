@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>moealturej</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Adding Animate.css for smooth animations -->
     <style>
         /* Reset Styles */
         * {
@@ -133,11 +134,10 @@
         .service-details {
             display: none;
             margin-top: 20px;
-            background-color: #4a148c; /* Updated color */
+            background-color: #222;
             color: #ffffff;
             padding: 20px;
             border-radius: 10px;
-            transition: background-color 0.3s ease; /* Added transition */
         }
 
         /* Responsive Styles */
@@ -162,21 +162,21 @@
 <body>
     <header>
         <img class="icon" src="channels4_profile.png" alt="Your Icon">
-        <h1>moealturej</h1>
+        <h1 class="animate__animated animate__fadeInDown">moealturej</h1> <!-- Adding animation to header -->
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="animate__animated animate__fadeInUp">About</a></li> <!-- Adding animation to navigation items -->
+                <li><a href="#services" class="animate__animated animate__fadeInUp">Services</a></li>
+                <li><a href="#contact" class="animate__animated animate__fadeInUp">Contact</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <section id="about" class="section about-section">
+        <section id="about" class="section about-section animate__animated animate__fadeInLeft"> <!-- Adding animation to sections -->
             <h2>About Us</h2>
             <p>We are dedicated to providing you with the best services!</p>
         </section>
-        <section id="services" class="section services-section">
+        <section id="services" class="section services-section animate__animated animate__fadeInRight"> <!-- Adding animation to sections -->
             <h2>Our Services</h2>
             <ul>
                 <li>
@@ -186,7 +186,7 @@
                         <p>10 Weapons - $15</p>
                         <p>15 Weapons - $20</p>
                         <p>All Weapons - $30</p>
-                                            </div>
+                    </div>
                 </li>
                 <li>
                     <button class="service-button" onclick="toggleServiceDetails(2)">Warzone 3 Accounts</button>
@@ -214,13 +214,13 @@
                 </li>
             </ul>
         </section>
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section contact-section animate__animated animate__fadeInUp"> <!-- Adding animation to sections -->
             <h2>Contact Us</h2>
             <p>Feel free to reach out to us for any inquiries or collaborations.</p>
             <p>Email: moealturej@gmail.com</p>
         </section>
     </div>
-    <footer>
+    <footer class="animate__animated animate__fadeInUp"> <!-- Adding animation to footer -->
         <div class="container">
             <p>&copy; 2024 moealturej. All rights reserved.</p>
         </div>
