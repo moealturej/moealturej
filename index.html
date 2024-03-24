@@ -130,15 +130,25 @@
         .service-button:hover {
             background-color: #ff0000;
         }
-        /* Service Details Styles */
-        .service-details {
-            display: none;
-            margin-top: 20px;
-            background-color: #ff1aff;
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-        }
+/* Service Details Styles */
+.service-details {
+    display: none;
+    margin-top: 20px;
+    background-color: #ffffff; /* Change background color to white */
+    color: #000000; /* Change text color to black */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.service-details p {
+    margin-bottom: 10px; /* Reduce spacing between paragraphs */
+    font-size: 1em; /* Adjust font size */
+}
+
+.service-details p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+}
 
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -232,7 +242,7 @@
     </footer>
 
     <!-- PayPal Script -->
-    <script src="https://www.paypal.com/sdk/js?client-id=drippydreamsyt@gmail.com=USD"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3=USD"></script>
     <script>
         // Toggle service details visibility
         function toggleServiceDetails(id) {
