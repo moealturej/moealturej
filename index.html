@@ -14,7 +14,7 @@
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #480a84; /* Updated background color */
+            background-color: #480a84;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
@@ -25,7 +25,8 @@
             padding: 20px 0;
             text-align: center;
             border-bottom: 3px solid #ff6b00;
-            position: relative; /* Adding position relative for icon positioning */
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             font-size: 4em;
@@ -33,6 +34,7 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
         }
         /* Navigation Styles */
         nav {
@@ -64,8 +66,8 @@
         /* Icon Styles */
         .icon {
             position: absolute;
-            top: 10px; /* Adjusted position for better location */
-            left: 10px; /* Adjusted position for better location */
+            top: 10px;
+            left: 10px;
             width: 40px;
             height: auto;
         }
@@ -79,7 +81,7 @@
             margin-bottom: 60px;
         }
         .about-section, .services-section, .contact-section {
-            background-color: #480a84; /* Updated background color */
+            background-color: #3a0851;
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
@@ -109,7 +111,7 @@
             letter-spacing: 1px;
         }
         .services-section ul li:before {
-            content: "\2022"; /* Bullet symbol */
+            content: "\2022";
             color: #ff6b00;
             margin-right: 10px;
         }
@@ -131,7 +133,7 @@
         .service-details {
             display: none;
             margin-top: 20px;
-            background-color: #333333;
+            background-color: #222;
             color: #ffffff;
             padding: 20px;
             border-radius: 10px;
@@ -158,7 +160,7 @@
 </head>
 <body>
     <header>
-        <img class="icon" src="channels4_profile.png" alt="Your Icon"> <!-- Add your icon here -->
+        <img class="icon" src="channels4_profile.png" alt="Your Icon">
         <h1>moealturej</h1>
         <nav>
             <ul>
@@ -188,8 +190,8 @@
                 <li>
                     <button class="service-button" onclick="toggleServiceDetails(2)">Warzone 3 Accounts</button>
                     <div id="service-details-2" class="service-details">
-                        <p>Pricing: $5-$25</p>
-                        <p>Options: Fresh Account, Account with Camos Account with Camos and levels</p>
+                        <p>Pricing: $25</p>
+                        <p>Options: Account with Camos and levels</p>
                     </div>
                 </li>
                 <li>
@@ -235,3 +237,4 @@
     </script>
 </body>
 </html>
+
