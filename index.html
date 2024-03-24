@@ -25,6 +25,7 @@
             padding: 20px 0;
             text-align: center;
             border-bottom: 3px solid #ff6b00;
+            position: relative; /* Adding position relative for icon positioning */
         }
         header h1 {
             font-size: 4em;
@@ -59,6 +60,15 @@
         nav ul li a:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        /* Icon Styles */
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: auto;
         }
         /* Main Content Styles */
         .container {
@@ -119,6 +129,7 @@
 </head>
 <body>
     <header>
+        <img class="icon" src="your-icon.png" alt="Your Icon"> <!-- Add your icon here -->
         <h1>moealturej</h1>
         <nav>
             <ul>
@@ -131,7 +142,7 @@
     <div class="container">
         <section id="about" class="section about-section">
             <h2>About Us</h2>
-            <p>We provide you with amazing services.</p>
+            <p>We are dedicated to providing you with the best services!</p>
         </section>
         <section id="services" class="section services-section">
             <h2>Our Services</h2>
@@ -140,7 +151,7 @@
                 <li>Warzone 3 Accounts</li>
                 <li>Black Ops Cold War Camos</li>
                 <li>Grand Theft Auto 5 Recovery</li>
-                            </ul>
+            </ul>
         </section>
         <section id="contact" class="section contact-section">
             <h2>Contact Us</h2>
