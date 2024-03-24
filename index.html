@@ -14,7 +14,7 @@
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #04040a;
+            background-color: #480a84; /* Updated background color */
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
@@ -64,9 +64,8 @@
         /* Icon Styles */
         .icon {
             position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
+            top: 10px; /* Adjusted position for better location */
+            left: 10px; /* Adjusted position for better location */
             width: 40px;
             height: auto;
         }
@@ -80,7 +79,7 @@
             margin-bottom: 60px;
         }
         .about-section, .services-section, .contact-section {
-            background-color: #090912;
+            background-color: #480a84; /* Updated background color */
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
@@ -114,16 +113,46 @@
             color: #ff6b00;
             margin-right: 10px;
         }
-        /* Footer Styles */
-        footer {
-            background: linear-gradient(to right, #ff6b00, #ff0000);
-            color: #cccccc;
-            padding: 20px 0;
-            text-align: center;
-            border-top: 3px solid #ff6b00;
-        }
-        footer p {
+        /* Button Styles */
+        .service-button {
+            background-color: #ff6b00;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
             font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .service-button:hover {
+            background-color: #ff0000;
+        }
+        /* Service Details Styles */
+        .service-details {
+            display: none;
+            margin-top: 20px;
+            background-color: #333333;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3em;
+            }
+            .icon {
+                width: 30px;
+            }
+            nav ul li a {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
+            .service-button {
+                padding: 8px 15px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -147,10 +176,34 @@
         <section id="services" class="section services-section">
             <h2>Our Services</h2>
             <ul>
-                <li>Warzone 3 Camos</li>
-                <li>Warzone 3 Accounts</li>
-                <li>Black Ops Cold War Camos</li>
-                <li>Grand Theft Auto 5 Recovery</li>
+                <li>
+                    <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
+                    <div id="service-details-1" class="service-details">
+                        <p>Pricing: $10</p>
+                        <p>Options: Various camo designs available</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="service-button" onclick="toggleServiceDetails(2)">Warzone 3 Accounts</button>
+                    <div id="service-details-2" class="service-details">
+                        <p>Pricing: $20</p>
+                        <p>Options: Different account levels and items included</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="service-button" onclick="toggleServiceDetails(3)">Black Ops Cold War Camos</button>
+                    <div id="service-details-3" class="service-details">
+                        <p>Pricing: $15</p>
+                        <p>Options: Exclusive camo sets for different weapons</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="service-button" onclick="toggleServiceDetails(4)">Grand Theft Auto 5 Recovery</button>
+                    <div id="service-details-4" class="service-details">
+                        <p>Pricing: $30</p>
+                        <p>Options: Full recovery packages with money, levels, and unlocks</p>
+                    </div>
+                </li>
             </ul>
         </section>
         <section id="contact" class="section contact-section">
@@ -164,5 +217,16 @@
             <p>&copy; 2024 moealturej. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleServiceDetails(id) {
+            var details = document.getElementById('service-details-' + id);
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+            } else {
+                details.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
