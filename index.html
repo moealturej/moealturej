@@ -4,35 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <style>
-        /* Add your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset Styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
             color: #333;
         }
+        /* Header Styles */
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
         }
+        header h1 {
+            font-size: 2.5em;
+        }
+        /* Navigation Styles */
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Main Content Styles */
         .container {
             max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .about-section, .services-section, .contact-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .about-section h2, .services-section h2, .contact-section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .about-section p, .services-section p, .contact-section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Website Header</h1>
+        <h1>Your Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container">
-        <h2>About Us</h2>
-        <p>This is a simple website created with HTML and CSS.</p>
+        <section id="about" class="section about-section">
+            <h2>About Us</h2>
+            <p>Welcome to our website! We are dedicated to providing you with the best services.</p>
+        </section>
+        <section id="services" class="section services-section">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Web Design</li>
+                <li>Graphic Design</li>
+                <li>Digital Marketing</li>
+                <li>Content Creation</li>
+            </ul>
+        </section>
+        <section id="contact" class="section contact-section">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries or collaborations.</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </section>
     </div>
     <footer>
         <div class="container">
