@@ -134,7 +134,7 @@
         .service-details {
             display: none;
             margin-top: 20px;
-            background-color: #189BCC;
+            background-color: #ff1aff;
             color: #ffffff;
             padding: 20px;
             border-radius: 5px;
@@ -172,8 +172,7 @@
         </nav>
     </header>
     <div class="container">
-        <section id="about" class
-="section about-section animate__animated animate__fadeInLeft">
+        <section id="about" class="section about-section animate__animated animate__fadeInLeft">
             <h2>About Us</h2>
             <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
             <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
@@ -188,6 +187,7 @@
                         <p>10 Weapons - $15</p>
                         <p>15 Weapons - $20</p>
                         <p>All Weapons - $30</p>
+                        <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
                     </div>
                 </li>
                 <li>
@@ -195,6 +195,7 @@
                     <div id="service-details-2" class="service-details">
                         <p>Pricing: $25</p>
                         <p>Options: Account with Camos and levels</p>
+                        <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Accounts -->
                     </div>
                 </li>
                 <li>
@@ -205,6 +206,7 @@
                         <p>10 Weapons - $15</p>
                         <p>15 Weapons - $20</p>
                         <p>All Weapons - $30</p>
+                        <div id="paypal-button-container-3"></div> <!-- PayPal button container for Black Ops Cold War Camos -->
                     </div>
                 </li>
                 <li>
@@ -212,6 +214,7 @@
                     <div id="service-details-4" class="service-details">
                         <p>Pricing: $20</p>
                         <p>Options: Full recovery service with money, levels, and unlocks</p>
+                        <div id="paypal-button-container-4"></div> <!-- PayPal button container for Grand Theft Auto 5 Recovery -->
                     </div>
                 </li>
             </ul>
@@ -228,7 +231,10 @@
         </div>
     </footer>
 
+    <!-- PayPal Script -->
+    <script src="https://www.paypal.com/sdk/js?client-id=drippydreamsyt@gmail.com=USD"></script>
     <script>
+        // Toggle service details visibility
         function toggleServiceDetails(id) {
             var details = document.getElementById('service-details-' + id);
             if (details.style.display === 'block') {
@@ -237,6 +243,60 @@
                 details.style.display = 'block';
             }
         }
+
+        // Create PayPal buttons
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+                
+            },
+            createOrder: function(data, actions) {
+                // Set up the transaction details
+                switch (data) {
+                    case 1:
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '10.00' // Amount for Warzone 3 Camos
+                                }
+                            }]
+                        });
+                    case 2:
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '25.00' // Amount for Warzone 3 Accounts
+                                }
+                            }]
+                        });
+                    case 3:
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '10.00' // Amount for Black Ops Cold War Camos
+                                }
+                            }]
+                        });
+                    case 4:
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '20.00' // Amount for Grand Theft Auto 5 Recovery
+                                }
+                            }]
+                        });
+                }
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-1'); // Render PayPal button for Warzone 3 Camos
+        // Repeat the render statement for other service options with appropriate container IDs
     </script>
 </body>
 </html>
