@@ -241,89 +241,92 @@
     </footer>
 
     <!-- PayPal Script -->
-<script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3=USD"></script>
-<script>
-    // Toggle service details visibility
-    function toggleServiceDetails(id) {
-        var details = document.getElementById('service-details-' + id);
-        if (details.style.display === 'block') {
-            details.style.display = 'none';
-        } else {
-            details.style.display = 'block';
+    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3=USD"></script>
+    <script>
+        // Toggle service details visibility
+        function toggleServiceDetails(id) {
+            var details = document.getElementById('service-details-' + id);
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+            } else {
+                details.style.display = 'block';
+            }
         }
-    }
 
-    // Create PayPal buttons
-    function createOrder(amount) {
-        return function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: amount
-                    }
-                }]
-            });
-        };
-    }
-
-    // Render PayPal buttons for each service option
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('10.00'), // Amount for Warzone 3 Camos
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name + '!');
-            });
+        // Create PayPal buttons
+        function createOrder(amount) {
+            return function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: amount
+                        }
+                    }]
+                });
+            };
         }
-    }).render('#paypal-button-container-1'); // Render PayPal button for Warzone 3 Camos
 
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('25.00'), // Amount for Warzone 3 Accounts
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name + '!');
-            });
-        }
-    }).render('#paypal-button-container-2'); // Render PayPal button for Warzone 3 Accounts
+        // Render PayPal buttons for each service option
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder('10.00'), // Amount for Warzone 3 Camos
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-1'); // Render PayPal button for Warzone 3 Camos
 
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('10.00'), // Amount for Black Ops Cold War Camos
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name + '!');
-            });
-        }
-    }).render('#paypal-button-container-3'); // Render PayPal button for Black Ops Cold War Camos
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder('25.00'), // Amount for Warzone 3 Accounts
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-2'); // Render PayPal button for Warzone 3 Accounts
 
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('20.00'), // Amount for Grand Theft Auto 5 Recovery
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name + '!');
-            });
-        }
-    }).render('#paypal-button-container-4'); // Render PayPal button for Grand Theft Auto 5 Recovery
-</script>
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder('10.00'), // Amount for Black Ops Cold War Camos
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-3'); // Render PayPal button for Black Ops Cold War Camos
+
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder('20.00'), // Amount for Grand Theft Auto 5 Recovery
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-4'); // Render PayPal button for Grand Theft Auto 5 Recovery
+    </script>
+</body>
+</html>
+
