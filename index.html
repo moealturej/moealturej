@@ -70,6 +70,7 @@
             left: 10px;
             width: 40px;
             height: auto;
+            cursor: pointer;
         }
         /* Main Content Styles */
         .container {
@@ -109,14 +110,11 @@
             font-size: 1.5em;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .services-section ul li:before {
-            content: "\2022";
-            color: #ff6b00;
-            margin-right: 10px;
-        }
-        /* Button Styles */
-        .service-button {
+        .services-section ul li button {
             background-color: #ff6b00;
             color: #ffffff;
             border: none;
@@ -125,8 +123,9 @@
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            width: 100%;
         }
-        .service-button:hover {
+        .services-section ul li button:hover {
             background-color: #ff0000;
         }
         /* Service Details Styles */
@@ -137,6 +136,36 @@
             color: #ffffff;
             padding: 20px;
             border-radius: 10px;
+        }
+        .service-details p {
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(to right, #ff6b00, #ff0000);
+            color: #cccccc;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 3px solid #ff6b00;
+            position: relative;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 1.2em;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('footer-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
         }
 
         /* Responsive Styles */
@@ -171,70 +200,69 @@
         </nav>
     </header>
     <div class="container">
-        <section id="about" class="section about-section">
+        <section id="about" class="section about-section
             <h2>About Us</h2>
-            <p>We are dedicated to providing you with the best services!</p>
-        </section>
-        <section id="services" class="section services-section">
-            <h2>Our Services</h2>
-            <ul>
-                <li>
-                    <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
-                    <div id="service-details-1" class="service-details">
-                        <p>5 Weapons - $10</p>
-                        <p>10 Weapons - $15</p>
-                        <p>15 Weapons - $20</p>
-                        <p>All Weapons - $30</p>
-                    </div>
-                </li>
-                <li>
-                    <button class="service-button" onclick="toggleServiceDetails(2)">Warzone 3 Accounts</button>
-                    <div id="service-details-2" class="service-details">
-                        <p>Pricing: $25</p>
-                        <p>Options: Account with Camos and levels</p>
-                    </div>
-                </li>
-                <li>
-                    <button class="service-button" onclick="toggleServiceDetails(3)">Black Ops Cold War Camos</button>
-                    <div id="service-details-3" class="service-details">
-                        <p>Camo Options: DMU, DA, Plague Dimond, Dimond, Gold and Golden Viper</p>
-                        <p>5 Weapons - $10</p>
-                        <p>10 Weapons - $15</p>
-                        <p>15 Weapons - $20</p>
-                        <p>All Weapons - $30</p>
-                    </div>
-                </li>
-                <li>
-                    <button class="service-button" onclick="toggleServiceDetails(4)">Grand Theft Auto 5 Recovery</button>
-                    <div id="service-details-4" class="service-details">
-                        <p>Pricing: $20</p>
-                        <p>Options: Full recovery service with money, levels, and unlocks</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section id="contact" class="section contact-section">
-            <h2>Contact Us</h2>
-            <p>Feel free to reach out to us for any inquiries or collaborations.</p>
-            <p>Email: moealturej@gmail.com</p>
-        </section>
+    <p>We are dedicated to providing you with the best services!</p>
+</section>
+<section id="services" class="section services-section">
+    <h2>Our Services</h2>
+    <ul>
+        <li>
+            <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
+            <div id="service-details-1" class="service-details">
+                <p>5 Weapons - $10</p>
+                <p>10 Weapons - $15</p>
+                <p>15 Weapons - $20</p>
+                <p>All Weapons - $30</p>
+            </div>
+        </li>
+        <li>
+            <button class="service-button" onclick="toggleServiceDetails(2)">Warzone 3 Accounts</button>
+            <div id="service-details-2" class="service-details">
+                <p>Pricing: $25</p>
+                <p>Options: Account with Camos and levels</p>
+            </div>
+        </li>
+        <li>
+            <button class="service-button" onclick="toggleServiceDetails(3)">Black Ops Cold War Camos</button>
+            <div id="service-details-3" class="service-details">
+                <p>Camo Options: DMU, DA, Plague Diamond, Diamond, Gold and Golden Viper</p>
+                <p>5 Weapons - $10</p>
+                <p>10 Weapons - $15</p>
+                <p>15 Weapons - $20</p>
+                <p>All Weapons - $30</p>
+            </div>
+        </li>
+        <li>
+            <button class="service-button" onclick="toggleServiceDetails(4)">Grand Theft Auto 5 Recovery</button>
+            <div id="service-details-4" class="service-details">
+                <p>Pricing: $20</p>
+                <p>Options: Full recovery service with money, levels, and unlocks</p>
+            </div>
+        </li>
+    </ul>
+</section>
+<section id="contact" class="section contact-section">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us for any inquiries or collaborations.</p>
+    <p>Email: moealturej@gmail.com</p>
+</section>
+</div>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 moealturej. All rights reserved.</p>
     </div>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 moealturej. All rights reserved.</p>
-        </div>
-    </footer>
+</footer>
 
-    <script>
-        function toggleServiceDetails(id) {
-            var details = document.getElementById('service-details-' + id);
-            if (details.style.display === 'block') {
-                details.style.display = 'none';
-            } else {
-                details.style.display = 'block';
-            }
-        }
-    </script>
+<script>
+function toggleServiceDetails(id) {
+    var details = document.getElementById('service-details-' + id);
+    if (details.style.display === 'block') {
+        details.style.display = 'none';
+    } else {
+        details.style.display = 'block';
+    }
+}
+</script>
 </body>
 </html>
-
