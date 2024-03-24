@@ -133,25 +133,11 @@
         .service-details {
             display: none;
             margin-top: 20px;
-            background-color: #222;
+            background-color: #4a148c; /* Updated color */
             color: #ffffff;
             padding: 20px;
             border-radius: 10px;
-        }
-
-        /* Footer Styles */
-        footer {
-            background: linear-gradient(to right, #ff6b00, #ff0000);
-            color: #cccccc;
-            padding: 20px 0;
-            text-align: center;
-            border-top: 3px solid #ff6b00;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        footer p {
-            font-size: 1.2em;
+            transition: background-color 0.3s ease; /* Added transition */
         }
 
         /* Responsive Styles */
@@ -188,20 +174,19 @@
     <div class="container">
         <section id="about" class="section about-section">
             <h2>About Us</h2>
-            <p>Welcome to moealturej, your one-stop destination for premium gaming services.</p>
-            <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
+            <p>We are dedicated to providing you with the best services!</p>
         </section>
         <section id="services" class="section services-section">
             <h2>Our Services</h2>
             <ul>
                 <li>
-<button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
+                    <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
                     <div id="service-details-1" class="service-details">
                         <p>5 Weapons - $10</p>
                         <p>10 Weapons - $15</p>
                         <p>15 Weapons - $20</p>
                         <p>All Weapons - $30</p>
-                    </div>
+                                            </div>
                 </li>
                 <li>
                     <button class="service-button" onclick="toggleServiceDetails(2)">Warzone 3 Accounts</button>
