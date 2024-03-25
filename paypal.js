@@ -61,4 +61,4 @@ function getServiceAmount(id) {
 }
 
 // Initialize PayPal buttons for the default option
-renderPayPalButton(1, '10.00');
+renderPayPalButton(1, '30.00');
