@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Improved cache control meta tags -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <!-- End of improved meta tags -->
+    <title>moealturej Services</title>
     <style>
         /* Reset Styles */
         * {
@@ -34,7 +30,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            font-size: 4em;
+            font-size: 3em;
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -68,14 +64,6 @@
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        /* Icon Styles */
-        .icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 40px;
-            height: auto;
-        }
         /* Main Content Styles */
         .container {
             max-width: 960px;
@@ -92,14 +80,14 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
         .about-section h2, .services-section h2, .contact-section h2 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 30px;
             color: #ff6b00;
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
         .about-section p, .services-section p, .contact-section p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-bottom: 30px;
             color: #cccccc;
             text-align: center;
@@ -107,29 +95,29 @@
         .services-section ul {
             list-style-type: none;
             padding: 0;
-            display: flex; /* Change to flex */
-            justify-content: space-between; /* Distribute items evenly */
-            flex-wrap: wrap; /* Wrap items to next line */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
         .services-section ul li {
-            width: calc(33.33% - 20px); /* Adjust width for 3 items in a row */
-            margin-bottom:            20px;
-            font-size: 1.5em;
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            font-size: 1.2em;
             text-transform: uppercase;
             letter-spacing: 1px;
-            background-color: #1a0533; /* Background color for service item */
-            border-radius: 20px; /* Rounded corners */
+            background-color: #1a0533;
+            border-radius: 20px;
             padding: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add box shadow */
-            text-align: center; /* Center align text */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
         }
         .services-section ul li img {
             display: block;
             margin: 0 auto;
-            margin-bottom: 10px; /* Spacing between image and text */
-            max-width: 100%; /* Adjust max-width of image */
+            margin-bottom: 10px;
+            max-width: 100%;
             height: auto;
-            border-radius: 10px; /* Rounded corners for images */
+            border-radius: 10px;
         }
         /* Button Styles */
         .service-button {
@@ -141,9 +129,9 @@
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-top: 10px; /* Add top margin */
-            display: block; /* Display as block */
-            width: 100%; /* Take full width */
+            margin-top: 10px;
+            display: block;
+            width: 100%;
         }
         .service-button:hover {
             background-color: #ff0000;
@@ -151,34 +139,29 @@
         /* Service Details Styles */
         .service-details {
             display: none;
-            background-color: #ffffff; /* Change background color to white */
-            color: #000000; /* Change text color to black */
+            background-color: #ffffff;
+            color: #000000;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .service-details p {
-            margin-bottom: 10px; /* Reduce spacing between paragraphs */
-            font-size: 1em; /* Adjust font size */
+            margin-bottom: 10px;
+            font-size: 1em;
         }
         .service-details p:last-child {
-            margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+            margin-bottom: 0;
         }
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 3em;
-            }
-            .icon {
-                width: 30px;
-            }
-            nav ul li a {
-                font-size: 1em;
-                padding: 10px 15px;
-            }
-            .services-section ul li {
-                width: calc(50% - 20px); /* Adjust width for 2 items in a row on smaller screens */
-            }
+        /* Footer Styles */
+        footer {
+            background-color: #1a0533;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 3px solid #ff6b00;
+            position: relative;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -190,170 +173,105 @@
                 <li><a href="#about" class="animate__animated animate__fadeInUp">About</a></li>
                 <li><a href="#services" class="animate__animated animate__fadeInUp">Services</a></li>
                 <li><a href="#contact" class="animate__animated animate__fadeInUp">Contact</a></li>
+                               <!-- Add more navigation links or features here -->
+                <li><a href="#login" class="animate__animated animate__fadeInUp">Login</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <section id="about" class="section about-section animate__animated animate__fadeInLeft">
             <h2>About Us</h2>
-            <div style="text-align: center;">
-                <img src="standard_17.gif" alt="About Picture" style="max-width: 100%;">
-                <p style="color: #cccccc;">Welcome to moealturej services, your one-stop destination for premium gaming services. Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
-            </div>
+            <!-- About Us content -->
         </section>
         <section id="services" class="section services-section animate__animated animate__fadeInRight">
             <h2>Our Services</h2>
             <ul>
-                <li>
-                    <img src="Call of Duty Modern Warfare 3 (2023) 2024.03.23 - 11.15.49.01 - frame at 1m16s.jpg" alt="Service 1 Picture" style="max-width: 100%;">
-                    <button class="service-button" onclick="toggleServiceDetails(1)">Features</button>
-                    <button class="service-button" onclick="createOrder('10.00', 1)">Purchase</button>
-                    <div id="service-details-1" class="service-details">
-                        <p>5 Weapons - $10</p>
-                        <p>10 Weapons - $15</p>
-                        <p>15 Weapons - $20</p>
-                        <p>All Weapons - $30</p>
-                        <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                    </div>
-                </li>
-                <li>
-                    <img src="Battle.Net_-ezgif.com-webp-to-jpg-converter.jpg" alt="Service 2 Picture" style="max-width: 100%;">
-                    <button class="service-button" onclick="toggleServiceDetails(2)">Features</button>
-                    <button class="service-button" onclick="createOrder('25.00', 2)">Purchase</button>
-                    <div id="service-details-2" class="service-details">
-                        <p>Pricing: $25</p>
-                        <p>Options: Account with Camos and levels</p>
-                        <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Accounts -->
-                    </div>
-                </li>
-                <li>
-                    <img src="maxresdefault.jpg" alt="Service 3 Picture" style="max-width: 100%;">
-                    <button class="service-button" onclick="toggleServiceDetails(3)">Features</button>
-                    <button class="service-button" onclick="createOrder('10.00', 3)">Purchase</button>
-                    <div id="service-details-3" class="service-details">
-                        <p>Camo Options: DMU, DA, Plague Diamond, Diamond, Gold, and Golden Viper</p>
-                        <p>5 Weapons - $10</p>
-                        <p>10 Weapons - $15</p>
-                        <p>15 Weapons - $20</p>
-                        <p>All Weapons - $30</p>
-                        <div id="paypal-button-container-3"></div> <!-- PayPal button container for Black Ops Cold War Camos -->
-                    </div>
-                </li>
-                <li>
-                    <img src="mQFyz7u837yijRnR7uKv6g.jpg" alt="Service 4 Picture" style="max-width: 100%;">
-                    <button class="service-button" onclick="toggleServiceDetails(4)">Features</button>
-                    <button class="service-button" onclick="createOrder('20.00', 4)">Purchase</button>
-                    <div id="service-details-4" class="service-details">
-                        <p>Pricing: $20</p                    <p>Options: Full recovery service with money, levels, and unlocks</p>
-                    <div id="paypal-button-container-4"></div> <!-- PayPal button container for Grand Theft Auto 5 Recovery -->
-                </div>
-            </li>
-        </ul>
-    </section>
-    <section id="contact" class="section contact-section animate__animated animate__fadeInUp">
-        <h2>Contact Us</h2>
-        <p>Feel free to reach out to us for any inquiries or collaborations.</p>
-        <p>Email: <a href="mailto:moealturej@gmail.com">moealturej@gmail.com</a></p>
-    </section>
-</div>
-<footer class="animate__animated animate__fadeInUp">
-    <div class="container">
-        <p>&copy; 2024 moealturej. All rights reserved.</p>
+                <!-- Service items -->
+            </ul>
+        </section>
+        <section id="contact" class="section contact-section animate__animated animate__fadeInUp">
+            <h2>Contact Us</h2>
+            <!-- Contact information -->
+        </section>
+        <!-- Login Section -->
+        <section id="login" class="section login-section animate__animated animate__fadeInUp">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <!-- Additional Features Section -->
+        <section id="additional-features" class="section additional-features-section animate__animated animate__fadeInUp">
+            <h2>Additional Features</h2>
+            <!-- Add more features here -->
+        </section>
     </div>
-</footer>
-
-<!-- PayPal Script -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3=USD"></script>
-    <script>
-        // Function to create PayPal order
-        function createOrder(amount) {
-            return fetch('/your-server-endpoint', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    amount: amount
-                }),
-            })
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                return data.orderID;
-            })
-            .catch(function(error) {
-                console.error('Error:', error);
-            });
-        }
-
-        // Function to capture payment
-        function capturePayment(orderID) {
-            return fetch('/your-server-endpoint/' + orderID + '/capture', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                return data;
-            })
-            .catch(function(error) {
-                console.error('Error:', error);
-            });
-        }
-
-        // Function to handle purchase button click
-        function handlePurchase(amount) {
-            createOrder(amount)
-            .then(function(orderID) {
-                if (orderID) {
-                    capturePayment(orderID)
-                    .then(function(response) {
-                        // Handle successful payment
-                        alert('Payment successful!');
-                    })
-                    .catch(function(error) {
-                        console.error('Error:', error);
-                    });
-                } else {
-                    console.error('Failed to create order.');
-                }
-            });
-        }
-
-        // Render PayPal buttons for each service option
-        function renderPayPalButton(amount, serviceId) {
-            paypal.Buttons({
-                style: {
-                    shape: 'rect',
-                    color: 'gold',
-                    layout: 'vertical',
-                    label: 'paypal',
-                },
-                createOrder: function(data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{
-                            amount: {
-                                value: amount
-                            }
-                        }]
-                    });
-                },
-                onClick: function(data, actions) {
-                    handlePurchase(amount);
-                },
-            }).render('#paypal-button-container-' + serviceId);
-        }
-
-        // Call renderPayPalButton for each service
-        renderPayPalButton('10.00', 1); // Amount for Warzone 3 Camos
-        renderPayPalButton('25.00', 2); // Amount for Warzone 3 Accounts
-        renderPayPalButton('10.00', 3); // Amount for Black Ops Cold War Camos
-        renderPayPalButton('20.00', 4); // Amount for Grand Theft Auto 5 Recovery
-    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 moealturej. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
-</html>
+<!-- Purchase Feature -->
+<div id="purchase-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Purchase</h2>
+    <form id="purchase-form">
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" name="amount" readonly><br><br>
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Function to handle purchase button click
+  function handlePurchase(amount) {
+    document.getElementById("amount").value = amount;
+    var modal = document.getElementById("purchase-modal");
+    modal.style.display = "block";
+  }
+
+  // Close the purchase modal when the user clicks on (x)
+  var closeBtn = document.getElementsByClassName("close")[0];
+  closeBtn.onclick = function() {
+    var modal = document.getElementById("purchase-modal");
+    modal.style.display = "none";
+  }
+
+  // Close the purchase modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+    var modal = document.getElementById("purchase-modal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Add event listener to the purchase form
+  document.getElementById("purchase-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var amount = document.getElementById("amount").value;
+    createOrder(amount)
+    .then(function(orderID) {
+      if (orderID) {
+        capturePayment(orderID)
+        .then(function(response) {
+          // Handle successful payment
+          alert('Payment successful!');
+          var modal = document.getElementById("purchase-modal");
+          modal.style.display = "none";
+        })
+        .catch(function(error) {
+          console.error('Error:', error);
+          alert('Payment failed. Please try again later.');
+        });
+      } else {
+        console.error('Failed to create order.');
+        alert('Failed to create order. Please try again later.');
+      }
+    });
+  });
+</script>
