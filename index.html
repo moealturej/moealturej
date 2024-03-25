@@ -6,11 +6,11 @@
     <title>moealturej</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Added meta tags -->
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'> 
-    <!-- End of added meta tags -->
+    <!-- Improved cache control meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- End of improved meta tags -->
     <style>
         /* Reset Styles */
         * {
@@ -108,18 +108,27 @@
         .services-section ul {
             list-style-type: none;
             padding: 0;
-            text-align: center;
+            display: flex; /* Change to flex */
+            justify-content: space-between; /* Distribute items evenly */
+            flex-wrap: wrap; /* Wrap items to next line */
         }
         .services-section ul li {
+            width: calc(33.33% - 20px); /* Adjust width for 3 items in a row */
             margin-bottom: 20px;
             font-size: 1.5em;
             text-transform: uppercase;
             letter-spacing: 1px;
+            background-color: #1a0533; /* Background color for service item */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add box shadow */
         }
-        .services-section ul li:before {
-            content: "\2022";
-            color: #ff6b00;
-            margin-right: 10px;
+        .services-section ul li img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px; /* Spacing between image and text */
+            max-width: 80px; /* Adjust max-width of image */
+            height: auto;
         }
         /* Button Styles */
         .service-button {
@@ -131,6 +140,9 @@
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-top: 10px; /* Add top margin */
+            display: block; /* Display as block */
+            width: 100%; /* Take full width */
         }
         .service-button:hover {
             background-color: #ff0000;
@@ -138,7 +150,6 @@
         /* Service Details Styles */
         .service-details {
             display: none;
-            margin-top: 20px;
             background-color: #ffffff; /* Change background color to white */
             color: #000000; /* Change text color to black */
             padding: 20px;
@@ -151,7 +162,8 @@
             font-size: 1em; /* Adjust font size */
         }
 
-        .service-details p:last-child {
+        .service-details p:last-child
+ {
             margin-bottom: 0; /* Remove bottom margin for the last paragraph */
         }
         /* Responsive Styles */
@@ -166,17 +178,14 @@
                 font-size: 1em;
                 padding: 10px 15px;
             }
-            .service-button {
-                padding: 10px 15px;
-                font-size: 1em;
+            .services-section ul li {
+                width: calc(50% - 20px); /* Adjust width for 2 items in a row on smaller screens */
             }
         }
     </style>
-    <!-- PayPal Script -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3&currency=USD"></script>
 </head>
 <body>
-       <header>
+    <header>
         <img class="icon" src="channels4_profile.png" alt="Your Icon">
         <h1 class="animate__animated animate__fadeInDown">moealturej</h1>
         <nav>
@@ -190,14 +199,18 @@
     <div class="container">
         <section id="about" class="section about-section animate__animated animate__fadeInLeft">
             <h2>About Us</h2>
-            <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
-            <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
+            <div style="text-align: center;">
+                <img src="about_pic.jpg" alt="About Picture" style="max-width: 100%;">
+                <p style="color: #cccccc;">Welcome to moealturej services, your one-stop destination for premium gaming services. Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
+            </div>
         </section>
         <section id="services" class="section services-section animate__animated animate__fadeInRight">
             <h2>Our Services</h2>
             <ul>
                 <li>
-                    <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
+                    <img src="service1_pic.jpg" alt="Service 1 Picture">
+                    <button class="service-button" onclick="toggleServiceDetails(1)">Features</button>
+                    <button class="service-button" onclick="toggleServiceDetails(1)">Purchase</button>
                     <div id="service-details-1" class="service-details">
                         <p>5 Weapons - $10</p>
                         <p>10 Weapons - $15</p>
@@ -206,10 +219,46 @@
                         <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
                     </div>
                 </li>
-                <!-- Other service items go here -->
+                <li>
+                    <img src="service2_pic.jpg" alt="Service 2 Picture">
+                    <button class="service-button" onclick="toggleServiceDetails(2)">Features</button>
+                    <button class="service-button" onclick="toggleServiceDetails(2)">Purchase</button>
+                    <div id="service-details-2" class="service-details">
+                        <p>Pricing: $25</p>
+                        <p>Options: Account with Camos and levels</p>
+                        <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Accounts -->
+                    </div>
+                </li>
+                <li>
+                    <img src="service3_pic.jpg" alt="Service 3 Picture">
+                    <button class="service-button" onclick="toggleServiceDetails(3)">Features</button>
+                    <button class="service-button" onclick="toggleServiceDetails(3)">Purchase</button>
+                    <div id="service-details-3" class="service-details">
+                        <p>Camo Options: DMU, DA, Plague Diamond, Diamond, Gold, and Golden Viper</p>
+                        <p>5 Weapons - $10</p>
+                        <p>10 Weapons - $15</p>
+                        <p>15 Weapons - $20</p>
+                        <p>All Weapons - $30</p>
+                        <div id="paypal-button-container-3"></div> <!-- PayPal button container for Black Ops Cold War Camos -->
+                    </div>
+                </li>
+                <li>
+                    <img src="service4_pic.jpg" alt="Service 4 Picture">
+                    <button class="service-button" onclick="toggleServiceDetails(4)">Features</button>
+                    <button class="service-button" onclick="toggleServiceDetails(4)">Purchase</button>
+                    <div id="service-details-4" class="service-details">
+                        <p>Pricing: $20</p>
+                        <p>Options: Full recovery service with money, levels, and unlocks</p>
+                        <div id="paypal-button-container-4"></div> <!-- PayPal button container for Grand Theft Auto 5 Recovery -->
+                    </div>
+                </li>
             </ul>
         </section>
-        <!-- Other sections go here -->
+        <section id="contact" class="section contact-section animate__animated animate__fadeInUp">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries or collaborations.</p>
+            <p>Email: <a href="mailto:moealturej@gmail.com">moealturej@gmail.com</a></p>
+        </section>
     </div>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
@@ -217,7 +266,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript for PayPal buttons -->
+    <!-- PayPal Script -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3=USD"></script>
     <script>
         // Toggle service details visibility
         function toggleServiceDetails(id) {
@@ -257,8 +307,50 @@
                 });
             }
         }).render('#paypal-button-container-1'); // Render PayPal button for Warzone 3 Camos
+                paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder('25.00'), // Amount for Warzone 3 Accounts
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-2'); // Render PayPal button for Warzone 3 Accounts
 
-        // Other PayPal buttons go here
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder('10.00'), // Amount for Black Ops Cold War Camos
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-3'); // Render PayPal button for Black Ops Cold War Camos
+
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder('20.00'), // Amount for Grand Theft Auto 5 Recovery
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-4'); // Render PayPal button for Grand Theft Auto 5 Recovery
     </script>
 </body>
 </html>
