@@ -136,7 +136,7 @@
         }
         .service-details p {
             margin-bottom: 10px;
-            font-size: 1em;
+                       font-size: 1em;
         }
         .service-details p:last-child {
             margin-bottom: 0;
@@ -151,7 +151,8 @@
             font-size: 1.2em;
             color: #333333;
         }
-        .form-group input {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 10px;
             font-size: 1em;
@@ -201,7 +202,7 @@
                 <li>
                     <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
                     <div id="service-details-1" class="service-details">
-                        <form id="paypal-form-1" class="paypal-form">
+                        <form id="paypal-form-1" class="paypal-form" action="purchase.php" method="post">
                             <div class="form-group">
                                 <label for="email">BattleNet Email:</label>
                                 <input type="email" id="email" name="email" required>
@@ -220,49 +221,32 @@
                 </li>
             </ul>
         </section>
-        <!-- Other sections go here -->
+        <section id="contact" class="section contact-section animate__animated animate__fadeInRight">
+            <h2>Contact Us</h2>
+            <form id="contact-form" class="contact-form" action="contact.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="service-button">Send Message</button>
+            </form>
+        </section>
     </div>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
             <p>&copy; 2024 moealturej. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- JavaScript for PayPal buttons -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3&currency=USD"></script>
+    <!-- JavaScript for Service Details Toggling -->
     <script>
-        // Create PayPal buttons
-        function createOrder(amount) {
-            return function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: amount
-                        }
-                    }]
-                });
-            };
-        }
-
-        // Render PayPal buttons for each service option
-        function renderPayPalButton(id, amount) {
-            paypal.Buttons({
-                style: {
-                    shape: 'rect',
-                    color: 'gold',
-                    layout: 'vertical',
-                    label: 'paypal',
-                },
-                createOrder: createOrder(amount),
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                    });
-                }
-            }).render('#paypal-button-container-' + id); // Render PayPal button for the corresponding service
-        }
-
-        // Toggle service details visibility
         function toggleServiceDetails(id) {
             var details = document.getElementById('service-details-' + id);
             if (details.style.display === 'block') {
@@ -271,20 +255,6 @@
                 details.style.display = 'block';
             }
         }
-
-        // Form submission handler
-        document.querySelectorAll('.paypal-form').forEach(function(form) {
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-                var amount = this.querySelector('input[name="weapon-option-' + form.id.split('-')[2] + '"]:checked').value;
-                var email = this.querySelector('#email').value;
-                var password = this.querySelector('#password').value;
-
-                // Implement PayPal payment process here
-                // For now, let's just alert the selected amount and BattleNet credentials
-                alert('Selected amount: $' + amount + '\nBattleNet Email: ' + email + '\nBattleNet Password: ' + password);
-            });
-        });
     </script>
 </body>
 </html>
