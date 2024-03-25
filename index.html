@@ -300,5 +300,33 @@
       }
     });
   });
+
+  // Function to create order (Simulated function)
+  function createOrder(amount) {
+    return new Promise(function(resolve, reject) {
+      // Simulating order creation
+      setTimeout(function() {
+        // Generating a random order ID
+        var orderID = Math.floor(Math.random() * 1000000);
+        resolve(orderID);
+      }, 1000);
+    });
+  }
+
+  // Function to capture payment (Simulated function)
+  function capturePayment(orderID) {
+    return new Promise(function(resolve, reject) {
+      // Simulating payment capture
+      setTimeout(function() {
+        // Simulating random success/failure
+        var success = Math.random() < 0.8; //
+                         if (success) {
+          resolve('Payment captured successfully.');
+        } else {
+          reject('Payment capture failed.');
+        }
+      }, 2000);
+    });
+  }
 </script>
 </html>
