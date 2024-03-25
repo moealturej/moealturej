@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>moealturej Services</title>
+    <!-- Include PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
     <style>
-        /* Reset Styles */
+        /* Add your styles here */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #480a84;
-            color: #ffffff;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             line-height: 1.6;
             overflow-x: hidden;
         }
-        /* Header Styles */
         header {
             background: linear-gradient(to right, #ff6b00, #ff0000);
             padding: 20px 0;
@@ -30,16 +29,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            font-size: 3em;
+            font-size: 2em;
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 3px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            margin-bottom: 20px;
-        }
-        /* Navigation Styles */
-        nav {
-            text-align: center;
             margin-bottom: 20px;
         }
         nav ul {
@@ -64,7 +58,6 @@
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        /* Main Content Styles */
         .container {
             max-width: 960px;
             margin: 20px auto;
@@ -73,23 +66,10 @@
         .section {
             margin-bottom: 60px;
         }
-        .about-section, .services-section, .contact-section {
-            background-color: #3a0851;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-        }
-        .about-section h2, .services-section h2, .contact-section h2 {
-            font-size: 2.5em;
+        .services-section h2 {
+            font-size: 1.8em;
             margin-bottom: 30px;
             color: #ff6b00;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        }
-        .about-section p, .services-section p, .contact-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #cccccc;
             text-align: center;
         }
         .services-section ul {
@@ -105,10 +85,10 @@
             font-size: 1.2em;
             text-transform: uppercase;
             letter-spacing: 1px;
-            background-color: #1a0533;
-            border-radius: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
         .services-section ul li img {
@@ -119,7 +99,6 @@
             height: auto;
             border-radius: 10px;
         }
-        /* Button Styles */
         .service-button {
             background-color: #ff6b00;
             color: #ffffff;
@@ -136,197 +115,61 @@
         .service-button:hover {
             background-color: #ff0000;
         }
-        /* Service Details Styles */
-        .service-details {
-            display: none;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .service-details p {
-            margin-bottom: 10px;
-            font-size: 1em;
-        }
-        .service-details p:last-child {
-            margin-bottom: 0;
-        }
-        /* Footer Styles */
-        footer {
-            background-color: #1a0533;
-            padding: 20px 0;
-            text-align: center;
-            border-top: 3px solid #ff6b00;
-            position: relative;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-            color: #ffffff;
-            font-size: 1.2em;
-        }
     </style>
 </head>
 <body>
     <header>
-        <img class="icon" src="standard_17.gif" alt="Your Icon">
+        <h1>moealturej Services</h1>
         <nav>
             <ul>
-                <li><a href="#about" class="animate__animated animate__fadeInUp">About</a></li>
-                <li><a href="#services" class="animate__animated animate__fadeInUp">Services</a></li>
-                <li><a href="#contact" class="animate__animated animate__fadeInUp">Contact</a></li>
-                <li><a href="#login" class="animate__animated animate__fadeInUp">Login</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <section id="about" class="section about-section animate__animated animate__fadeInLeft">
-            <h2>About Us</h2>
-            <!-- About Us content -->
-            <p>Welcome to moealturej Services! We are dedicated to providing high-quality services to our clients.</p>
-        </section>
-        <section id="services" class="section services-section animate__animated animate__fadeInRight">
+        <section id="services" class="section services-section">
             <h2>Our Services</h2>
             <ul>
                 <li>
-                    <img src="Call of Duty  Modern Warfare 3 (2023) 2024.03.23 - 11.15.49.01 - frame at 1m16s.jpg" alt="Service 1">
+                    <img src="service1.jpg" alt="Service 1">
                     <h3>Service 1</h3>
                     <p>Description of Service 1.</p>
-                    <button class="service-button" onclick="handlePurchase('Service 1')">Purchase</button>
-                    <div class="service-details">
-                        <p>Details of Service 1.</p>
-                    </div>
+                    <!-- Button to initiate PayPal Checkout -->
+                    <button class="service-button" onclick="handlePurchase('Service 1', 50)">Purchase</button>
                 </li>
-                <li>
-                    <img src="Battle.Net_-ezgif.com-webp-to-jpg-converter.jpg" alt="Service 2">
-                    <h3>Service 2</h3>
-                    <p>Description of Service 2.</p>
-                    <button class="service-button" onclick="handlePurchase('Service 2')">Purchase</button>
-                    <div class="service-details">
-                        <p>Details of Service 2.</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="maxresdefault.jpg" alt="Service 3">
-                    <h3>Service 3</h3>
-                    <p>Description of Service 3.</p>
-                    <button class="service-button" onclick="handlePurchase('Service 3')">Purchase</button>
-                    <div class="service-details">
-                        <p>Details of Service 3.</p>
-                    </div>
-                </li>
+                <!-- Repeat for other services -->
             </ul>
         </section>
-        <section id="contact" class="section contact-section animate__animated animate__fadeInUp">
-            <h2>Contact Us</h2>
-            <p>Please feel free to contact us at contact@moealturej.com</p>
-        </section>
-        <!-- Login Section -->
-        <section id="login" class="section login-section animate__animated animate__fadeInUp">
-            <h2>Login</h2>
-            <form id="login-form">
-                <input type="text" id="username" name="username" placeholder="Username" required><br><br>
-                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-                <button type="submit">Login</button>
-            </form>
-        </section>
-        <!-- Additional Features Section -->
-        <section id="additional-features" class="section additional-features-section animate__animated animate__fadeInUp">
-            <h2>Additional Features</h2>
-            <!-- Add more features here -->
-        </section>
     </div>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 moealturej. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-<!-- Purchase Feature -->
-<div id="purchase-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Purchase</h2>
-    <form id="purchase-form">
-      <label for="amount">Amount:</label>
-      <input type="text" id="amount" name="amount" readonly><br><br>
-      <button type="submit">Proceed to Payment</button>
-    </form>
-  </div>
-</div>
+    <!-- PayPal Smart Payment Buttons Container -->
+    <div id="paypal-button-container"></div>
 
-<script>
-  // Function to handle purchase button click
-  function handlePurchase(amount) {
-    document.getElementById("amount").value = amount;
-    var modal = document.getElementById("purchase-modal");
-    modal.style.display = "block";
-  }
-
-  // Close the purchase modal when the user clicks on (x)
-  var closeBtn = document.getElementsByClassName("close")[0];
-  closeBtn.onclick = function() {
-    var modal = document.getElementById("purchase-modal");
-    modal.style.display = "none";
-  }
-
-  // Close the purchase modal when the user clicks anywhere outside of it
-  window.onclick = function(event) {
-    var modal = document.getElementById("purchase-modal");
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-  // Add event listener to the purchase form
-  document.getElementById("purchase-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var amount = document.getElementById("amount").value;
-    createOrder(amount)
-    .then(function(orderID) {
-      if (orderID) {
-        capturePayment(orderID)
-        .then(function(response) {
-          // Handle successful payment
-          alert('Payment successful!');
-          var modal = document.getElementById("purchase-modal");
-          modal.style.display = "none";
-        })
-        .catch(function(error) {
-          console.error('Error:', error);
-          alert('Payment failed. Please try again later.');
-        });
-      } else {
-        console.error('Failed to create order.');
-        alert('Failed to create order. Please try again later.');
-      }
-    });
-  });
-
-  // Function to create order (Simulated function)
-  function createOrder(amount) {
-    return new Promise(function(resolve, reject) {
-      // Simulating order creation
-      setTimeout(function() {
-        // Generating a random order ID
-        var orderID = Math.floor(Math.random() * 1000000);
-        resolve(orderID);
-      }, 1000);
-    });
-  }
-
-  // Function to capture payment (Simulated function)
-  function capturePayment(orderID) {
-    return new Promise(function(resolve, reject) {
-      // Simulating payment capture
-      setTimeout(function() {
-        // Simulating random success/failure
-        var success = Math.random() < 0.8; //
-                         if (success) {
-          resolve('Payment captured successfully.');
-        } else {
-          reject('Payment capture failed.');
+    <!-- JavaScript to handle PayPal Checkout -->
+    <script>
+        function handlePurchase(serviceName, price) {
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            description: serviceName,
+                            amount: {
+                                value: price,
+                                currency_code: 'USD'
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name + '! Thank you for your purchase.');
+                        // You can add additional actions here, such as updating your database
+                    });
+                }
+            }).render('#paypal-button-container');
         }
-      }, 2000);
-    });
-  }
-</script>
+    </script>
+</body>
 </html>
