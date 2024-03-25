@@ -172,9 +172,11 @@
             }
         }
     </style>
+    <!-- PayPal Script -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3&currency=USD"></script>
 </head>
 <body>
-    <header>
+       <header>
         <img class="icon" src="channels4_profile.png" alt="Your Icon">
         <h1 class="animate__animated animate__fadeInDown">moealturej</h1>
         <nav>
@@ -188,7 +190,7 @@
     <div class="container">
         <section id="about" class="section about-section animate__animated animate__fadeInLeft">
             <h2>About Us</h2>
-                        <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
+            <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
             <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
         </section>
         <section id="services" class="section services-section animate__animated animate__fadeInRight">
@@ -204,40 +206,10 @@
                         <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
                     </div>
                 </li>
-                <li>
-                    <button class="service-button" onclick="toggleServiceDetails(2)">Warzone 3 Accounts</button>
-                    <div id="service-details-2" class="service-details">
-                        <p>Pricing: $25</p>
-                        <p>Options: Account with Camos and levels</p>
-                        <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Accounts -->
-                    </div>
-                </li>
-                <li>
-                    <button class="service-button" onclick="toggleServiceDetails(3)">Black Ops Cold War Camos</button>
-                    <div id="service-details-3" class="service-details">
-                        <p>Camo Options: DMU, DA, Plague Diamond, Diamond, Gold, and Golden Viper</p>
-                        <p>5 Weapons - $10</p>
-                        <p>10 Weapons - $15</p>
-                        <p>15 Weapons - $20</p>
-                        <p>All Weapons - $30</p>
-                        <div id="paypal-button-container-3"></div> <!-- PayPal button container for Black Ops Cold War Camos -->
-                    </div>
-                </li>
-                <li>
-                    <button class="service-button" onclick="toggleServiceDetails(4)">Grand Theft Auto 5 Recovery</button>
-                    <div id="service-details-4" class="service-details">
-                        <p>Pricing: $20</p>
-                        <p>Options: Full recovery service with money, levels, and unlocks</p>
-                        <div id="paypal-button-container-4"></div> <!-- PayPal button container for Grand Theft Auto 5 Recovery -->
-                    </div>
-                </li>
+                <!-- Other service items go here -->
             </ul>
         </section>
-        <section id="contact" class="section contact-section animate__animated animate__fadeInUp">
-            <h2>Contact Us</h2>
-            <p>Feel free to reach out to us for any inquiries or collaborations.</p>
-            <p>Email: <a href="mailto:moealturej@gmail.com">moealturej@gmail.com</a></p>
-        </section>
+        <!-- Other sections go here -->
     </div>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
@@ -245,8 +217,7 @@
         </div>
     </footer>
 
-    <!-- PayPal Script -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3=USD"></script>
+    <!-- JavaScript for PayPal buttons -->
     <script>
         // Toggle service details visibility
         function toggleServiceDetails(id) {
@@ -287,50 +258,7 @@
             }
         }).render('#paypal-button-container-1'); // Render PayPal button for Warzone 3 Camos
 
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal',
-            },
-            createOrder: createOrder('25.00'), // Amount for Warzone 3 Accounts
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-        }).render('#paypal-button-container-2'); // Render PayPal button for Warzone 3 Accounts
-
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal',
-            },
-            createOrder: createOrder('10.00'), // Amount for Black Ops Cold War Camos
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-        }).render('#paypal-button-container-3'); // Render PayPal button for Black Ops Cold War Camos
-
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal',
-            },
-            createOrder: createOrder('20.00'), // Amount for Grand Theft Auto 5 Recovery
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-        }).render('#paypal-button-container-4'); // Render PayPal button for Grand Theft Auto 5 Recovery
+        // Other PayPal buttons go here
     </script>
 </body>
 </html>
