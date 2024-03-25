@@ -119,16 +119,18 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             background-color: #1a0533; /* Background color for service item */
-            border-radius: 20px; /* Rounded corners */
+                        border-radius: 20px; /* Rounded corners */
             padding: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add box shadow */
+            text-align: center; /* Center align text */
         }
         .services-section ul li img {
             display: block;
             margin: 0 auto;
             margin-bottom: 10px; /* Spacing between image and text */
-            max-width: 80px; /* Adjust max-width of image */
+            max-width: 100%; /* Adjust max-width of image */
             height: auto;
+            border-radius: 10px; /* Rounded corners for images */
         }
         /* Button Styles */
         .service-button {
@@ -156,14 +158,11 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
         }
-
         .service-details p {
             margin-bottom: 10px; /* Reduce spacing between paragraphs */
             font-size: 1em; /* Adjust font size */
         }
-
-        .service-details p:last-child
- {
+        .service-details p:last-child {
             margin-bottom: 0; /* Remove bottom margin for the last paragraph */
         }
         /* Responsive Styles */
@@ -208,7 +207,7 @@
             <h2>Our Services</h2>
             <ul>
                 <li>
-                    <img src="Call of Duty Modern Warfare 3 (2023) 2024.03.23 - 11.15.49.01 - frame at 1m16s.jpg" alt="Service 1 Picture">
+                    <img src="Call of Duty Modern Warfare 3 (2023) 2024.03.23 - 11.15.49.01 - frame at 1m16s.jpg" alt="Service 1 Picture" style="max-width: 100%;">
                     <button class="service-button" onclick="toggleServiceDetails(1)">Features</button>
                     <button class="service-button" onclick="toggleServiceDetails(1)">Purchase</button>
                     <div id="service-details-1" class="service-details">
@@ -220,7 +219,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="Battle.Net_-ezgif.com-webp-to-jpg-converter.jpg" alt="Service 2 Picture">
+                    <img src="Battle.Net_-ezgif.com-webp-to-jpg-converter.jpg" alt="Service 2 Picture" style="max-width: 100%;">
                     <button class="service-button" onclick="toggleServiceDetails(2)">Features</button>
                     <button class="service-button" onclick="toggleServiceDetails(2)">Purchase</button>
                     <div id="service-details-2" class="service-details">
@@ -230,7 +229,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="maxresdefault.jpg" alt="Service 3 Picture">
+                    <img src="maxresdefault.jpg" alt="Service 3 Picture" style="max-width: 100%;">
                     <button class="service-button" onclick="toggleServiceDetails(3)">Features</button>
                     <button class="service-button" onclick="toggleServiceDetails(3)">Purchase</button>
                     <div id="service-details-3" class="service-details">
@@ -243,7 +242,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="mQFyz7u837yijRnR7uKv6g.jpg" alt="Service 4 Picture">
+                    <img src="mQFyz7u837yijRnR7uKv6g.jpg" alt="Service 4 Picture" style="max-width: 100%;">
                     <button class="service-button" onclick="toggleServiceDetails(4)">Features</button>
                     <button class="service-button" onclick="toggleServiceDetails(4)">Purchase</button>
                     <div id="service-details-4" class="service-details">
@@ -307,7 +306,8 @@
                 });
             }
         }).render('#paypal-button-container-1'); // Render PayPal button for Warzone 3 Camos
-                paypal.Buttons({
+
+        paypal.Buttons({
             style: {
                 shape: 'rect',
                 color: 'gold',
