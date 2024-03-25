@@ -265,16 +265,6 @@
 <!-- PayPal Script -->
 <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3=USD"></script>
 <script>
-    // Toggle service details visibility
-    function toggleServiceDetails(id) {
-        var details = document.getElementById('service-details-' + id);
-        if (details.style.display === 'block') {
-            details.style.display = 'none';
-        } else {
-            details.style.display = 'block';
-        }
-    }
-
     // Create PayPal buttons
     function createOrder(amount, serviceId) {
         return function(data, actions) {
@@ -285,56 +275,51 @@
                     }
                 }]
             }).then(function(orderData) {
-                document.getElementById('paypal-button-container-' + serviceId).innerHTML = '<button id="paypal-button-' + serviceId + '">Purchase with PayPal</button>';
-                document.getElementById('paypal-button-' + serviceId).addEventListener('click', function() {
-                    actions.order.capture().then(function(details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                    });
-                });
+                return orderData.orderID; // Return the order ID
             });
         };
     }
 
+    // Handle payment capture
+    function capturePayment(orderID, serviceId) {
+        return function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                // You can add further processing here, like updating the UI or sending confirmation emails
+            });
+        };
+    }
+
+    // Toggle service details visibility
+    function toggleServiceDetails(id) {
+        var details = document.getElementById('service-details-' + id);
+        if (details.style.display === 'block') {
+            details.style.display = 'none';
+        } else {
+            details.style.display = 'block';
+        }
+    }
+
     // Render PayPal buttons for each service option
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('10.00', 1), // Amount for Warzone 3 Camos
-    }).render('#paypal-button-container-1'); // Render PayPal button for Warzone 3 Camos
+    function renderPayPalButton(amount, serviceId) {
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder(amount, serviceId),
+            onClick: capturePayment(serviceId),
+        }).render('#paypal-button-container-' + serviceId);
+    }
 
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('25.00', 2), // Amount for Warzone 3 Accounts
-    }).render('#paypal-button-container-2'); // Render PayPal button for Warzone 3 Accounts
-
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('10.00', 3), // Amount for Black Ops Cold War Camos
-    }).render('#paypal-button-container-3'); // Render PayPal button for Black Ops Cold War Camos
-
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal',
-        },
-        createOrder: createOrder('20.00', 4), // Amount for Grand Theft Auto 5 Recovery
-    }).render('#paypal-button-container-4'); // Render PayPal button for Grand Theft Auto 5 Recovery
+    // Call renderPayPalButton for each service
+    renderPayPalButton('10.00', 1); // Amount for Warzone 3 Camos
+    renderPayPalButton('25.00', 2); // Amount for Warzone 3 Accounts
+    renderPayPalButton('10.00', 3); // Amount for Black Ops Cold War Camos
+    renderPayPalButton('20.00', 4); // Amount for Grand Theft Auto 5 Recovery
 </script>
+
 </body>
 </html>
