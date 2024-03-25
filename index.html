@@ -115,6 +115,10 @@
         .service-button:hover {
             background-color: #ff0000;
         }
+        .loading-indicator {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -150,6 +154,9 @@
     <!-- JavaScript to handle PayPal Checkout -->
     <script>
         function handlePurchase(serviceName, price) {
+            // Show loading indicator
+            document.getElementById('paypal-button-container').innerHTML = '<div class="loading-indicator">Loading...</div>';
+            
             paypal.Buttons({
                 env: 'sandbox', /* sandbox | production */
                 style: {
@@ -173,7 +180,8 @@
                 onApprove: function(data, actions) {
                     /* Make a call to your server to execute the payment */
                     var EXECUTE_URL = '/example/executePayment';
-                    return fetch('/my-server/capture-paypal-transaction', {
+                    return fetch('/my-server/capture-paypal
+                                                     -transaction', {
                         body: JSON.stringify({
                             orderID: data.orderID
                         })
