@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Redirect back to the services section after processing
-    header("Location: #services");
+    header("Location: index.html#services");
     exit();
 }
 ?>
