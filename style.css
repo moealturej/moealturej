@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #480a84;
+    background-color: #2c3e50; /* Darker background color */
     color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
@@ -15,27 +15,27 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(to right, #ff6b00, #ff0000);
-    padding: 20px 0;
+    background: linear-gradient(to right, #3498db, #9b59b6); /* Gradient background */
+    padding: 40px 0; /* Increased padding */
     text-align: center;
-    border-bottom: 3px solid #ff6b00;
+    border-bottom: 3px solid #2980b9; /* Darker border color */
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: 4.5em; /* Slightly larger font size */
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
+    letter-spacing: 5px; /* Increased letter spacing */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Softer text shadow */
+    margin-bottom: 30px; /* Increased margin */
 }
 
 /* Navigation Styles */
 nav {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Increased margin */
 }
 
 nav ul {
@@ -44,75 +44,76 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 30px; /* Increased margin */
 }
 
 nav ul li a {
-        color: #ffffff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #ff6b00, #ff0000);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.4em; /* Increased font size */
+    padding: 15px 25px; /* Increased padding */
+    border-radius: 8px; /* Rounded corners */
+    background: linear-gradient(to right, #3498db, #9b59b6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Softer shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
 }
 
 /* Icon Styles */
 .icon {
     position: absolute;
-    top: 120px;
-    left: 120px;
+    top: 80px; /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url('standard_17.gif'); /* Set background image */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
-    width: 40px; /* Make the icon larger */
-    height: 40px; /* Make the icon larger */
-    border-radius: 75%; /* Make it circular */
+    width: 60px; /* Larger icon */
+    height: 60px; /* Larger icon */
+    border-radius: 50%; /* Make it circular */
 }
 
 /* Main Content Styles */
 .container {
     max-width: 960px;
-    margin: 20px auto;
+    margin: 0 auto; /* Center align container */
     padding: 0 20px;
 }
 
 .section {
-    margin-bottom: 60px;
+    margin-bottom: 80px; /* Increased margin */
 }
 
 .about-section,
 .services-section,
 .contact-section {
-    background-color: #3a0851;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    background-color: #34495e; /* Darker background color */
+    padding: 60px; /* Increased padding */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6); /* Larger shadow */
 }
 
 .about-section h2,
 .services-section h2,
 .contact-section h2 {
-    font-size: 3em;
-    margin-bottom: 30px;
-    color: #ff6b00;
+    font-size: 3.5em; /* Larger font size */
+    margin-bottom: 50px; /* Increased margin */
+    color: #ecf0f1; /* Lighter text color */
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Softer text shadow */
 }
 
 .about-section p,
 .services-section p,
 .contact-section p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: #cccccc;
+    font-size: 1.6em; /* Larger font size */
+    margin-bottom: 40px; /* Increased margin */
+    color: #bdc3c7; /* Lighter text color */
     text-align: center;
 }
 
@@ -123,54 +124,56 @@ nav ul li a:hover {
 }
 
 .services-section ul li {
-    margin-bottom: 20px;
-    font-size: 1.5em;
+    margin-bottom: 30px; /* Increased margin */
+    font-size: 1.6em; /* Larger font size */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px; /* Increased letter spacing */
 }
 
 .services-section ul li:before {
     content: "\2022";
-    color: #ff6b00;
-    margin-right: 10px;
+    color: #3498db;
+    margin-right: 15px; /* Adjusted margin */
 }
 
 /* Button Styles */
 .service-button {
-    background-color: #ff6b00;
+    background-color: #3498db; /* Darker button color */
     color: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 12px 24px;
-    font-size: 1.2em;
+    border-radius: 8px; /* Rounded corners */
+        padding: 15px 30px; /* Increased padding */
+    font-size: 1.4em; /* Adjusted font size */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .service-button:hover {
-    background-color: #ff0000;
+    background-color: #2980b9; /* Darker hover color */
 }
 
 /* Service Details Styles */
 .service-details {
     display: none;
-    margin-top: 20px;
-    background-color: #ffffff; /* Change background color to white */
-    color: #000000; /* Change text color to black */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow for depth */
+    margin-top: 40px; /* Increased margin */
+    background-color: #ffffff; /* White background color */
+    color: #333333; /* Dark text color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Larger shadow */
 }
+
 .service-details img {
     max-width: 100%; /* Ensure the image does not exceed its container */
     height: auto; /* Preserve aspect ratio */
     display: block; /* Remove default inline display */
-    margin: 0 auto 20px; /* Add some bottom margin */
+    margin: 0 auto 30px; /* Center image with bottom margin */
 }
 
 .service-details p {
-    margin-bottom: 10px; /* Reduce spacing between paragraphs */
-    font-size: 1em; /* Adjust font size */
+    margin-bottom: 15px; /* Reduced margin */
+    font-size: 1.2em; /* Adjusted font size */
+    line-height: 1.4; /* Increased line height */
 }
 
 .service-details p:last-child {
@@ -180,21 +183,24 @@ nav ul li a:hover {
 /* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 3em;
+        font-size: 3.5em; /* Adjusted font size */
     }
 
     .icon {
-        width: 100px;
-        height: 100px; /* Adjust height accordingly */
+        width: 80px; /* Adjusted icon size */
+        height: 80px; /* Adjusted icon size */
+        top: 60px; /* Adjusted position */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     nav ul li a {
-        font-size: 1em;
-        padding: 10px 15px;
+        font-size: 1.2em; /* Adjusted font size */
+        padding: 12px 20px; /* Adjusted padding */
     }
 
     .service-button {
-        padding: 7px 12px;
-        font-size: 1em;
+        padding: 12px 24px; /* Adjusted padding */
+        font-size: 1.2em; /* Adjusted font size */
     }
 }
