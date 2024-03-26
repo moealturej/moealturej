@@ -74,7 +74,7 @@ nav ul li a:hover {
     background-size: cover;
     width: 160px;
     height: 160px;
-    border-radius: 50%; /* Changed from 100% */
+    border-radius: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -134,7 +134,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    animation: fadeIn 0.5s ease-in-out; /* Add slide-in animation */
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .service-details img {
