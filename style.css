@@ -161,6 +161,12 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow for depth */
 }
+.service-details img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto; /* Preserve aspect ratio */
+    display: block; /* Remove default inline display */
+    margin: 0 auto 20px; /* Add some bottom margin */
+}
 
 .service-details p {
     margin-bottom: 10px; /* Reduce spacing between paragraphs */
