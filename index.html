@@ -39,6 +39,7 @@
                 <li>
                     <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
                     <div id="service-details-1" class="service-details" style="display: none;">
+                        <img src="warzone_camos.jpg" alt="Warzone Camos">
                         <p>2 camos per weapon</p>
                         <p>Any camos</p>
                         <p>All Weapons - $30</p>
@@ -66,6 +67,7 @@
             } else {
                 details.style.display = 'block';
                 renderPayPalButton(id);
+                promptLoginDetails(id); // Prompt for login details
             }
         }
 
@@ -107,6 +109,23 @@
                     });
                 }
             }).render('#paypal-button-container-' + id); // Render PayPal button for the corresponding service
+        }
+
+        // Prompt for login details
+        function promptLoginDetails(id) {
+            var loginDetails = prompt('Please enter your BattleNet or Steam login details:');
+            // Send login details to server for storage (implementation required)
+            // Example:
+            // fetch('/login', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({ serviceId: id, loginDetails: loginDetails })
+            // })
+            // .then(response => response.json())
+            // .then(data => console.log(data))
+            // .catch(error => console.error('Error:', error));
         }
     </script>
 </body>
