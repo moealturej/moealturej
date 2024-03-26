@@ -88,34 +88,6 @@ nav ul li a:hover {
     margin-bottom: 60px;
 }
 
-.about-section,
-.services-section,
-.contact-section {
-    background-color: #3a0851;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-}
-
-.about-section h2,
-.services-section h2,
-.contact-section h2 {
-    font-size: 3em;
-    margin-bottom: 30px;
-    color: #ff6b00;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.about-section p,
-.services-section p,
-.contact-section p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: #cccccc;
-    text-align: center;
-}
-
 .services-section ul {
     list-style-type: none;
     padding: 0;
@@ -163,7 +135,7 @@ nav ul li a:hover {
     margin-top: 10px;
     color: #ffffff; /* Change text color to black */
     padding: 5px;
-    font-size: 1em;
+    font-size: 2em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
 }
 
