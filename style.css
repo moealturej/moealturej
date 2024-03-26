@@ -70,12 +70,12 @@ nav ul li a:hover {
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url('standard_17.gif'); /* Set background image */
-    background-size: cover; /* Cover the entire area */
-    width: 120px; /* Adjusted icon size */
-    height: 120px; /* Adjusted icon size */
-    border-radius: 100%; /* Make it circular */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    background-image: url('standard_17.gif');
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Main Content Styles */
@@ -87,15 +87,6 @@ nav ul li a:hover {
 
 .section {
     margin-bottom: 60px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .about-section h2,
@@ -146,7 +137,7 @@ nav ul li a:hover {
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Button shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .service-button:hover {
@@ -162,7 +153,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    animation: slideIn 0.5s ease-in-out; /* Slide-in animation */
+    animation: fadeIn 0.5s ease-in-out; /* Add slide-in animation */
 }
 
 .service-details img {
@@ -170,7 +161,7 @@ nav ul li a:hover {
     height: auto;
     display: block;
     margin: 0 auto 30px;
-    border-radius: 8px; /* Rounded image corners */
+    border-radius: 8px;
 }
 
 .service-details p {
