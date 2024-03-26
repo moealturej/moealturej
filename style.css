@@ -74,7 +74,7 @@ nav ul li a:hover {
     background-size: cover;
     width: 160px;
     height: 160px;
-    border-radius: 100%;
+    border-radius: 50%; /* Changed from 100% */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
