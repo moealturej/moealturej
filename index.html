@@ -28,11 +28,6 @@
         </nav>
     </header>
     <div class="container">
-        <section id="about" class="section about-section animate__animated animate__fadeInLeft">
-            <h2>About Us</h2>
-            <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
-            <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
-        </section>
         <section id="Services" class="section services-section animate__animated animate__fadeInRight">
             <h2>Warzone 3 camos</h2>
             <ul>
@@ -45,8 +40,21 @@
                         <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
                     </div>
                 </li>
-                <!-- Other service items go here -->
+                <li>
+                    <button class="service-button" onclick="toggleServiceDetails(2)">10 weapons - $15</button>
+                    <div id="service-details-2" class="service-details" style="display: none;">
+                        <img src="show.jpg" alt="Warzone Camos">
+                        <p>2 camos per weapon</p>
+                        <p>Any camos</p>
+                        <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                    </div>
+                </li>
             </ul>
+        </section>
+        <section id="about" class="section about-section animate__animated animate__fadeInLeft">
+            <h2>About Us</h2>
+            <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
+            <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
         </section>
         <!-- Other sections go here -->
     </div>
@@ -66,7 +74,6 @@
             } else {
                 details.style.display = 'block';
                 renderPayPalButton(id);
-                promptLoginDetails(id); // Prompt for login details
             }
         }
 
@@ -89,6 +96,9 @@
             switch (id) {
                 case 1:
                     amount = '30.00';
+                    break;
+                case 2:
+                    amount = '15.00';
                     break;
                 // Add cases for other service options if needed
                 default:
