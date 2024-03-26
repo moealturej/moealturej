@@ -161,11 +161,10 @@ nav ul li a:hover {
 .service-details {
     display: none;
     margin-top: 10px;
-    background-color: #fffff; /* Change background color to white */
     color: #ffffff; /* Change text color to black */
     padding: 5px;
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Add a subtle box shadow for depth */
+    font-size: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
 }
 
 .service-details p {
