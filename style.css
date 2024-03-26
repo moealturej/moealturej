@@ -7,10 +7,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #480a84;
-    color: #ffffff;
+    background-color: #f0f0f0;
+    color: #333333;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -23,13 +22,21 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+header .icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    display: block;
+}
+
 header h1 {
-    font-size: 4em;
+    font-size: 3em;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
 }
 
 /* Navigation Styles */
@@ -62,20 +69,6 @@ nav ul li a {
 nav ul li a:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Icon Styles */
-.icon {
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url('standard_17.gif');
-    background-size: cover;
-    width: 160px;
-    height: 160px;
-    border-radius: 100%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Main Content Styles */
@@ -130,7 +123,7 @@ nav ul li a:hover {
     display: none;
     margin-top: 40px;
     background-color: #ffffff;
-    color: #000000;
+    color: #333333;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -155,16 +148,44 @@ nav ul li a:hover {
     margin-bottom: 0;
 }
 
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #333333;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+/* Animation Styles */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
 
     .icon {
-        top: 300px;
-        width: 600px;
-        height: 600px;
+        width: 100px;
+        height: 100px;
     }
 
     nav ul li a {
