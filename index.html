@@ -27,6 +27,7 @@
             <div class="button-container">
                 <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                 <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
+                <button class="service-button" onclick="toggleServiceDetails(3)">New Service - $25</button> <!-- New service button -->
             </div>
             <div id="service-details-1" class="service-details" style="display: none;">
                 <p>2 camos per weapon</p>
@@ -38,6 +39,12 @@
                 <p>Any camos</p>
                 <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
             </div>
+            <div id="service-details-3" class="service-details" style="display: none;"> <!-- New service details -->
+                <p>Description of the new service.</p>
+                <div id="paypal-button-container-3"></div> <!-- PayPal button container for the new service -->
+            </div>
+        </section>
+    </div>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
             <p>&copy; 2024 moealturej. All rights reserved.</p>
@@ -90,7 +97,9 @@
             case 2:
                 amount = '15.00';
                 break;
-            // Add cases for other service options if needed
+            case 3:
+                amount = '25.00'; // Adjust amount for the new service
+                break;
             default:
                 amount = '0.00';
         }
@@ -112,4 +121,6 @@
             }
         }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
     }
-</script>
+    </script>
+</body>
+</html>
