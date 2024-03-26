@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>moealturej</title>
+    <!-- External Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+    <!-- Meta Tags for Cache Control -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <!-- PayPal Script -->
     <script src="https://www.paypal.com/sdk/js?client-id=Adhk_JJCzzgbAAHnJQHQvSqevZQIgmr3v2W933e3RTL_acJfkNxCNhk-pH4xydn3tRAkHnhjc1g6YTSt&currency=USD"></script>
 </head>
 <body>
     <header>
         <img class="icon" src="standard_17.gif" alt="Your Icon">
+        <h1 class="animate__animated animate__fadeInDown">moealturej</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" class="animate__animated animate__fadeInUp">About</a></li>
+                <li><a href="#services" class="animate__animated animate__fadeInUp">Services</a></li>
+                <li><a href="#contact" class="animate__animated animate__fadeInUp">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container">
-        <section id="services" class="section services-section animate__animated animate__fadeInRight">
-            <h2>Warzone 3 Camos</h2>
+        <section id="Services" class="section services-section animate__animated animate__fadeInRight">
+            <h2>Warzone 3 camos</h2>
             <ul>
                 <li>
                     <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
@@ -26,16 +37,16 @@
                         <img src="show.jpg" alt="Warzone Camos">
                         <p>2 camos per weapon</p>
                         <p>Any camos</p>
-                        <div id="paypal-button-container-1"></div>
+                        <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
                     </div>
                 </li>
                 <li>
-                    <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
+                    <button class="service-button" onclick="toggleServiceDetails(2)">10 weapons - $15</button>
                     <div id="service-details-2" class="service-details" style="display: none;">
                         <img src="show.jpg" alt="Warzone Camos">
                         <p>2 camos per weapon</p>
                         <p>Any camos</p>
-                        <div id="paypal-button-container-2"></div>
+                        <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
                     </div>
                 </li>
             </ul>
@@ -45,13 +56,17 @@
             <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
             <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
         </section>
+        <!-- Other sections go here -->
     </div>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
             <p>&copy; 2024 moealturej. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for PayPal buttons -->
     <script>
+        // Toggle service details visibility
         function toggleServiceDetails(id) {
             var details = document.getElementById('service-details-' + id);
             if (details.style.display === 'block') {
@@ -62,6 +77,7 @@
             }
         }
 
+        // Create PayPal buttons
         function createOrder(amount) {
             return function(data, actions) {
                 return actions.order.create({
@@ -74,6 +90,7 @@
             };
         }
 
+        // Render PayPal buttons for each service option
         function renderPayPalButton(id) {
             var amount;
             switch (id) {
@@ -83,6 +100,7 @@
                 case 2:
                     amount = '15.00';
                     break;
+                // Add cases for other service options if needed
                 default:
                     amount = '0.00';
             }
@@ -99,7 +117,7 @@
                         alert('Transaction completed by ' + details.payer.name.given_name + '!');
                     });
                 }
-            }).render('#paypal-button-container-' + id);
+            }).render('#paypal-button-container-' + id); // Render PayPal button for the corresponding service
         }
     </script>
 </body>
