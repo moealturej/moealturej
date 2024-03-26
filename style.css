@@ -67,14 +67,14 @@ nav ul li a:hover {
 /* Icon Styles */
 .icon {
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 120px;
+    left: 120px;
     background-image: url('standard_17.gif'); /* Set background image */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
-    width: 20px; /* Make the icon larger */
-    height: 20px; /* Make the icon larger */
-    border-radius: 50%; /* Make it circular */
+    width: 40px; /* Make the icon larger */
+    height: 40px; /* Make the icon larger */
+    border-radius: 75%; /* Make it circular */
 }
 
 /* Main Content Styles */
