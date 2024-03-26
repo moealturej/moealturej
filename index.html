@@ -16,9 +16,14 @@
     <script src="https://www.paypal.com/sdk/js?client-id=Adhk_JJCzzgbAAHnJQHQvSqevZQIgmr3v2W933e3RTL_acJfkNxCNhk-pH4xydn3tRAkHnhjc1g6YTSt&currency=USD"></script>
 </head>
 <body>
-    <div class="content">
+    <div class="sidebar" id="sidebar">
+        <h2>Sidebar</h2>
+        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+    </div>
+    <div class="content" id="content">
         <header>
             <h1 class="animate__animated animate__fadeInDown">moealturej services</h1>
+            <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
         </header>
         <div class="container">
             <section id="services" class="section services-section animate__animated animate__fadeIn">
@@ -67,6 +72,16 @@
             </div>
         </section>
     </div>
+    <section id="discord" class="section services-section animate__animated animate__fadeIn">
+        <div class="container">
+            <h2>Provide Your Discord Username</h2>
+            <form id="discord-form" action="submit_discord_username.php" method="POST">
+                <label for="discord-username">Discord Username:</label>
+                <input type="text" id="discord-username" name="discord-username" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
             <p>&copy; 2024 moealturej. All rights reserved.</p>
@@ -145,8 +160,40 @@
                 });
             }
         }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
-}
+    }
+    </script>
 
-</script>
+    <!-- JavaScript for Discord form submission -->
+    <script>
+    function submitDiscordUsername(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the form data
+        const form = document.getElementById('discord-form');
+        const formData = new FormData(form);
+        const discordUsername = formData.get('discord-username');
+
+        // You can handle the form submission here, for example, sending it to a server using fetch or AJAX
+        // Example using fetch:
+        fetch('submit_discord_username.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Discord username submitted successfully!');
+                form.reset(); // Reset the form after successful submission
+            } else {
+                alert('Error submitting Discord username. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error submitting Discord username. Please try again.');
+        });
+    }
+
+    document.getElementById('discord-form').addEventListener('submit', submitDiscordUsername);
+    </script>
 </body>
 </html>
