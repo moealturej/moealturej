@@ -110,23 +110,6 @@
                 }
             }).render('#paypal-button-container-' + id); // Render PayPal button for the corresponding service
         }
-
-        // Prompt for login details
-        function promptLoginDetails(id) {
-            var loginDetails = prompt('Please enter your BattleNet or Steam login details:');
-            // Send login details to server for storage (implementation required)
-            // Example:
-            // fetch('/login', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     },
-            //     body: JSON.stringify({ serviceId: id, loginDetails: loginDetails })
-            // })
-            // .then(response => response.json())
-            // .then(data => console.log(data))
-            // .catch(error => console.error('Error:', error));
-        }
     </script>
 </body>
 </html>
