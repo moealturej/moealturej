@@ -58,13 +58,13 @@ nav ul li a:hover {
 /* Icon Styles */
 .icon {
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 10px;
+    left: 10px;
     background-image: url('standard_17.gif'); /* Set background image */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
-    width: 200px; /* Make the icon larger */
-    height: 200px; /* Make the icon larger */
+    width: 20px; /* Make the icon larger */
+    height: 20px; /* Make the icon larger */
     border-radius: 50%; /* Make it circular */
 }
 /* Main Content Styles */
