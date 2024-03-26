@@ -72,8 +72,8 @@ nav ul li a:hover {
     transform: translateX(-50%);
     background-image: url('standard_17.gif');
     background-size: cover;
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     border-radius: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -97,15 +97,6 @@ nav ul li a:hover {
     color: #ff6b00;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.about-section p,
-.services-section p,
-.contact-section p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: #cccccc;
-    text-align: center;
 }
 
 .services-section ul {
@@ -181,9 +172,9 @@ nav ul li a:hover {
     }
 
     .icon {
-        top: 30px;
-        width: 60px;
-        height: 60px;
+        top: 300px;
+        width: 600px;
+        height: 600px;
     }
 
     nav ul li a {
