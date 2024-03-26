@@ -72,9 +72,9 @@ nav ul li a:hover {
     transform: translateX(-50%);
     background-image: url('standard_17.gif'); /* Set background image */
     background-size: cover; /* Cover the entire area */
-    width: 80px; /* Adjusted icon size */
-    height: 80px; /* Adjusted icon size */
-    border-radius: 50%; /* Make it circular */
+    width: 120px; /* Adjusted icon size */
+    height: 120px; /* Adjusted icon size */
+    border-radius: 100%; /* Make it circular */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
 }
 
@@ -87,16 +87,6 @@ nav ul li a:hover {
 
 .section {
     margin-bottom: 60px;
-}
-
-.about-section,
-.services-section,
-.contact-section {
-    background-color: #3a0851;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
 @keyframes fadeIn {
