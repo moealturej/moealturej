@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>moealturej</title>
+    <!-- External Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+    <!-- Meta Tags for Cache Control -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <!-- PayPal Script -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Adhk_JJCzzgbAAHnJQHQvSqevZQIgmr3v2W933e3RTL_acJfkNxCNhk-pH4xydn3tRAkHnhjc1g6YTSt&currency=USD"></script>
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar">
+        <!-- Sidebar content goes here -->
         <h2>Sidebar</h2>
-        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <p>This is the sidebar content.</p>
     </div>
-    <div class="content" id="content">
+    <div class="content">
         <header>
             <h1 class="animate__animated animate__fadeInDown">moealturej services</h1>
-            <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
         </header>
         <div class="container">
             <section id="services" class="section services-section animate__animated animate__fadeIn">
                 <div class="showcase">
                     <div class="image-container">
-                        <p class="image-label">Warzone 3 Camos</p>
+                        <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
                         <img src="show.jpg" alt="Warzone Camos" class="show-image">
                     </div>
                 </div>
@@ -36,12 +40,12 @@
                 <div id="service-details-1" class="service-details" style="display: none;">
                     <p>2 camos per weapon</p>
                     <p>Any camos</p>
-                    <div id="paypal-button-container-1"></div>
+                    <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
                 </div>
                 <div id="service-details-2" class="service-details" style="display: none;">
                     <p>2 camos per weapon</p>
                     <p>Any camos</p>
-                    <div id="paypal-button-container-2"></div>
+                    <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
                 </div>
             </section>
         </div>
@@ -49,7 +53,7 @@
             <div class="container">
                 <div class="showcase">
                     <div class="image-container">
-                        <p class="image-label">Warzone 3 accounts</p>
+                        <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
                         <img src="warzone-mw3.jpg" alt="Warzone Camos" class="show-image">
                     </div>
                 </div>
@@ -59,101 +63,95 @@
                 </div>
                 <div id="service-details-5" class="service-details" style="display: none;">
                     <p>Stock 1X</p>
-                    <div id="paypal-button-container-5"></div>
+                    <div id="paypal-button-container-5"></div> <!-- PayPal button container for the BattleNet account service -->
                 </div>
                 <div id="service-details-6" class="service-details" style="display: none;">
                     <p>Stock 0X</p>
-                    <div id="paypal-button-container-6"></div>
+                    <div id="paypal-button-container-6"></div> <!-- PayPal button container for the Steam account service -->
                 </div>
             </div>
         </section>
-        <footer class="animate__animated animate__fadeInUp">
-            <div class="container">
-                <p>&copy; 2024 moealturej. All rights reserved.</p>
-            </div>
-        </footer>
     </div>
+    <footer class="animate__animated animate__fadeInUp">
+        <div class="container">
+            <p>&copy; 2024 moealturej. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for PayPal buttons -->
     <script>
-        // Create PayPal buttons
-        function createOrder(amount) {
-            return function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: amount
-                        }
-                    }]
+    // Variable to keep track of the last service details shown
+    var lastShownDetailsId = null;
+
+    // Toggle service details visibility
+    function toggleServiceDetails(id) {
+        var details = document.getElementById('service-details-' + id);
+        if (details.style.display === 'block') {
+            details.style.display = 'none';
+        } else {
+            // If another service details is already shown, hide it first
+            if (lastShownDetailsId !== null) {
+                var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
+                lastShownDetails.style.display = 'none';
+            }
+            details.style.display = 'block';
+            renderPayPalButton(id);
+            // Update the lastShownDetailsId variable
+            lastShownDetailsId = id;
+        }
+    }
+
+    // Create PayPal buttons
+    function createOrder(amount) {
+        return function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: amount
+                    }
+                }]
+            });
+        };
+    }
+
+    // Render PayPal buttons for each service option
+    function renderPayPalButton(id) {
+        var amount;
+        switch (id) {
+            case 1:
+                amount = '30.00';
+                break;
+            case 2:
+                amount = '15.00';
+                break;
+            case 5:
+                amount = '25.00'; // Adjust amount for the BattleNet account service
+                break;
+            case 6:
+                amount = '25.00'; // Adjust amount for the Steam account service
+                break;
+            default:
+                amount = '100.00'; // Default amount
+        }
+        var paypalButtonContainer = document.getElementById('paypal-button-container-' + id);
+        // Remove any existing PayPal buttons inside the container
+        paypalButtonContainer.innerHTML = '';
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder(amount),
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
                 });
-            };
-        }
-
-        // Render PayPal buttons for each service option
-        function renderPayPalButton(id) {
-            var amount;
-            switch (id) {
-                case 1:
-                    amount = '30.00';
-                    break;
-                case 2:
-                    amount = '15.00';
-                    break;
-                case 5:
-                    amount = '25.00';
-                    break;
-                case 6:
-                    amount = '25.00';
-                    break;
-                default:
-                    amount = '100.00';
             }
-            var paypalButtonContainer = document.getElementById('paypal-button-container-' + id);
-            paypalButtonContainer.innerHTML = '';
-            paypal.Buttons({
-                style: {
-                    shape: 'rect',
-                    color: 'gold',
-                    layout: 'vertical',
-                    label: 'paypal',
-                },
-                createOrder: createOrder(amount),
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                    });
-                }
-            }).render(paypalButtonContainer);
-        }
+        }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
+}
 
-        // Toggle service details visibility
-        function toggleServiceDetails(id) {
-            var details = document.getElementById('service-details-' + id);
-            if (details.style.display === 'block') {
-                details.style.display = 'none';
-            } else {
-                if (lastShownDetailsId !== null) {
-                    var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
-                    lastShownDetails.style.display = 'none';
-                }
-                details.style.display = 'block';
-                renderPayPalButton(id);
-                lastShownDetailsId = id;
-            }
-        }
-
-        // Toggle sidebar visibility
-        function toggleSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            var content = document.getElementById('content');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-                content.style.marginLeft = '0';
-            } else {
-                sidebar.style.left = '0px';
-                content.style.marginLeft = '250px';
-            }
-        }
-
-        var lastShownDetailsId = null; // Variable to keep track of the last service details shown
-    </script>
+</script>
 </body>
 </html>
