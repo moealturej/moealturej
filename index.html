@@ -27,8 +27,6 @@
             <div class="button-container">
                 <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                 <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
-                <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet account</button> <!-- New service button -->
-                <button class="service-button" onclick="toggleServiceDetails(6)">Steam account</button> <!-- New service button -->
             </div>
             <div id="service-details-1" class="service-details" style="display: none;">
                 <p>2 camos per weapon</p>
@@ -40,16 +38,24 @@
                 <p>Any camos</p>
                 <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
             </div>
-            <div id="service-details-5" class="service-details" style="display: none;"> <!-- New service details -->
+        </section>
+    </div>
+    <section id="accounts" class="section services-section animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="button-container">
+                <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet account</button>
+                <button class="service-button" onclick="toggleServiceDetails(6)">Steam account</button>
+            </div>
+            <div id="service-details-5" class="service-details" style="display: none;">
                 <p>Description of the BattleNet account service.</p>
                 <div id="paypal-button-container-5"></div> <!-- PayPal button container for the BattleNet account service -->
             </div>
-            <div id="service-details-6" class="service-details" style="display: none;"> <!-- New service details -->
+            <div id="service-details-6" class="service-details" style="display: none;">
                 <p>Description of the Steam account service.</p>
                 <div id="paypal-button-container-6"></div> <!-- PayPal button container for the Steam account service -->
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
             <p>&copy; 2024 moealturej. All rights reserved.</p>
