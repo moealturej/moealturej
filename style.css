@@ -1,10 +1,15 @@
+/* Reset Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    color: #333333;
-    line-height: 1.6;
-    overflow-x: hidden;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 .container {
@@ -13,23 +18,11 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
 header {
-    background: linear-gradient(to right, #ff00cc, #3333ff);
-    padding: 30px 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid #ff6b00;
-    position: relative;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 4.5em;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-    margin-bottom: 30px;
 }
 
 nav ul {
@@ -42,123 +35,120 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
     text-decoration: none;
+    color: #fff;
     font-weight: bold;
-    font-size: 1.3em;
-    padding: 12px 24px;
-    border-radius: 8px;
-    background: linear-gradient(to right, #ff6b00, #ff0000);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    color: gold;
 }
 
-/* About Section */
-.about-section h2 {
-    font-size: 3.5em;
-    color: #ff00cc;
+section {
     margin-bottom: 40px;
 }
 
-.about-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555555;
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-/* Service Section */
-.services-section h2 {
-    font-size: 3.5em;
-    color: #3333ff;
-    margin-bottom: 40px;
-}
-
-.services-section ul li button {
-    font-size: 1.2em;
-    padding: 15px 30px;
-    background-color: #ff00cc;
-    color: #ffffff;
+.service-button {
+    background-color: gold;
+    color: #333;
     border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.services-section ul li button:hover {
-    background-color: #3333ff;
+.service-button:hover {
+    background-color: #ffd700;
 }
 
-/* Footer */
+.service-details {
+    margin-top: 20px;
+}
+
+.service-details img {
+    max-width: 100%;
+    height: auto;
+}
+
 footer {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 50px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 footer p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 14px;
 }
 
-/* Hover Animation */
-.animate__animated {
-    animation-duration: 1s;
-}
-
-.animate__fadeInLeft {
-    animation-name: fadeInLeft;
-}
-
-.animate__fadeInRight {
-    animation-name: fadeInRight;
-}
-
-.animate__fadeInUp {
-    animation-name: fadeInUp;
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-40px);
+    /* Animation Classes */
+    .animate__animated {
+        animation-duration: 1s;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(40px);
+    .animate__fadeInDown {
+        animation-name: fadeInDown;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
+    .animate__fadeInLeft {
+        animation-name: fadeInLeft;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+    .animate__fadeInRight {
+        animation-name: fadeInRight;
+    }
+
+    .animate__fadeInUp {
+        animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
