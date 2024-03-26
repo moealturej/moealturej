@@ -59,8 +59,8 @@ header h1 {
 }
 
 .service-button {
-    padding: 10px 20px;
-    font-size: 1.1em;
+    padding: 12px 24px;
+    font-size: 1.2em;
     font-weight: bold;
     color: #ffffff;
     background-color: #007bff;
@@ -68,12 +68,20 @@ header h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    outline: none; /* Remove default button outline */
 }
 
 .service-button:hover {
     background-color: #0056b3;
 }
 
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 .service-details {
     margin-top: 20px;
 }
