@@ -46,59 +46,70 @@
 
     <!-- JavaScript for PayPal buttons -->
     <script>
-        // Toggle service details visibility
-        function toggleServiceDetails(id) {
-            var details = document.getElementById('service-details-' + id);
-            if (details.style.display === 'block') {
-                details.style.display = 'none';
-            } else {
-                details.style.display = 'block';
-                renderPayPalButton(id);
-            }
-        }
+    // Variable to keep track of the last service details shown
+    var lastShownDetailsId = null;
 
-        // Create PayPal buttons
-        function createOrder(amount) {
-            return function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: amount
-                        }
-                    }]
+    // Toggle service details visibility
+    function toggleServiceDetails(id) {
+        var details = document.getElementById('service-details-' + id);
+        if (details.style.display === 'block') {
+            details.style.display = 'none';
+        } else {
+            // If another service details is already shown, hide it first
+            if (lastShownDetailsId !== null) {
+                var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
+                lastShownDetails.style.display = 'none';
+            }
+            details.style.display = 'block';
+            renderPayPalButton(id);
+            // Update the lastShownDetailsId variable
+            lastShownDetailsId = id;
+        }
+    }
+
+    // Create PayPal buttons
+    function createOrder(amount) {
+        return function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: amount
+                    }
+                }]
+            });
+        };
+    }
+
+    // Render PayPal buttons for each service option
+    function renderPayPalButton(id) {
+        var amount;
+        switch (id) {
+            case 1:
+                amount = '30.00';
+                break;
+            case 2:
+                amount = '15.00';
+                break;
+            // Add cases for other service options if needed
+            default:
+                amount = '0.00';
+        }
+        var paypalButtonContainer = document.getElementById('paypal-button-container-' + id);
+        // Remove any existing PayPal buttons inside the container
+        paypalButtonContainer.innerHTML = '';
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+            },
+            createOrder: createOrder(amount),
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
                 });
-            };
-        }
-
-        // Render PayPal buttons for each service option
-        function renderPayPalButton(id) {
-            var amount;
-            switch (id) {
-                case 1:
-                    amount = '30.00';
-                    break;
-                case 2:
-                    amount = '15.00';
-                    break;
-                // Add cases for other service options if needed
-                default:
-                    amount = '0.00';
             }
-            paypal.Buttons({
-                style: {
-                    shape: 'rect',
-                    color: 'gold',
-                    layout: 'vertical',
-                    label: 'paypal',
-                },
-                createOrder: createOrder(amount),
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                    });
-                }
-            }).render('#paypal-button-container-' + id); // Render PayPal button for the corresponding service
-        }
-    </script>
-</body>
-</html>
+        }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
+    }
+</script>
