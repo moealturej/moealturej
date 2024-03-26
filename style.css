@@ -89,16 +89,6 @@ nav ul li a:hover {
     margin-bottom: 60px;
 }
 
-.about-section h2,
-.services-section h2,
-.contact-section h2 {
-    font-size: 3em;
-    margin-bottom: 30px;
-    color: #ff6b00;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
 .services-section ul {
     list-style-type: none;
     padding: 0;
