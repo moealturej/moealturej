@@ -132,10 +132,10 @@ nav ul li a:hover {
 /* Service Details Styles */
 .service-details {
     display: none;
-    margin-top: 10px;
-    color: #ffffff; /* Change text color to black */
+    margin-top: 5px;
+    color: #ffffff;
     padding: 5px;
-    font-size: 2em;
+    font-size: 1.6em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
 }
 
