@@ -15,40 +15,19 @@ body {
 
 header {
     background: linear-gradient(to right, #6c5ce7, #4bcffa);
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     border-bottom: 3px solid #6c5ce7;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: 3em;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
-}
-
-nav {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
 }
 
 .container {
@@ -62,7 +41,11 @@ nav ul li a {
 }
 
 .services-section {
-    position: relative;
+    text-align: center;
+}
+
+.showcase {
+    margin-bottom: 20px;
 }
 
 .show-image {
@@ -72,16 +55,12 @@ nav ul li a {
 }
 
 .button-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .service-button {
-    padding: 12px 24px;
-    font-size: 1.2em;
+    padding: 15px 30px;
+    font-size: 1.3em;
     font-weight: bold;
     color: #ffffff;
     background-color: #6c5ce7;
@@ -95,13 +74,8 @@ nav ul li a {
     background-color: #4834d4;
 }
 
-.service-details {
-    margin-top: 20px;
-}
-
-.service-details img {
-    width: 100%;
-    border-radius: 10px;
+.service-details p {
+    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
@@ -114,7 +88,8 @@ nav ul li a {
 
 .about-section h2 {
     font-size: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #6c5ce7;
 }
 
 .about-section p {
@@ -128,6 +103,7 @@ footer {
     background-color: #343a40;
     color: #ffffff;
     font-size: 1.1em;
+    margin-top: 40px;
 }
 
 .container p {
