@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #480a84;
@@ -11,6 +12,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+
 /* Header Styles */
 header {
     background: linear-gradient(to right, #ff6b00, #ff0000);
@@ -20,6 +22,7 @@ header {
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 header h1 {
     font-size: 4em;
     color: #ffffff;
@@ -28,18 +31,22 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
 }
+
 /* Navigation Styles */
 nav {
     text-align: center;
     margin-bottom: 20px;
 }
+
 nav ul {
     list-style-type: none;
 }
+
 nav ul li {
     display: inline;
     margin-right: 20px;
 }
+
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
@@ -51,10 +58,12 @@ nav ul li a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 nav ul li a:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 /* Icon Styles */
 .icon {
     position: absolute;
@@ -67,50 +76,65 @@ nav ul li a:hover {
     height: 20px; /* Make the icon larger */
     border-radius: 50%; /* Make it circular */
 }
+
 /* Main Content Styles */
 .container {
     max-width: 960px;
     margin: 20px auto;
     padding: 0 20px;
 }
+
 .section {
     margin-bottom: 60px;
 }
-.about-section, .services-section, .contact-section {
+
+.about-section,
+.services-section,
+.contact-section {
     background-color: #3a0851;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
-.about-section h2, .services-section h2, .contact-section h2 {
+
+.about-section h2,
+.services-section h2,
+.contact-section h2 {
     font-size: 3em;
     margin-bottom: 30px;
     color: #ff6b00;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
-.about-section p, .services-section p, .contact-section p {
+
+.about-section p,
+.services-section p,
+.contact-section p {
     font-size: 1.5em;
     margin-bottom: 30px;
     color: #cccccc;
     text-align: center;
 }
+
 .services-section ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
 }
+
 .services-section ul li {
     margin-bottom: 20px;
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 .services-section ul li:before {
     content: "\2022";
     color: #ff6b00;
     margin-right: 10px;
 }
+
 /* Button Styles */
 .service-button {
     background-color: #ff6b00;
@@ -122,9 +146,11 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .service-button:hover {
     background-color: #ff0000;
 }
+
 /* Service Details Styles */
 .service-details {
     display: none;
@@ -133,7 +159,7 @@ nav ul li a:hover {
     color: #000000; /* Change text color to black */
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0     /* Add a subtle box shadow for depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow for depth */
 }
 
 .service-details p {
@@ -144,120 +170,25 @@ nav ul li a:hover {
 .service-details p:last-child {
     margin-bottom: 0; /* Remove bottom margin for the last paragraph */
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
         font-size: 3em;
     }
+
     .icon {
         width: 100px;
         height: 100px; /* Adjust height accordingly */
     }
+
     nav ul li a {
         font-size: 1em;
         padding: 10px 15px;
     }
+
     .service-button {
         padding: 7px 12px;
         font-size: 1em;
     }
 }
-</style>
-</head>
-<body>
-<header>
-    <div class="icon"></div> <!-- Move the icon into the header -->
-    <h1 class="animate__animated animate__fadeInDown">moealturej</h1>
-    <nav>
-        <ul>
-            <li><a href="#about" class="animate__animated animate__fadeInUp">About</a></li>
-            <li><a href="#services" class="animate__animated animate__fadeInUp">Services</a></li>
-            <li><a href="#contact" class="animate__animated animate__fadeInUp">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<div class="container">
-    <section id="about" class="section about-section animate__animated animate__fadeInLeft">
-        <h2>About Us</h2>
-        <p>Welcome to moealturej services, your one-stop destination for premium gaming services.</p>
-        <p>Our team is dedicated to providing you with the best services, including camos, accounts, and recovery options.</p>
-    </section>
-    <section id="services" class="section services-section animate__animated animate__fadeInRight">
-        <h2>Our Services</h2>
-        <ul>
-            <li>
-                <button class="service-button" onclick="toggleServiceDetails(1)">Warzone 3 Camos</button>
-                <div id="service-details-1" class="service-details" style="display: none;">
-                    <p>5 Weapons - $10</p>
-                    <p>10 Weapons - $15</p>
-                    <p>15 Weapons - $20</p>
-                    <p>All Weapons - $30</p>
-                    <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                </div>
-            </li>
-            <!-- Other service items go here -->
-        </ul>
-    </section>
-    <!-- Other sections go here -->
-</div>
-<footer class="animate__animated animate__fadeInUp">
-    <div class="container">
-        <p>&copy; 2024 moealturej. All rights reserved.</p>
-    </div>
-</footer>
-
-<!-- JavaScript for PayPal buttons -->
-<script>
-    // Toggle service details visibility
-    function toggleServiceDetails(id) {
-        var details = document.getElementById('service-details-' + id);
-        if (details.style.display === 'block') {
-            details.style.display = 'none';
-        } else {
-            details.style.display = 'block';
-            renderPayPalButton(id);
-        }
-    }
-
-    // Create PayPal buttons
-    function createOrder(amount) {
-        return function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: amount
-                    }
-                }]
-            });
-        };
-    }
-
-    // Render PayPal buttons for each service option
-    function renderPayPalButton(id) {
-        var amount;
-        switch (id) {
-            case 1:
-                amount = '30.00';
-                break;
-            // Add cases for other service options if needed
-            default:
-                amount = '0.00';
-        }
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal',
-            },
-            createOrder: createOrder(amount),
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-        }).render('#paypal-button-container-' + id); // Render PayPal button for the corresponding service
-    }
-</script>
-</body>
-</html>
