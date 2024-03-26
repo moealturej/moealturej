@@ -27,7 +27,8 @@
             <div class="button-container">
                 <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                 <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
-                <button class="service-button" onclick="toggleServiceDetails(3)">New Service - $25</button> <!-- New service button -->
+                <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet account</button> <!-- New service button -->
+                <button class="service-button" onclick="toggleServiceDetails(6)">Steam account</button> <!-- New service button -->
             </div>
             <div id="service-details-1" class="service-details" style="display: none;">
                 <p>2 camos per weapon</p>
@@ -39,32 +40,14 @@
                 <p>Any camos</p>
                 <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
             </div>
-            <div id="service-details-3" class="service-details" style="display: none;"> <!-- New service details -->
-                <p>Description of the new service.</p>
-                <div id="paypal-button-container-3"></div> <!-- PayPal button container for the new service -->
+            <div id="service-details-5" class="service-details" style="display: none;"> <!-- New service details -->
+                <p>Description of the BattleNet account service.</p>
+                <div id="paypal-button-container-5"></div> <!-- PayPal button container for the BattleNet account service -->
             </div>
-             </header>
-    <div class="container">
-        <section id="services" class="section services-section animate__animated animate__fadeIn">
-            <div class="showcase">
-                <img src="show.jpg" alt="Warzone Camos" class="show-image">
+            <div id="service-details-6" class="service-details" style="display: none;"> <!-- New service details -->
+                <p>Description of the Steam account service.</p>
+                <div id="paypal-button-container-6"></div> <!-- PayPal button container for the Steam account service -->
             </div>
-            <div class="button-container">
-                <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet account
-                <button class="service-button" onclick="toggleServiceDetails(6)"Steam account
-            </div>
-            <div id="service-details-1" class="service-details" style="display: none;">
-                <p>2 camos per weapon</p>
-                <p>Any camos</p>
-                <div id="paypal-button-container-5"></div> <!-- PayPal button container for Warzone 3 Camos -->
-            </div>
-            <div id="service-details-2" class="service-details" style="display: none;">
-                <p>2 camos per weapon</p>
-                <p>Any camos</p>
-                <div id="paypal-button-container-6"></div> <!-- PayPal button container for Warzone 3 Camos -->
-            </div>
-            <div id="service-details-3" class="service-details" style="display: none;"> <!-- New service details -->
-                <p>Description of the new service.</p>
         </section>
     </div>
     <footer class="animate__animated animate__fadeInUp">
@@ -120,13 +103,13 @@
                 amount = '15.00';
                 break;
             case 5:
-                amount = '25.00';
+                amount = '25.00'; // Adjust amount for the BattleNet account service
                 break;
-            case 5:
-                amount = '25.00';
+            case 6:
+                amount = '25.00'; // Adjust amount for the Steam account service
                 break;
             default:
-                amount = '100.00';
+                amount = '100.00'; // Default amount
         }
         var paypalButtonContainer = document.getElementById('paypal-button-container-' + id);
         // Remove any existing PayPal buttons inside the container
