@@ -146,14 +146,14 @@
                 font-size: 3em;
             }
             .icon {
-                width: 30px;
+                width: 100px;
             }
             nav ul li a {
                 font-size: 1em;
                 padding: 10px 15px;
             }
             .service-button {
-                padding: 10px 15px;
+                padding: 7px 12px;
                 font-size: 1em;
             }
         }
