@@ -79,18 +79,17 @@ nav ul li a:hover {
 }
 
 .services-section ul li button {
-    font-size: 1.3em;
-    padding: 18px 36px;
+    font-size: 1.2em;
+    padding: 15px 30px;
     background-color: #ff00cc;
     color: #ffffff;
-    border: 2px solid #ff00cc;
-    border-radius: 10px;
+    border: none;
+    border-radius: 8px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .services-section ul li button:hover {
     background-color: #3333ff;
-    color: #ffffff;
 }
 
 /* Footer */
@@ -153,4 +152,13 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
