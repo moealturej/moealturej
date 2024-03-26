@@ -14,10 +14,10 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #f5365c, #ff5f5f);
+    background: linear-gradient(to right, #6c5ce7, #4bcffa);
     padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid #f5365c;
+    border-bottom: 3px solid #6c5ce7;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,6 +28,27 @@ header h1 {
     letter-spacing: 3px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .container {
@@ -45,8 +66,8 @@ header h1 {
 }
 
 .show-image {
-    width: 50%;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -63,25 +84,17 @@ header h1 {
     font-size: 1.2em;
     font-weight: bold;
     color: #ffffff;
-    background-color: #007bff;
+    background-color: #6c5ce7;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    outline: none; /* Remove default button outline */
 }
 
 .service-button:hover {
-    background-color: #0056b3;
+    background-color: #4834d4;
 }
 
-.button-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
 .service-details {
     margin-top: 20px;
 }
