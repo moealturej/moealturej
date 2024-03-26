@@ -45,15 +45,15 @@ header h1 {
 }
 
 .show-image {
-    width: 100%;
-    border-radius: 10px;
+    width: 50%;
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 70%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
