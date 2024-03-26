@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,172 +11,14 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'> 
     <!-- End of added meta tags -->
-    <style>
-        /* Reset Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #480a84;
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        /* Header Styles */
-        header {
-            background: linear-gradient(to right, #ff6b00, #ff0000);
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 3px solid #ff6b00;
-            position: relative;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 4em;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            margin-bottom: 20px;
-        }
-        /* Navigation Styles */
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav ul {
-            list-style-type: none;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background: linear-gradient(to right, #ff6b00, #ff0000);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        nav ul li a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        /* Icon Styles */
-        .icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 40px;
-            height: auto;
-        }
-        /* Main Content Styles */
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .section {
-            margin-bottom: 60px;
-        }
-        .about-section, .services-section, .contact-section {
-            background-color: #3a0851;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-        }
-        .about-section h2, .services-section h2, .contact-section h2 {
-            font-size: 3em;
-            margin-bottom: 30px;
-            color: #ff6b00;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        }
-        .about-section p, .services-section p, .contact-section p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            color: #cccccc;
-            text-align: center;
-        }
-        .services-section ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-        .services-section ul li {
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .services-section ul li:before {
-            content: "\2022";
-            color: #ff6b00;
-            margin-right: 10px;
-        }
-        /* Button Styles */
-        .service-button {
-            background-color: #ff6b00;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            padding: 12px 24px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .service-button:hover {
-            background-color: #ff0000;
-        }
-        /* Service Details Styles */
-        .service-details {
-            display: none;
-            margin-top: 20px;
-            background-color: #ffffff; /* Change background color to white */
-            color: #000000; /* Change text color to black */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-        }
-
-        .service-details p {
-            margin-bottom: 10px; /* Reduce spacing between paragraphs */
-            font-size: 1em; /* Adjust font size */
-        }
-
-        .service-details p:last-child {
-            margin-bottom: 0; /* Remove bottom margin for the last paragraph */
-        }
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 3em;
-            }
-            .icon {
-                width: 30px;
-            }
-            nav ul li a {
-                font-size: 1em;
-                padding: 10px 15px;
-            }
-            .service-button {
-                padding: 10px 15px;
-                font-size: 1em;
-            }
-        }
-    </style>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
     <!-- PayPal Script -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ_R0taLVqb2NCK3&currency=USD"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AaW7Z0sxklzTCmSW2Hs9aku6bHISVeTnGN8S9mOR5DfvO3t7L8NPSJGNqaPP3ph-VJ
+"></script>
 </head>
 <body>
-       <header>
+    <header>
         <img class="icon" src="channels4_profile.png" alt="Your Icon">
         <h1 class="animate__animated animate__fadeInDown">moealturej</h1>
         <nav>
