@@ -36,12 +36,12 @@
             createDonation: createDonation('30.00'), // Set default donation amount
             onApprove: function(data, actions) {
                 return actions.payment.execute().then(function(details) {
-                    alert('Thank you for your donation!');
+                    alert('Thank you for your purchase!');
                     // Optionally, you can perform additional actions after successful donation
                 });
             },
             onError: function(err) {
-                console.error('An error occurred during donation:', err);
+                console.error('An error occurred during purchase:', err);
                 // Provide feedback to the user about the error
             }
         }).render('#paypal-button-container'); // Render PayPal button in the specified container
