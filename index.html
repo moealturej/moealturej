@@ -43,6 +43,28 @@
                 <p>Description of the new service.</p>
                 <div id="paypal-button-container-3"></div> <!-- PayPal button container for the new service -->
             </div>
+             </header>
+    <div class="container">
+        <section id="services" class="section services-section animate__animated animate__fadeIn">
+            <div class="showcase">
+                <img src="show.jpg" alt="Warzone Camos" class="show-image">
+            </div>
+            <div class="button-container">
+                <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet account
+                <button class="service-button" onclick="toggleServiceDetails(6)"Steam account
+            </div>
+            <div id="service-details-1" class="service-details" style="display: none;">
+                <p>2 camos per weapon</p>
+                <p>Any camos</p>
+                <div id="paypal-button-container-5"></div> <!-- PayPal button container for Warzone 3 Camos -->
+            </div>
+            <div id="service-details-2" class="service-details" style="display: none;">
+                <p>2 camos per weapon</p>
+                <p>Any camos</p>
+                <div id="paypal-button-container-6"></div> <!-- PayPal button container for Warzone 3 Camos -->
+            </div>
+            <div id="service-details-3" class="service-details" style="display: none;"> <!-- New service details -->
+                <p>Description of the new service.</p>
         </section>
     </div>
     <footer class="animate__animated animate__fadeInUp">
@@ -97,11 +119,14 @@
             case 2:
                 amount = '15.00';
                 break;
-            case 3:
-                amount = '25.00'; // Adjust amount for the new service
+            case 5:
+                amount = '25.00';
+                break;
+            case 5:
+                amount = '25.00';
                 break;
             default:
-                amount = '0.00';
+                amount = '100.00';
         }
         var paypalButtonContainer = document.getElementById('paypal-button-container-' + id);
         // Remove any existing PayPal buttons inside the container
