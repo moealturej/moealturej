@@ -67,8 +67,8 @@ nav ul li a:hover {
 /* Icon Styles */
 .icon {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 50px;
+    left: 50px;
     background-image: url('standard_17.gif'); /* Set background image */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
