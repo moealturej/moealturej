@@ -32,6 +32,51 @@ header h1 {
     margin-bottom: 10px;
 }
 
+/* Navigation Styles */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ff6b00, #ff0000);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Styles */
+.icon {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-image: url('standard_17.gif'); /* Set background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    width: 20px; /* Make the icon larger */
+    height: 20px; /* Make the icon larger */
+    border-radius: 50%; /* Make it circular */
+}
+
 /* Main Content Styles */
 .container {
     max-width: 960px;
@@ -43,14 +88,34 @@ header h1 {
     margin-bottom: 60px;
 }
 
-.services-section h2 {
+.services-section ul {
+    list-style-type: none;
+    padding: 0;
     text-align: center;
+}
+
+.services-section ul li {
     margin-bottom: 20px;
-    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services-section ul li:before {
+    content: "\2022";
+    color: #ff6b00;
+    margin-right: 10px;
+}
+
+.show-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Button Styles */
-.service-button {
+.service-button,
+.download-button {
     background-color: #ff6b00;
     color: #ffffff;
     border: none;
@@ -61,7 +126,8 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
-.service-button:hover {
+.service-button:hover,
+.download-button:hover {
     background-color: #ff0000;
 }
 
@@ -90,7 +156,18 @@ header h1 {
         font-size: 3em;
     }
 
-    .service-button {
+    .icon {
+        width: 100px;
+        height: 100px; /* Adjust height accordingly */
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .service-button,
+    .download-button {
         padding: 7px 12px;
         font-size: 1em;
     }
