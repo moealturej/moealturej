@@ -145,8 +145,20 @@
                 });
             }
         }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
-}
+    }
 
-</script>
+    // Function to trigger file download
+    function downloadFile() {
+        var link = document.createElement('a');
+        link.href = 'CombatMaster.dll'; // Specify the path to your file
+        link.download = 'file_name.extension'; // Specify the file name
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    </script>
+
+    <!-- Add a download button -->
+    <button onclick="downloadFile()">Download File</button>
 </body>
 </html>
