@@ -48,7 +48,7 @@ nav ul li {
 }
 
 nav ul li a {
-        color: #ffffff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
@@ -114,7 +114,8 @@ nav ul li a:hover {
 }
 
 /* Button Styles */
-.service-button {
+.service-button,
+.download-button {
     background-color: #ff6b00;
     color: #ffffff;
     border: none;
@@ -125,7 +126,8 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
-.service-button:hover {
+.service-button:hover,
+.download-button:hover {
     background-color: #ff0000;
 }
 
@@ -164,7 +166,8 @@ nav ul li a:hover {
         padding: 10px 15px;
     }
 
-    .service-button {
+    .service-button,
+    .download-button {
         padding: 7px 12px;
         font-size: 1em;
     }
