@@ -107,7 +107,7 @@ header h1 {
 }
 
 /* Form Styles */
-.form-container {
+#contact-form {
     display: none;
     max-width: 600px;
     margin: 20px auto;
@@ -117,16 +117,16 @@ header h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-container label {
+#contact-form label {
     display: block;
     margin-bottom: 10px;
     font-size: 0.9em;
     color: #fff; /* Text color */
 }
 
-.form-container input[type="text"],
-.form-container input[type="email"],
-.form-container textarea {
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -137,7 +137,7 @@ header h1 {
     color: #333; /* Text color */
 }
 
-.form-container input[type="submit"] {
+#contact-form input[type="submit"] {
     background-color: #ff6b00; /* Button background color */
     color: #fff; /* Button text color */
     border: none;
@@ -148,7 +148,7 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
-.form-container input[type="submit"]:hover {
+#contact-form input[type="submit"]:hover {
     background-color: #ff0000; /* Button background color on hover */
 }
 
@@ -164,7 +164,7 @@ header h1 {
         font-size: 0.9em;
     }
 
-    .form-container {
+    #contact-form {
         width: 90%;
         padding: 15px;
     }
