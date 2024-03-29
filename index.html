@@ -14,87 +14,6 @@
     <meta http-equiv="Expires" content="0">
     <!-- PayPal Script -->
     <script src="https://www.paypal.com/sdk/js?client-id=Adhk_JJCzzgbAAHnJQHQvSqevZQIgmr3v2W933e3RTL_acJfkNxCNhk-pH4xydn3tRAkHnhjc1g6YTSt&currency=USD"></script>
-</head>
-<body>
-    <div class="content">
-        <header>
-            <h1 class="animate__animated animate__fadeInDown">moealturej services</h1>
-        </header>
-        <div class="container">
-            <section id="services" class="section services-section animate__animated animate__fadeIn">
-                <div class="showcase">
-                    <div class="image-container">
-                        <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
-                        <img src="show.jpg" alt="Warzone Camos" class="show-image">
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
-                    <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
-                    <button class="service-button" onclick="showContactForm()">Provide Details</button>
-                    <button class="download-button" onclick="downloadFile()">Download File</button>
-                </div>
-                <div id="service-details-1" class="service-details" style="display: none;">
-                    <p>2 camos per weapon</p>
-                    <p>Any camos</p>
-                    <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                </div>
-                <div id="service-details-2" class="service-details" style="display: none;">
-                    <p>2 camos per weapon</p>
-                    <p>Any camos</p>
-                    <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                </div>
-            </section>
-        </div>
-        <section id="accounts" class="section services-section animate__animated animate__fadeIn">
-            <div class="container">
-                <div class="showcase">
-                    <div class="image-container">
-                        <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
-                        <img src="warzone-mw3.jpg" alt="Warzone Camos" class="show-image">
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet accounts - $25</button>
-                    <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $25</button>
-                </div>
-                <div id="service-details-5" class="service-details" style="display: none;">
-                    <p>Stock 1X</p>
-                    <div id="paypal-button-container-5"></div> <!-- PayPal button container for the BattleNet account service -->
-                </div>
-                <div id="service-details-6" class="service-details" style="display: none;">
-                    <p>Stock 0X</p>
-                    <div id="paypal-button-container-6"></div> <!-- PayPal button container for the Steam account service -->
-                </div>
-            </div>
-        </section>
-    </div>
-    <footer class="animate__animated animate__fadeInUp">
-        <div class="container">
-            <p>&copy; 2024 moealturej. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Form Container -->
-    <div class="form-container" id="contact-form" style="display: none;">
-        <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/7bab9024fa96d00938d440734fb8e3d6?embedded=1"></div>
-        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-        <script type="text/javascript" src="https://formkeep-production-herokuapp-com.global.ssl.fastly.net/formkeep-embed.js"></script>
-
-        <!-- Get notified when the form is submitted, add your own code below: -->
-        <script>
-            const formkeepEmbed = document.querySelector('#formkeep-embed');
-
-            formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
-                console.log('Submitting form...');
-            });
-
-            formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
-                console.log('Submitted form...');
-            });
-        </script>
-    </div>
-
     <!-- JavaScript for PayPal buttons -->
     <script>
         // Variable to keep track of the last service details shown
@@ -189,5 +108,79 @@
             }).render(container);
         }
     </script>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1 class="animate__animated animate__fadeInDown">moealturej services</h1>
+        </header>
+        <div class="container">
+            <section id="services" class="section services-section animate__animated animate__fadeIn">
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
+                        <img src="show.jpg" alt="Warzone Camos" class="show-image">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
+                    <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
+                    <button class="service-button" onclick="showContactForm()">Provide Details</button>
+                    <button class="download-button" onclick="downloadFile()">Download File</button>
+                </div>
+                <div id="service-details-1" class="service-details" style="display: none;">
+                    <p>2 camos per weapon</p>
+                    <p>Any camos</p>
+                    <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                </div>
+                <div id="service-details-2" class="service-details" style="display: none;">
+                    <p>2 camos per weapon</p>
+                    <p>Any camos</p>
+                    <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                </div>
+            </section>
+        </div>
+        <section id="accounts" class="section services-section animate__animated animate__fadeIn">
+            <div class="container">
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
+                        <img src="warzone-mw3.jpg" alt="Warzone 3 Accounts" class="show-image">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="service-button" onclick="toggleServiceDetails(5)">10 accounts - $25</button>
+                    <button class="service-button" onclick="toggleServiceDetails(6)">20 accounts - $50</button>
+                </div>
+                <div id="service-details-5" class="service-details" style="display: none;">
+                    <p>BattleNet accounts</p>
+                    <p>Random weapons</p>
+                    <div id="paypal-button-container-5"></div> <!-- PayPal button container for Warzone 3 accounts -->
+                </div>
+                <div id="service-details-6" class="service-details" style="display: none;">
+                    <p>Steam accounts</p>
+                    <p>Random weapons</p>
+                    <div id="paypal-button-container-6"></div> <!-- PayPal button container for Warzone 3 accounts -->
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form -->
+        <div class="container">
+            <section id="contact-form" class="section services-section animate__animated animate__fadeIn" style="display: none;">
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/7bab9024fa96d00938d440734fb8e3d6" method="post">
+                    <fieldset id="fs-frm-inputs">
+                        <label for="full-name">Discord Username</label>
+                        <input type="text" name="name" id="full-name" placeholder="@username" required="">
+                        <label for="email-address">BattleNet Email Address</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="email@example.exp" required="">
+                        <label for="message">Camo Choices</label>
+                        <textarea rows="5" name="message" id="message" placeholder="Camos" required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </fieldset>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
