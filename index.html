@@ -75,18 +75,22 @@
 
     <!-- Form Container -->
     <div class="form-container" id="contact-form" style="display: none;">
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/moqgkler" method="post">
-            <fieldset id="fs-frm-inputs">
-                <label for="full-name">Discord Username</label>
-                <input type="text" name="name" id="full-name" placeholder="Username" required="">
-                <label for="email-address">BattleNet Email Address</label>
-                <input type="email" name="_replyto" id="email-address" placeholder="email@example.com" required="">
-                <label for="message">Camo Choices</label>
-                <textarea rows="5" name="message" id="message" placeholder="Camo options" required=""></textarea>
-                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-            </fieldset>
-            <input type="submit" value="Submit">
-        </form>
+        <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/7bab9024fa96d00938d440734fb8e3d6?embedded=1"></div>
+        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script type="text/javascript" src="https://formkeep-production-herokuapp-com.global.ssl.fastly.net/formkeep-embed.js"></script>
+
+        <!-- Get notified when the form is submitted, add your own code below: -->
+        <script>
+            const formkeepEmbed = document.querySelector('#formkeep-embed');
+
+            formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
+                console.log('Submitting form...');
+            });
+
+            formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
+                console.log('Submitted form...');
+            });
+        </script>
     </div>
 
     <!-- JavaScript for PayPal buttons -->
@@ -160,29 +164,8 @@
                         alert('Transaction completed by ' + details.payer.name.given_name + '! You will receive your order soon.');
                     });
                 }
-            }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
-        }
-
-        // Function to toggle form visibility
-        function toggleForm() {
-            var form = document.getElementById('contact-form');
-            form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
+            }).render(paypalButtonContainer);
         }
     </script>
-
-    <!-- JavaScript for Download Button -->
-    <script>
-        // Function to handle download button click
-        function downloadFile() {
-            // Replace 'CombatMaster.dll' with the actual file URL
-            window.location.href = 'CombatMaster.dll';
-        }
-    </script>
-
-    <!-- Provide Details Button -->
-    <button class="service-button" onclick="toggleForm()">Provide Details</button>
-
-    <!-- Add a download button -->
-    <button class="download-button" onclick="downloadFile()">Download File</button>
 </body>
 </html>
