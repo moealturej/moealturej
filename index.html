@@ -22,12 +22,48 @@
         </header>
         <div class="container">
             <section id="services" class="section services-section animate__animated animate__fadeIn">
-                <!-- Your service sections go here -->
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
+                        <img src="show.jpg" alt="Warzone Camos" class="show-image">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
+                    <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
+                </div>
+                <div id="service-details-1" class="service-details" style="display: none;">
+                    <p>2 camos per weapon</p>
+                    <p>Any camos</p>
+                    <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                </div>
+                <div id="service-details-2" class="service-details" style="display: none;">
+                    <p>2 camos per weapon</p>
+                    <p>Any camos</p>
+                    <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                </div>
             </section>
         </div>
         <section id="accounts" class="section services-section animate__animated animate__fadeIn">
             <div class="container">
-                <!-- Your account sections go here -->
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
+                        <img src="warzone-mw3.jpg" alt="Warzone Camos" class="show-image">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet accounts - $25</button>
+                    <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $25</button>
+                </div>
+                <div id="service-details-5" class="service-details" style="display: none;">
+                    <p>Stock 1X</p>
+                    <div id="paypal-button-container-5"></div> <!-- PayPal button container for the BattleNet account service -->
+                </div>
+                <div id="service-details-6" class="service-details" style="display: none;">
+                    <p>Stock 0X</p>
+                    <div id="paypal-button-container-6"></div> <!-- PayPal button container for the Steam account service -->
+                </div>
             </div>
         </section>
     </div>
@@ -37,8 +73,8 @@
         </div>
     </footer>
 
-    <!-- Form -->
-    <div class="form-container">
+    <!-- Form Container -->
+    <div class="form-container" id="contact-form">
         <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/https://formspree.io/f/moqgkler" method="post">
             <fieldset id="fs-frm-inputs">
                 <label for="full-name">Discord Username</label>
@@ -53,106 +89,84 @@
         </form>
     </div>
 
-    <!-- JavaScript for PayPal buttons and form toggle -->
+    <!-- Script to toggle form visibility -->
     <script>
-    var formContainer = document.querySelector('.form-container');
-    var formVisible = false;
-
-    // Function to toggle form visibility
-    function toggleForm() {
-        formVisible = !formVisible;
-        formContainer.style.display = formVisible ? 'block' : 'none';
-    }
-
-    // Call toggleForm when a button is pressed
-    document.querySelectorAll('.service-button').forEach(button => {
-        button.addEventListener('click', toggleForm);
-    });
-
-    // Variable to keep track of the last service details shown
-    var lastShownDetailsId = null;
-
-    // Function to toggle service details visibility
-    function toggleServiceDetails(id) {
-        var details = document.getElementById('service-details-' + id);
-        if (details.style.display === 'block') {
-            details.style.display = 'none';
-        } else {
-            // If another service details is already shown, hide it first
-            if (lastShownDetailsId !== null) {
-                var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
-                lastShownDetails.style.display = 'none';
-            }
-            details.style.display = 'block';
-            renderPayPalButton(id);
-            // Update the lastShownDetailsId variable
-            lastShownDetailsId = id;
+        function toggleForm() {
+            var form = document.getElementById('contact-form');
+            form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
         }
-    }
-
-    // Create PayPal buttons
-    function createOrder(amount) {
-        return function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: amount
-                    }
-                }]
-            });
-        };
-    }
-
-    // Render PayPal buttons for each service option
-    function renderPayPalButton(id) {
-        var amount;
-        switch (id) {
-            case 1:
-                amount = '30.00';
-                break;
-            case 2:
-                amount = '15.00';
-                break;
-            case 5:
-                amount = '25.00'; // Adjust amount for the BattleNet account service
-                break;
-            case 6:
-                amount = '25.00'; // Adjust amount for the Steam account service
-                break;
-            default:
-                amount = '100.00'; // Default amount
-        }
-        var paypalButtonContainer = document.getElementById('paypal-button-container-' + id);
-        // Remove any existing PayPal buttons inside the container
-        paypalButtonContainer.innerHTML = '';
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal',
-            },
-            createOrder: createOrder(amount),
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-        }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
-    }
-
-    // Function to trigger file download
-    function downloadFile() {
-        var link = document.createElement('a');
-        link.href = 'CombatMaster.dll'; // Specify the path to your file
-        link.download = 'CombatMaster.dll'; // Specify the file name
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
     </script>
 
-    <!-- Add a download button -->
-    <button class="download-button" onclick="downloadFile()">Download File</button>
+    <!-- PayPal Script for Warzone 3 Camos -->
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '30'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '! You will receive your order soon.');
+                });
+            }
+        }).render('#paypal-button-container-1');
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '15'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '! You will receive your order soon.');
+                });
+            }
+        }).render('#paypal-button-container-2');
+    </script>
+
+    <!-- PayPal Script for Warzone 3 Accounts -->
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '25'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '! You will receive your order soon.');
+                });
+            }
+        }).render('#paypal-button-container-5');
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '25'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '! You will receive your order soon.');
+                });
+            }
+        }).render('#paypal-button-container-6');
+    </script>
 </body>
 </html>
