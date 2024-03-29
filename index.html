@@ -36,8 +36,8 @@
             lastShownDetailsId = id;
         }
 
-        // Show contact form
-        function showContactForm() {
+        // Show or hide contact form
+        function toggleContactForm() {
             var form = document.getElementById('contact-form');
             if (form.style.display === 'block') {
                 form.style.display = 'none';
@@ -125,7 +125,7 @@
                 <div class="button-container">
                     <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                     <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
-                    <button class="service-button" onclick="showContactForm()">Provide Details</button>
+                    <button class="service-button" onclick="toggleContactForm()">Provide Details</button>
                     <button class="download-button" onclick="downloadFile()">Download File</button>
                 </div>
                 <div id="service-details-1" class="service-details" style="display: none;">
