@@ -31,6 +31,8 @@
                 <div class="button-container">
                     <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                     <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
+                    <button class="service-button" onclick="showContactForm()">Provide Details</button>
+                    <a href="download_link" class="download-button">Download</a>
                 </div>
                 <div id="service-details-1" class="service-details" style="display: none;">
                     <p>2 camos per weapon</p>
@@ -116,6 +118,12 @@
             }
         }
 
+        // Show contact form
+        function showContactForm() {
+            var contactForm = document.getElementById('contact-form');
+            contactForm.style.display = 'block';
+        }
+
         // Create PayPal buttons
         function createOrder(amount) {
             return function(data, actions) {
@@ -134,16 +142,14 @@
             var amount;
             switch (id) {
                 case 1:
-                    amount = '30.00';
+                    amount = '30.00'; // Adjust amount for All Weapons service
                     break;
                 case 2:
-                    amount = '15.00';
+                    amount = '15.00'; // Adjust amount for 10 Weapons service
                     break;
                 case 5:
-                    amount = '25.00'; // Adjust amount for the BattleNet account service
-                    break;
                 case 6:
-                    amount = '25.00'; // Adjust amount for the Steam account service
+                    amount = '25.00'; // Adjust amount for the BattleNet or Steam account service
                     break;
                 default:
                     amount = '100.00'; // Default amount
