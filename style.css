@@ -1,174 +1,94 @@
 /* Reset Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #480a84;
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #480a84;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-/* Header Styles */
-header {
-    background: linear-gradient(to right, #ff6b00, #ff0000);
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 3px solid #ff6b00;
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #ff6b00, #ff0000);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid #ff6b00;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-header h1 {
-    font-size: 2em;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    margin-bottom: 10px;
-}
+        header h1 {
+            font-size: 2em;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            margin-bottom: 10px;
+        }
 
-/* Navigation Styles */
-nav {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        /* Main Content Styles */
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
 
-nav ul {
-    list-style-type: none;
-}
+        .section {
+            margin-bottom: 60px;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        /* Button Styles */
+        .service-button,
+        .download-button {
+            background-color: #ff6b00;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #ff6b00, #ff0000);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .service-button:hover,
+        .download-button:hover {
+            background-color: #ff0000;
+        }
 
-nav ul li a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
+        /* Service Details Styles */
+        .service-details {
+            display: none;
+            margin-top: 5px;
+            color: #ffffff;
+            padding: 5px;
+            font-size: 1.6em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
+        }
 
-/* Icon Styles */
-.icon {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    background-image: url('standard_17.gif'); /* Set background image */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the image */
-    width: 20px; /* Make the icon larger */
-    height: 20px; /* Make the icon larger */
-    border-radius: 50%; /* Make it circular */
-}
+        .service-details p {
+            margin-bottom: 5px; /* Reduce spacing between paragraphs */
+            font-size: 1em; /* Adjust font size */
+        }
 
-/* Main Content Styles */
-.container {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
+        .service-details p:last-child {
+            margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+        }
 
-.section {
-    margin-bottom: 60px;
-}
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3em;
+            }
 
-.services-section ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-.services-section ul li {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.services-section ul li:before {
-    content: "\2022";
-    color: #ff6b00;
-    margin-right: 10px;
-}
-
-.show-image {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Button Styles */
-.service-button,
-.download-button {
-    background-color: #ff6b00;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 24px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.service-button:hover,
-.download-button:hover {
-    background-color: #ff0000;
-}
-
-/* Service Details Styles */
-.service-details {
-    display: none;
-    margin-top: 5px;
-    color: #ffffff;
-    padding: 5px;
-    font-size: 1.6em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
-}
-
-.service-details p {
-    margin-bottom: 5px; /* Reduce spacing between paragraphs */
-    font-size: 1em; /* Adjust font size */
-}
-
-.service-details p:last-child {
-    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 3em;
-    }
-
-    .icon {
-        width: 100px;
-        height: 100px; /* Adjust height accordingly */
-    }
-
-    nav ul li a {
-        font-size: 1em;
-        padding: 10px 15px;
-    }
-
-    .service-button,
-    .download-button {
-        padding: 7px 12px;
-        font-size: 1em;
-    }
-}
+            .service-button,
+            .download-button {
+                padding: 7px 12px;
+                font-size: 1em;
+            }
+        }
