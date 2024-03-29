@@ -32,7 +32,7 @@
                     <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                     <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
                     <button class="service-button" onclick="showContactForm()">Provide Details</button>
-                    <a href="download_link" class="download-button">Download</a>
+                    <button class="download-button" onclick="downloadFile()">Download File</button>
                 </div>
                 <div id="service-details-1" class="service-details" style="display: none;">
                     <p>2 camos per weapon</p>
@@ -112,65 +112,81 @@
                     lastShownDetails.style.display = 'none';
                 }
                 details.style.display = 'block';
-                renderPayPalButton(id);
-                // Update the lastShownDetailsId variable
-                lastShownDetailsId = id;
+                renderPayPalButtons(id); // Render PayPal buttons for the selected service
             }
+            lastShownDetailsId = id;
         }
 
         // Show contact form
         function showContactForm() {
-            var contactForm = document.getElementById('contact-form');
-            contactForm.style.display = 'block';
-        }
-
-        // Create PayPal buttons
-        function createOrder(amount) {
-            return function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: amount
-                        }
-                    }]
-                });
-            };
-        }
-
-        // Render PayPal buttons for each service option
-        function renderPayPalButton(id) {
-            var amount;
-            switch (id) {
-                case 1:
-                    amount = '30.00'; // Adjust amount for All Weapons service
-                    break;
-                case 2:
-                    amount = '15.00'; // Adjust amount for 10 Weapons service
-                    break;
-                case 5:
-                case 6:
-                    amount = '25.00'; // Adjust amount for the BattleNet or Steam account service
-                    break;
-                default:
-                    amount = '100.00'; // Default amount
+            var form = document.getElementById('contact-form');
+            if (form.style.display === 'block') {
+                form.style.display = 'none';
+            } else {
+                form.style.display = 'block';
             }
-            var paypalButtonContainer = document.getElementById('paypal-button-container-' + id);
-            // Remove any existing PayPal buttons inside the container
-            paypalButtonContainer.innerHTML = '';
+        }
+
+        // Function to trigger file download
+        function downloadFile() {
+            var link = document.createElement('a');
+            link.href = 'CombatMaster.dll'; // Specify the path to your file
+            link.download = 'CombatMaster.dll'; // Specify the file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Render PayPal buttons for the selected service
+        function renderPayPalButtons(serviceId) {
+            // PayPal buttons container IDs
+            var paypalButtonContainers = {
+                1: 'paypal-button-container-1',
+                2: 'paypal-button-container-2',
+                5: 'paypal-button-container-5',
+                6: 'paypal-button-container-6'
+            };
+
+            // PayPal button creation options based on service ID
+            var paypalButtonOptions = {
+                1: { amount: '30', description: 'All Weapons' },
+                2: { amount: '15', description: '10 Weapons' },
+                5: { amount: '25', description: 'BattleNet accounts' },
+                6: { amount: '25', description: 'Steam accounts' }
+            };
+
+            // Clear previous PayPal buttons
+            var container = document.getElementById(paypalButtonContainers[serviceId]);
+            container.innerHTML = '';
+
+            // Render PayPal button for the selected service
             paypal.Buttons({
-                style: {
-                    shape: 'rect',
-                    color: 'gold',
-                    layout: 'vertical',
-                    label: 'paypal',
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: paypalButtonOptions[serviceId].amount
+                            }
+                        }]
+                    });
                 },
-                createOrder: createOrder(amount),
                 onApprove: function(data, actions) {
                     return actions.order.capture().then(function(details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name + '! You will receive your order soon.');
+                        console.log(details);
+                        alert('Transaction completed by ' + details.payer.name.given_name + '! Thanks for your purchase.');
                     });
+                },
+                onError: function(err) {
+                    console.log(err);
+                    alert('An error occurred during the transaction. Please try again later.');
+                },
+                style: {
+                    layout: 'vertical',
+                    color: 'gold',
+                    shape: 'rect',
+                    label: 'paypal'
                 }
-            }).render(paypalButtonContainer);
+            }).render(container);
         }
     </script>
 </body>
