@@ -106,6 +106,52 @@ header h1 {
     margin-bottom: 0;
 }
 
+/* Form Styles */
+.form-container {
+    display: none;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #fff; /* Text color */
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    border-radius: 3px;
+    border: 1px solid #ccc; /* Border color */
+    background-color: #fff; /* Background color */
+    color: #333; /* Text color */
+}
+
+.form-container input[type="submit"] {
+    background-color: #ff6b00; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #ff0000; /* Button background color on hover */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
@@ -116,5 +162,10 @@ header h1 {
     .download-button {
         padding: 8px 16px;
         font-size: 0.9em;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 15px;
     }
 }
