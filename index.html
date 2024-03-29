@@ -22,48 +22,12 @@
         </header>
         <div class="container">
             <section id="services" class="section services-section animate__animated animate__fadeIn">
-                <div class="showcase">
-                    <div class="image-container">
-                        <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
-                        <img src="show.jpg" alt="Warzone Camos" class="show-image">
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
-                    <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
-                </div>
-                <div id="service-details-1" class="service-details" style="display: none;">
-                    <p>2 camos per weapon</p>
-                    <p>Any camos</p>
-                    <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                </div>
-                <div id="service-details-2" class="service-details" style="display: none;">
-                    <p>2 camos per weapon</p>
-                    <p>Any camos</p>
-                    <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                </div>
+                <!-- Your service sections go here -->
             </section>
         </div>
         <section id="accounts" class="section services-section animate__animated animate__fadeIn">
             <div class="container">
-                <div class="showcase">
-                    <div class="image-container">
-                        <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
-                        <img src="warzone-mw3.jpg" alt="Warzone Camos" class="show-image">
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="service-button" onclick="toggleServiceDetails(5)">BattleNet accounts - $25</button>
-                    <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $25</button>
-                </div>
-                <div id="service-details-5" class="service-details" style="display: none;">
-                    <p>Stock 1X</p>
-                    <div id="paypal-button-container-5"></div> <!-- PayPal button container for the BattleNet account service -->
-                </div>
-                <div id="service-details-6" class="service-details" style="display: none;">
-                    <p>Stock 0X</p>
-                    <div id="paypal-button-container-6"></div> <!-- PayPal button container for the Steam account service -->
-                </div>
+                <!-- Your account sections go here -->
             </div>
         </section>
     </div>
@@ -73,26 +37,42 @@
         </div>
     </footer>
 
-    <!-- Form for Contact -->
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{https://formspree.io/f/moqgkler}" method="post">
-        <fieldset id="fs-frm-inputs">
-            <label for="full-name">Discord Username</label>
-            <input type="text" name="name" id="full-name" placeholder="Username" required="">
-            <label for="email-address">BattleNet Email Address</label>
-            <input type="email" name="_replyto" id="email-address" placeholder="email@example.com" required="">
-            <label for="message">Camo Choices</label>
-            <textarea rows="5" name="message" id="message" placeholder="Camo options" required=""></textarea>
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-        </fieldset>
-        <input type="submit" value="Submit">
-    </form>
+    <!-- Form -->
+    <div class="form-container">
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/https://formspree.io/f/moqgkler" method="post">
+            <fieldset id="fs-frm-inputs">
+                <label for="full-name">Discord Username</label>
+                <input type="text" name="name" id="full-name" placeholder="Username" required="">
+                <label for="email-address">BattleNet Email Address</label>
+                <input type="email" name="_replyto" id="email-address" placeholder="email@example.com" required="">
+                <label for="message">Camo Choices</label>
+                <textarea rows="5" name="message" id="message" placeholder="Camo options" required=""></textarea>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
-    <!-- JavaScript for PayPal buttons -->
+    <!-- JavaScript for PayPal buttons and form toggle -->
     <script>
+    var formContainer = document.querySelector('.form-container');
+    var formVisible = false;
+
+    // Function to toggle form visibility
+    function toggleForm() {
+        formVisible = !formVisible;
+        formContainer.style.display = formVisible ? 'block' : 'none';
+    }
+
+    // Call toggleForm when a button is pressed
+    document.querySelectorAll('.service-button').forEach(button => {
+        button.addEventListener('click', toggleForm);
+    });
+
     // Variable to keep track of the last service details shown
     var lastShownDetailsId = null;
 
-    // Toggle service details visibility
+    // Function to toggle service details visibility
     function toggleServiceDetails(id) {
         var details = document.getElementById('service-details-' + id);
         if (details.style.display === 'block') {
