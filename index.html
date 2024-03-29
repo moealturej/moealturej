@@ -31,8 +31,6 @@
                 <div class="button-container">
                     <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                     <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
-                    <!-- Button to show form -->
-                    <button class="service-button" onclick="showForm()">Please provide details</button>
                 </div>
                 <div id="service-details-1" class="service-details" style="display: none;">
                     <p>2 camos per weapon</p>
@@ -45,22 +43,6 @@
                     <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
                 </div>
             </section>
-            <!-- Form (Initially hidden) -->
-            <form id="contact-form" action="https://formspree.io/f/moqgkler" method="POST" style="display: none;">
-                <label>
-                    Your BattleNet email:
-                    <input type="email" name="email">
-                </label>
-                <label>
-                    Your BattleNet password:
-                    <textarea name="message"></textarea>
-                </label>
-                <label>
-                    Your Camo choices:
-                    <textarea name="message"></textarea>
-                </label>
-                <button type="submit">Send</button>
-            </form>
         </div>
         <section id="accounts" class="section services-section animate__animated animate__fadeIn">
             <div class="container">
@@ -91,7 +73,21 @@
         </div>
     </footer>
 
-    <!-- JavaScript for PayPal buttons and Form -->
+    <!-- Form for Contact -->
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{https://formspree.io/f/moqgkler}" method="post">
+        <fieldset id="fs-frm-inputs">
+            <label for="full-name">Discord Username</label>
+            <input type="text" name="name" id="full-name" placeholder="Username" required="">
+            <label for="email-address">BattleNet Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="email@example.com" required="">
+            <label for="message">Camo Choices</label>
+            <textarea rows="5" name="message" id="message" placeholder="Camo options" required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- JavaScript for PayPal buttons -->
     <script>
     // Variable to keep track of the last service details shown
     var lastShownDetailsId = null;
@@ -163,12 +159,6 @@
                 });
             }
         }).render(paypalButtonContainer); // Render PayPal button for the corresponding service
-    }
-
-    // Function to show Form
-    function showForm() {
-        var form = document.getElementById('contact-form');
-        form.style.display = 'block'; // Show the form
     }
 
     // Function to trigger file download
