@@ -1,94 +1,94 @@
 /* Reset Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #480a84;
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #480a84;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        /* Header Styles */
-        header {
-            background: linear-gradient(to right, #ff6b00, #ff0000);
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 3px solid #ff6b00;
-            position: relative;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #ff6b00, #ff0000);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #ff6b00;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        header h1 {
-            font-size: 2em;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-            margin-bottom: 10px;
-        }
+header h1 {
+    font-size: 2.5em; /* Increased font size for header */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Increased letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    margin-bottom: 20px; /* Increased margin */
+}
 
-        /* Main Content Styles */
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
+/* Main Content Styles */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
 
-        .section {
-            margin-bottom: 60px;
-        }
+.section {
+    margin-bottom: 60px;
+}
 
-        /* Button Styles */
-        .service-button,
-        .download-button {
-            background-color: #ff6b00;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            padding: 12px 24px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+/* Button Styles */
+.service-button,
+.download-button {
+    background-color: #ff6b00;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px; /* Rounded button corners */
+    padding: 15px 30px; /* Increased padding */
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .service-button:hover,
-        .download-button:hover {
-            background-color: #ff0000;
-        }
+.service-button:hover,
+.download-button:hover {
+    background-color: #ff0000;
+}
 
-        /* Service Details Styles */
-        .service-details {
-            display: none;
-            margin-top: 5px;
-            color: #ffffff;
-            padding: 5px;
-            font-size: 1.6em;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
-        }
+/* Service Details Styles */
+.service-details {
+    display: none;
+    margin-top: 15px; /* Increased top margin */
+    color: #ffffff;
+    padding: 15px; /* Increased padding */
+    font-size: 1.2em; /* Reduced font size */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
+}
 
-        .service-details p {
-            margin-bottom: 5px; /* Reduce spacing between paragraphs */
-            font-size: 1em; /* Adjust font size */
-        }
+.service-details p {
+    margin-bottom: 10px; /* Increased bottom margin */
+    font-size: 1em; /* Adjust font size */
+}
 
-        .service-details p:last-child {
-            margin-bottom: 0; /* Remove bottom margin for the last paragraph */
-        }
+.service-details p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+}
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 3em;
-            }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3em;
+    }
 
-            .service-button,
-            .download-button {
-                padding: 7px 12px;
-                font-size: 1em;
-            }
-        }
+    .service-button,
+    .download-button {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+}
