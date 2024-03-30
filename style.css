@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #e6e6fa; /* Lavender background color */
-    color: #333; /* Dark text color */
+    background-color: #480a84;
+    color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -24,8 +24,8 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem; /* Increased font size */
-    color: #fff; /* White text color */
+    font-size: 1.8em;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
@@ -34,33 +34,38 @@ header h1 {
 
 /* Main Content Styles */
 .container {
-    max-width: 1200px; /* Increased maximum width */
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 800px;
+    margin: 15px auto;
+    padding: 0 15px;
+}
+
+.section {
+    margin-bottom: 40px;
 }
 
 /* Showcase Image Styles */
 .image-container {
     position: relative;
-    margin-bottom: 10px; /* Increased margin bottom */
+    max-width: 75%;
+    margin-bottom: 7px;
 }
 
 .image-label {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 5px 10px;
     border-radius: 3px;
-    font-size: 1rem; /* Increased font size */
-    color: #333; /* Dark text color */
+    font-size: 0.8em;
+    color: #ffffff;
 }
 
 .show-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 75%;
+    max-width: 75%;
+    height: auto; /* Ensure images maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -68,11 +73,11 @@ header h1 {
 .service-button,
 .download-button {
     background-color: #ff6b00;
-    color: #fff;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border-radius: 3px;
+    padding: 8px 16px;
+    font-size: 0.9em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: 10px;
@@ -85,16 +90,17 @@ header h1 {
 
 /* Service Details Styles */
 .service-details {
+    display: none;
     margin-top: 10px;
-    color: #333;
+    color: #ffffff;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 0.9em;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .service-details p {
     margin-bottom: 8px;
-    font-size: 1rem;
+    font-size: 0.9em;
 }
 
 .service-details p:last-child {
@@ -103,10 +109,11 @@ header h1 {
 
 /* Form Styles */
 #contact-form {
+    display: none;
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -114,8 +121,8 @@ header h1 {
 #contact-form label {
     display: block;
     margin-bottom: 10px;
-    font-size: 1rem;
-    color: #333;
+    font-size: 0.9em;
+    color: #fff; /* Text color */
 }
 
 #contact-form input[type="text"],
@@ -124,38 +131,38 @@ header h1 {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #f8f8f8; /* Light gray background color */
-    color: #333;
+    font-size: 0.9em;
+    border-radius: 3px;
+    border: 1px solid #ccc; /* Border color */
+    background-color: #fff; /* Background color */
+    color: #333; /* Text color */
 }
 
 #contact-form input[type="submit"] {
-    background-color: #ff6b00;
-    color: #fff;
+    background-color: #ff6b00; /* Button background color */
+    color: #fff; /* Button text color */
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #contact-form input[type="submit"]:hover {
-    background-color: #ff0000;
+    background-color: #ff0000; /* Button background color on hover */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem; /* Decreased font size for smaller screens */
+        font-size: 2em;
     }
 
     .service-button,
     .download-button {
         padding: 8px 12px;
-        font-size: 0.9rem; /* Decreased font size for smaller screens */
+        font-size: 0.8em;
     }
 
     #contact-form {
