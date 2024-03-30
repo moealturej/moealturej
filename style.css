@@ -48,7 +48,7 @@ header h1 {
 .image-container {
     position: relative;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .image-label {
@@ -65,8 +65,8 @@ header h1 {
 .show-image {
     width: 100%;
     max-width: 100%;
-    height: auto; /* Ensure images maintain aspect ratio */
-    border-radius: 5px; /* Rounded corners */
+    height: auto;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -77,8 +77,8 @@ header h1 {
     color: #ffffff;
     border: none;
     border-radius: 3px;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 8px 16px;
+    font-size: 0.9em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -95,6 +95,7 @@ header h1 {
     color: #ffffff;
     padding: 10px;
     font-size: 0.9em;
+    border-radius: 5px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -161,12 +162,15 @@ header h1 {
 
     .service-button,
     .download-button {
-        padding: 8px 16px;
-        font-size: 0.9em;
+        padding: 8px 12px;
+        font-size: 0.8em;
     }
 
-    #contact-form {
-        width: 90%;
-        padding: 15px;
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .image-label {
+        font-size: 0.7em;
     }
 }
