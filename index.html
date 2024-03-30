@@ -62,16 +62,20 @@
             var paypalButtonContainers = {
                 1: 'paypal-button-container-1',
                 2: 'paypal-button-container-2',
+                3: 'paypal-button-container-3',
+                4: 'paypal-button-container-4',
                 5: 'paypal-button-container-5',
                 6: 'paypal-button-container-6'
             };
 
             // PayPal button creation options based on service ID
             var paypalButtonOptions = {
-                1: { amount: '30', description: 'All Weapons' },
-                2: { amount: '15', description: '10 Weapons' },
-                5: { amount: '25', description: 'BattleNet accounts' },
-                6: { amount: '5', description: 'Steam accounts' }
+                1: { amount: '30.00', description: 'All Weapons' },
+                2: { amount: '15.00', description: '10 Weapons' },
+                3: { amount: '30.00', description: 'New Service' }, // Replace XX.XX with the desired amount
+                4: { amount: '30.00', description: 'Another New Service' }, // Replace YY.YY with the desired amount
+                5: { amount: '25.00', description: 'Yet Another New Service' }, // Replace ZZ.ZZ with the desired amount
+                6: { amount: '5.00', description: 'Final New Service' } // Replace WW.WW with the desired amount
             };
 
             // Clear previous PayPal buttons
@@ -115,18 +119,18 @@
             <h1 class="animate__animated animate__fadeInDown">moealturej services</h1>
         </header>
         <div class="container">
-            <section id="services" class="section services-section animate__animated animate__fadeIn">
+            <!-- Service 1: Warzone 3 Camos -->
+            <section id="service1" class="section services-section animate__animated animate__fadeIn">
                 <div class="showcase">
                     <div class="image-container">
                         <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
-                        <img src="show.jpg" alt="Warzone Camos" class="show-image">
+                        <img src="warzone3_camos.jpg" alt="Warzone 3 Camos" class="show-image">
                     </div>
                 </div>
                 <div class="button-container">
                     <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
                     <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
                     <button class="service-button" onclick="toggleContactForm()">Provide Details</button>
-                    <button class="download-button" onclick="downloadFile()">Download File</button>
                 </div>
                 <div id="service-details-1" class="service-details" style="display: none;">
                     <p>2 camos per weapon</p>
@@ -139,18 +143,17 @@
                     <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
                 </div>
             </section>
-        </div>
-        <section id="accounts" class="section services-section animate__animated animate__fadeIn">
-            <div class="container">
+            <!-- Service 2: Warzone 3 accounts -->
+            <section id="service2" class="section services-section animate__animated animate__fadeIn">
                 <div class="showcase">
                     <div class="image-container">
                         <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
-                        <img src="warzone-mw3.jpg" alt="Warzone 3 Accounts" class="show-image">
+                        <img src="warzone3_accounts.jpg" alt="Warzone 3 Accounts" class="show-image">
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="service-button" onclick="toggleServiceDetails(5)">battle-net accounts - $25</button>
-                    <button class="service-button" onclick="toggleServiceDetails(6)">steam accounts - $5</button>
+                    <button class="service-button" onclick="toggleServiceDetails(5)">Battle-net accounts - $25</button>
+                    <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $5</button>
                 </div>
                 <div id="service-details-5" class="service-details" style="display: none;">
                     <p>Stock 1X</p>
@@ -160,25 +163,78 @@
                     <p>Stock ∞</p>
                     <div id="paypal-button-container-6"></div> <!-- PayPal button container for Warzone 3 accounts -->
                 </div>
-            </div>
-        </section>
-        <!-- Contact Form -->
-        <div class="container">
-            <section id="contact-form" class="section services-section animate__animated animate__fadeIn" style="display: none;">
-                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/moqgkler" method="post">
-                    <fieldset id="fs-frm-inputs">
-                        <label for="full-name">Discord Username</label>
-                        <input type="text" name="name" id="full-name" placeholder="@username" required="">
-                        <label for="email-address">BattleNet Email Address</label>
-                        <input type="email" name="_replyto" id="email-address" placeholder="email@example.exp" required="">
-                        <label for="message">Camo Choices</label>
-                        <textarea rows="5" name="message" id="message" placeholder="Camos" required=""></textarea>
-                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                    </fieldset>
-                    <input type="submit" value="Submit">
-                </form>
+            </section>
+            <!-- Service 3: New Service -->
+            <section id="service3" class="section services-section animate__animated animate__fadeIn">
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="image-label">Modern Warefare 2 Camo</p> <!-- Label for the image -->
+                        <img src="newmw2icon.webp" alt="New Service" class="show-image"> <!-- Replace placeholder.jpg with your image -->
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="service-button" onclick="toggleServiceDetails(3)">All weapoms - $30</button>
+                </div>
+                <div id="service-details-3" class="service-details" style="display: none;">
+                    <p>Any camo</p>
+                    <p>of your choice</p>
+                </div>
+            </section>
+            <!-- Service 4: Another New Service -->
+            <section id="service4" class="section services-section animate__animated animate__fadeIn">
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="image-label">Another New Service</p> <!-- Label for the image -->
+                        <img src="newmw1icon.webp" alt="Another New Service" class="show-image"> <!-- Replace placeholder.jpg with your image -->
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="service-button" onclick="toggleServiceDetails(4)">All weapons - $30</button>
+                </div>
+                <div id="service-details-4" class="service-details" style="display: none;">
+                    <p>Any camo</p>
+                    <p>of your choice</p>
+                </div>
+            </section>
+            <!-- Service 5: Yet Another New Service -->
+            <section id="service5" class="section services-section animate__animated animate__fadeIn">
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
+                        <img src="newmw3icon.webp" alt="Yet Another New Service" class="show-image"> <!-- Replace placeholder.jpg with your image -->
+                    </div>
+            </section>
+            <!-- Service 6: Final New Service -->
+            <section id="service6" class="section services-section animate__animated animate__fadeIn">
+                <div class="showcase">
+                    <div class="image-container">
+                        <p class="Combat Master ESP-Aimbot File download">Final New Service</p> <!-- Label for the image -->
+                        <img src="placeholder.jpg" alt="Final New Service" class="show-image"> <!-- Replace placeholder.jpg with your image -->
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="download-button" onclick="downloadFile()">Download File</button>
+                </div>
+                <div id="service-details-6" class="service-details" style="display: none;">
+                </div>
             </section>
         </div>
+    </div>
+    <!-- Contact Form -->
+    <div class="container">
+        <section id="contact-form" class="section services-section animate__animated animate__fadeIn" style="display: none;">
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/moqgkler" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <label for="full-name">Discord Username</label>
+                    <input type="text" name="name" id="full-name" placeholder="@username" required="">
+                    <label for="email-address">BattleNet Email Address</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="email@example.exp" required="">
+                    <label for="message">Camo Choices</label>
+                    <textarea rows="5" name="message" id="message" placeholder="Camos" required=""></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </div>
     <footer class="animate__animated animate__fadeInUp">
@@ -186,6 +242,9 @@
             <p>&copy; 2024 moealturej. All rights reserved.</p>
         </div>
     </footer>
-    </div>
+    <!-- JavaScript for PayPal buttons -->
+    <script>
+        // Replace placeholder.jpg with the actual image paths for your services
+    </script>
 </body>
 </html>
