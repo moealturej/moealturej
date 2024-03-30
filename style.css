@@ -46,8 +46,8 @@ header h1 {
 /* Showcase Image Styles */
 .image-container {
     position: relative;
-    max-width: 100%;
-    margin-bottom: 10px;
+    max-width: 50%;
+    margin-bottom: 5px;
 }
 
 .image-label {
@@ -62,8 +62,8 @@ header h1 {
 }
 
 .show-image {
-    width: 100%;
-    max-width: 100%;
+    width: 50%;
+    max-width: 50%;
     height: auto; /* Ensure images maintain aspect ratio */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
