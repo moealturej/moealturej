@@ -45,80 +45,70 @@
     top: 10px;
     left: 10px;
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
 }
 
+/* Button container */
 .button-container {
-    margin-top: 10px;
+    text-align: center;
 }
 
-.service-button, .download-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
+.service-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.service-button:hover, .download-button:hover {
-    background-color: #0056b3;
-}
-
-/* Style for service details */
-.service-details {
-    padding: 10px;
-    background-color: #f9f9f9;
+.download-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    cursor: pointer;
 }
 
-/* Styles for the contact form */
-#contact-form {
-    margin-top: 20px;
-}
-
-#fs-frm-inputs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-}
-
-#fs-frm-inputs label {
-    font-weight: bold;
-}
-
-#fs-frm-inputs input[type="text"],
-#fs-frm-inputs input[type="email"],
-#fs-frm-inputs textarea {
-    width: 100%;
+/* Service details */
+.service-details {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
 }
 
-#fs-frm-inputs textarea {
-    resize: vertical;
-}
-
-#fs-frm-inputs input[type="submit"] {
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-#fs-frm-inputs input[type="submit"]:hover {
-    background-color: #0056b3;
+footer p {
+    margin: 0;
+}
+
+/* Animation classes */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
 }
