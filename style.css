@@ -1,6 +1,6 @@
 /* CSS code for styling the header */
 .header {
-    background: linear-gradient(135deg, #FF1493, #FF4500, #FFD700); /* Gradient background */
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
     color: #fff; /* White text color */
     padding: 120px 20px; /* Increased padding */
     text-align: center;
@@ -34,18 +34,29 @@
     font-size: 36px; /* Increased font size */
 }
 
+/* CSS code for styling the content */
+body {
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
+    color: #333; /* Dark text color */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0;
+    padding: 0;
+}
+
 /* CSS code for styling the services */
 .content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #F0E68C; /* Background color */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 /* Style for the showcase images */
 .show-image {
     width: 100%;
-    height: 450px; /* Increased height for images */
+    height: 500px; /* Increased height for images */
     object-fit: cover;
     border-top-left-radius: 30px; /* Increased border radius */
     border-top-right-radius: 30px; /* Increased border radius */
@@ -56,11 +67,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: -40px; /* Decreased margin between rows */
 }
 
 /* Style for each service */
 .services-section {
-    margin-bottom: 80px; /* Increased margin */
+    margin-bottom: 80px; /* Decreased margin */
     width: calc(50% - 20px); /* Two services per row */
     background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
     border-radius: 30px; /* Increased border radius */
@@ -111,7 +123,7 @@
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #FF1493, #FF4500, #FFD700); /* Gradient background */
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
     padding: 100px 0; /* Increased padding */
     text-align: center;
     color: #fff; /* White text color */
@@ -128,8 +140,4 @@
 
 .animate__fadeInDown {
     animation-name: fadeInDown;
-}
-
-.animate__fadeInUp {
-    animation-name: fadeInUp;
 }
