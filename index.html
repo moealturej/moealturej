@@ -82,7 +82,7 @@
             var container = document.getElementById(paypalButtonContainers[serviceId]);
             container.innerHTML = '';
 
-            // Render PayPal button for the selected service if it's a paid service
+            // Render PayPal button for the selected service
             if (serviceId !== 7) { // Assuming 7 is the ID for Combat Master, which is the only free service
                 paypal.Buttons({
                     createOrder: function(data, actions) {
@@ -121,138 +121,133 @@
             <h1 class="animate__animated animate__fadeInDown">moealturej services</h1>
         </header>
         <div class="container">
-            <!-- Row 1 -->
-            <div class="row">
-                <!-- Service 1: Warzone 3 Camos -->
-                <div class="col">
-                    <section id="service1" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
-                                <img src="show.jpg" alt="Warzone 3 Camos" class="show-image">
+            <!-- Paid Services Section -->
+            <section class="category-section">
+                <h2>Paid Services</h2>
+                <!-- Row 1 -->
+                <div class="row">
+                    <!-- Service 1: Warzone 3 Camos -->
+                    <div class="col">
+                        <section id="service1" class="section services-section animate__animated animate__fadeIn">
+                            <!-- Service section content -->
+                            <div class="showcase">
+                                <div class="image-container">
+                                    <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
+                                    <img src="show.jpg" alt="Warzone 3 Camos" class="show-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
-                            <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
-                            <button class="service-button" onclick="toggleContactForm()">Provide Details</button>
-                        </div>
-                        <div id="service-details-1" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                        </div>
-                        <div id="service-details-2" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 7: Combat Master (Assumed to be Free) -->
-                <div class="col">
-                    <section id="service7" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Combat Master</p> <!-- Label for the image -->
-                                <img src="combatmaster.jpg" alt="Combat Master" class="show-image">
+                            <div class="button-container">
+                                <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
+                                <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
+                                <button class="service-button" onclick="toggleContactForm()">Provide Details</button>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="downloadFile()">Download File</button>
-                        </div>
-                        <div id="service-details-7" class="service-details" style="display: none;">
-                        </div>
-                    </section>
-                </div>
-            </div> <!-- End of Row 1 -->
+                            <div id="service-details-1" class="service-details" style="display: none;">
+                                <p>2 camos per weapon</p>
+                                <p>Any camos</p>
+                                <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                            </div>
+                            <div id="service-details-2" class="service-details" style="display: none;">
+                                <p>2 camos per weapon</p>
+                                <p>Any camos</p>
+                                <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                            </div>
+                        </section>
+                    </div>
+                    <!-- Service 2: Warzone 3 accounts -->
+                    <div class="col">
+                        <section id="service2" class="section services-section animate__animated animate__fadeIn">
+                            <!-- Service section content -->
+                            <div class="showcase">
+                                <div class="image-container">
+                                    <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
+                                    <img src="warzone-mw3.jpg" alt="Warzone 3 Accounts" class="show-image">
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <button class="service-button" onclick="toggleServiceDetails(5)">Battle-net accounts - $25</button>
+                                <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $5</button>
+                            </div>
+                            <div id="service-details-5" class="service-details" style="display: none;">
+                                <p>Stock 1X</p>
+                                <div id="paypal-button-container-5"></div> <!-- PayPal button container for Warzone 3 accounts -->
+                            </div>
+                            <div id="service-details-6" class="service-details" style="display: none;">
+                                <p>Stock ∞</p>
+                                <div id="paypal-button-container-6"></div> <!-- PayPal button container for Warzone 3 accounts -->
+                            </div>
+                        </section>
+                    </div>
+                </div> <!-- End of Row 1 -->
 
-            <!-- Row 2 -->
-            <div class="row">
-                <!-- Service 3: New Service -->
-                <div class="col">
-                    <section id="service3" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Modern Warfare 2 Camo</p> <!-- Label for the image -->
-                                <img src="newmw2icon.webp" alt="New Service" class="show-image">
+                <!-- Row 2 -->
+                <div class="row">
+                    <!-- Service 3: New Service -->
+                    <div class="col">
+                        <section id="service3" class="section services-section animate__animated animate__fadeIn">
+                            <!-- Service section content -->
+                            <div class="showcase">
+                                <div class="image-container">
+                                    <p class="image-label">Modern Warfare 2 Camo</p> <!-- Label for the image -->
+                                    <img src="newmw2icon.webp" alt="New Service" class="show-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(3)">All weapons - $30</button>
-                        </div>
-                        <div id="service-details-3" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-3"></div>
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 4: Another New Service -->
-                <div class="col">
-                    <section id="service4" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">MW19 Camos</p> <!-- Label for the image -->
-                                <img src="newmw1icon.webp" alt="Another New Service" class="show-image">
+                            <div class="button-container">
+                                <button class="service-button" onclick="toggleServiceDetails(3)">All weapons - $30</button>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(4)">All weapons - $30</button>
-                        </div>
-                        <div id="service-details-4" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-4"></div>
-                        </div>
-                    </section>
-                </div>
-            </div> <!-- End of Row 2 -->
+                            <div id="service-details-3" class="service-details" style="display: none;">
+                                <p>2 camos per weapon</p>
+                                <p>Any camos</p>
+                                <div id="paypal-button-container-3"></div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- Service 4: Another New Service -->
+                    <div class="col">
+                        <section id="service4" class="section services-section animate__animated animate__fadeIn">
+                            <!-- Service section content -->
+                            <div class="showcase">
+                                <div class="image-container">
+                                    <p class="image-label">MW19 Camos</p> <!-- Label for the image -->
+                                    <img src="newmw1icon.webp" alt="Another New Service" class="show-image">
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <button class="service-button" onclick="toggleServiceDetails(4)">All weapons - $30</button>
+                            </div>
+                            <div id="service-details-4" class="service-details" style="display: none;">
+                                <p>2 camos per weapon</p>
+                                <p>Any camos</p>
+                                <div id="paypal-button-container-4"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div> <!-- End of Row 2 -->
+            </section> <!-- End of Paid Services Section -->
 
-            <!-- Row 3 -->
-            <div class="row">
-                <!-- Service 5: Yet Another New Service -->
-                <div class="col">
-                    <section id="service5" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">BOCW Camos</p> <!-- Label for the image -->
-                                <img src="maxresdefault.jpg" alt="Yet Another New Service" class="show-image">
+            <!-- Free Services Section -->
+            <section class="category-section">
+                <h2>Free Services</h2>
+                <!-- Row 3 -->
+                <div class="row">
+                    <!-- Service 7: Combat Master -->
+                    <div class="col">
+                        <section id="service7" class="section services-section animate__animated animate__fadeIn">
+                            <!-- Service section content -->
+                            <div class="showcase">
+                                <div class="image-container">
+                                    <p class="image-label">Combat Master</p> <!-- Label for the image -->
+                                    <img src="combatmaster.jpg" alt="Combat Master" class="show-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(5)">All weapons - $30</button>
-                        </div>
-                        <div id="service-details-5" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 6: Final New Service -->
-                <div class="col">
-                    <section id="service6" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">CM ESP-Aimbot file</p> <!-- Label for the image -->
-                                <img src="Combat Master 2024.03.22 - 16.46.29.02 - frame at 0m9s.jpg" alt="Final New Service" class="show-image">
+                            <div class="button-container">
+                                <button class="download-button" onclick="downloadFile()">Download File</button>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="download-button" onclick="downloadFile()">Download File</button>
-                        </div>
-                        <div id="service-details-6" class="service-details" style="display: none;">
-                        </div>
-                    </section>
-                </div>
-            </div> <!-- End of Row 3 -->
-
+                            <div id="service-details-7" class="service-details" style="display: none;">
+                            </div>
+                        </section>
+                    </div>
+                </div> <!-- End of Row 3 -->
+            </section> <!-- End of Free Services Section -->
         </div>
     </div>
     <footer class="animate__animated animate__fadeInUp">
