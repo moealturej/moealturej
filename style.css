@@ -2,7 +2,7 @@
 .header {
     background: linear-gradient(135deg, #FF1493, #FF4500, #FFD700); /* Gradient background */
     color: #fff; /* White text color */
-    padding: 100px 20px; /* Increased padding */
+    padding: 120px 20px; /* Increased padding */
     text-align: center;
     position: relative;
 }
@@ -26,12 +26,12 @@
 }
 
 .header-title {
-    font-size: 72px; /* Increased font size */
-    margin-bottom: 30px; /* Increased margin */
+    font-size: 80px; /* Increased font size */
+    margin-bottom: 40px; /* Increased margin */
 }
 
 .header-description {
-    font-size: 32px; /* Increased font size */
+    font-size: 36px; /* Increased font size */
 }
 
 /* CSS code for styling the services */
@@ -39,15 +39,16 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #F0E68C; /* Background color */
 }
 
 /* Style for the showcase images */
 .show-image {
     width: 100%;
-    height: 400px; /* Increased height for images */
+    height: 450px; /* Increased height for images */
     object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 30px; /* Increased border radius */
+    border-top-right-radius: 30px; /* Increased border radius */
 }
 
 /* Row layout for services */
@@ -62,7 +63,7 @@
     margin-bottom: 80px; /* Increased margin */
     width: calc(50% - 20px); /* Two services per row */
     background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
-    border-radius: 20px;
+    border-radius: 30px; /* Increased border radius */
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Soft shadow */
     transition: transform 0.3s ease-in-out;
@@ -79,11 +80,11 @@
 
 .image-label {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    padding: 10px 20px; /* Increased padding */
-    border-radius: 10px; /* Rounded corners */
+    padding: 15px 30px; /* Increased padding */
+    border-radius: 15px; /* Rounded corners */
     font-weight: bold;
     color: #fff; /* White text color */
 }
@@ -92,10 +93,10 @@
 .service-button {
     display: block;
     width: 100%;
-    padding: 30px; /* Increased padding */
+    padding: 20px; /* Decreased padding */
     margin-bottom: 20px; /* Increased margin */
     text-align: center;
-    background-color: #00FFFF; /* Cyan color */
+    background-color: #87CEEB; /* Sky blue color */
     color: #fff; /* White text color */
     border: none;
     border-radius: 15px; /* Rounded corners */
@@ -104,14 +105,14 @@
 }
 
 .service-button:hover {
-    background-color: #00CED1; /* Darker cyan color on hover */
+    background-color: #4682B4; /* Darker sky blue color on hover */
     transform: translateY(-5px); /* Button lift on hover */
 }
 
 /* Footer */
 .footer {
     background: linear-gradient(135deg, #FF1493, #FF4500, #FFD700); /* Gradient background */
-    padding: 80px 0; /* Increased padding */
+    padding: 100px 0; /* Increased padding */
     text-align: center;
     color: #fff; /* White text color */
 }
