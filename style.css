@@ -2,20 +2,23 @@
 
 /* Container for the content */
 .content {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 100px 20px;
 }
 
 /* Style for the category sections */
 .category-section {
-    margin-bottom: 40px;
+    margin-bottom: 150px;
 }
 
 .category-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 72px;
+    margin-bottom: 80px;
+    color: #ff69b4; /* Hot pink */
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
 }
 
 /* Row layout for services */
@@ -27,14 +30,18 @@
 
 /* Style for each service */
 .services-section {
-    margin-bottom: 20px;
-    width: calc(50% - 10px); /* Two services per row */
+    margin-bottom: 150px;
+    width: calc(50% - 80px); /* Two services per row */
+    background: linear-gradient(135deg, #ff9f43, #e74c3c); /* Gradient from orange to red */
+    border-radius: 80px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 .showcase {
     position: relative;
     overflow: hidden;
-    height: 200px; /* Set a fixed height for the showcase */
+    height: 600px; /* Set a fixed height for the showcase */
 }
 
 .show-image {
@@ -45,13 +52,15 @@
 
 .image-label {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px 10px;
-    border-radius: 5px;
+    top: 80px;
+    left: 80px;
+    background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+    padding: 40px 80px;
+    border-radius: 90px;
     font-weight: bold;
-    color: #333;
+    color: #ff69b4; /* Hot pink */
+    text-transform: uppercase;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 /* Button container */
@@ -60,42 +69,46 @@
 }
 
 .service-button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff6b6b; /* Red color for buttons */
+    margin: 80px;
+    padding: 60px 120px;
+    font-size: 40px;
+    background: linear-gradient(135deg, #1abc9c, #3498db); /* Gradient from turquoise to blue */
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 .download-button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #45aaf2; /* Blue color for download button */
+    margin: 80px;
+    padding: 60px 120px;
+    font-size: 40px;
+    background: linear-gradient(135deg, #9b59b6, #f39c12); /* Gradient from purple to yellow */
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 /* Service details */
 .service-details {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    background-color: #f9f9f9;
+    padding: 100px;
+    border-top: 10px solid #333; /* Dark gray */
+}
+
+.service-details p {
+    margin-bottom: 80px;
+    line-height: 2.8;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    padding: 20px 0;
+    background: radial-gradient(circle, #2ecc71, #27ae60); /* Gradient from green to dark green */
+    padding: 200px 0;
     text-align: center;
     position: fixed;
     bottom: 0;
