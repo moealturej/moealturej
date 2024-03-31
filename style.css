@@ -1,5 +1,26 @@
 /* CSS code for styling the services */
 
+/* Body background */
+body {
+    background: linear-gradient(135deg, #ff7675, #fd79a8, #a29bfe, #74b9ff, #55efc4); /* Colorful gradient background */
+    background-size: 500% 500%; /* Background size for gradient animation */
+    animation: gradientAnimation 10s ease infinite; /* Animation for gradient background */
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Container for the content */
 .content {
     max-width: 1200px;
@@ -13,9 +34,9 @@
 }
 
 .category-section h2 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 30px;
-    color: #333;
+    color: #fff; /* White text color */
     text-align: center;
 }
 
@@ -30,33 +51,37 @@
 .services-section {
     margin-bottom: 60px;
     width: calc(50% - 20px); /* Two services per row */
-    background: linear-gradient(135deg, #6c5ce7, #fd79a8); /* Gradient from purple to pink */
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
 .showcase {
     position: relative;
     overflow: hidden;
     height: 200px; /* Set a fixed height for the showcase */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .show-image {
     width: 100%;
-    height: 100%; /* Ensure all images fill their containers */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .image-label {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
-    color: #333;
+    color: #fff; /* White text color */
 }
 
 /* Button container */
@@ -65,26 +90,35 @@
 }
 
 .service-button {
-    margin: 10px;
+    margin: 20px;
     padding: 12px 24px;
-    font-size: 14px;
-    background: linear-gradient(135deg, #6c5ce7, #fd79a8); /* Gradient for buttons */
-    color: #fff;
+    font-size: 16px;
+    background: linear-gradient(135deg, #ff7675, #fd79a8); /* Gradient background for buttons */
+    color: #fff; /* White text color */
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    animation: pulse 1.5s infinite alternate; /* Animation for buttons */
+    animation: buttonAnimation 1s infinite alternate; /* Button animation */
 }
 
 .service-button:hover {
-    background: linear-gradient(135deg, #fd79a8, #6c5ce7); /* Gradient on hover */
+    background: linear-gradient(135deg, #fd79a8, #ff7675); /* Gradient background change on hover */
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Service details */
 .service-details {
     padding: 20px;
-    border-top: 1px solid #ccc; /* Light gray */
+    border-top: 2px solid #ff7675; /* Pink border */
 }
 
 .service-details p {
@@ -94,10 +128,10 @@
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     padding: 20px 0;
     text-align: center;
-    color: #fff;
+    color: #fff; /* White text color */
 }
 
 /* Animation classes */
@@ -111,14 +145,4 @@ footer {
 
 .animate__fadeInUp {
     animation-name: fadeInUp;
-}
-
-/* Button animation keyframes */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
 }
