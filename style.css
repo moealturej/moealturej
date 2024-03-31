@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
-    color: #333; /* Dark text color */
+    color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -140,7 +140,7 @@ body {
 /* Footer Styles */
 .footer {
     background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
-    color: #fff;
+    color: #000;
     text-align: center;
     padding: 60px 20px; /* Increased padding */
 }
