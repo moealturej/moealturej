@@ -9,6 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
+    color: #333;
 }
 
 /* Container for the content */
@@ -18,14 +19,27 @@ body {
     padding: 20px;
 }
 
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
 /* Style for the category sections */
 .category-section {
     margin-bottom: 40px;
 }
 
 .category-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #007bff;
 }
 
 /* Row layout for services */
@@ -37,11 +51,17 @@ body {
 
 /* Style for each service */
 .services-section {
-    margin-bottom: 20px;
-    width: calc(50% - 10px); /* Two services per row */
+    width: calc(50% - 20px); /* Two services per row with margin */
+    margin-bottom: 40px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.services-section:hover {
+    transform: translateY(-5px);
 }
 
 .showcase {
@@ -58,28 +78,31 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 0 5px 5px 0;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .button-container {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
 }
 
 .service-button, .download-button {
     display: inline-block;
-    width: 45%;
-    padding: 10px;
-    margin: 0 5px;
+    width: calc(50% - 20px);
+    padding: 12px;
+    margin: 0 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 .service-button:hover, .download-button:hover {
@@ -88,34 +111,36 @@ body {
 
 /* Style for service details */
 .service-details {
-    padding: 10px;
+    padding: 20px;
     background-color: #f9f9f9;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
 }
 
 /* Styles for the contact form */
 #contact-form {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #fs-frm-inputs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 #fs-frm-inputs label {
     font-weight: bold;
+    font-size: 16px;
 }
 
 #fs-frm-inputs input[type="text"],
 #fs-frm-inputs input[type="email"],
 #fs-frm-inputs textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 #fs-frm-inputs textarea {
@@ -124,15 +149,27 @@ body {
 
 #fs-frm-inputs input[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 #fs-frm-inputs input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #777;
 }
