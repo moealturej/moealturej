@@ -34,11 +34,13 @@
 .showcase {
     position: relative;
     overflow: hidden;
+    height: 200px; /* Set a fixed height for the showcase */
 }
 
 .show-image {
     width: 100%;
-    height: auto;
+    height: 100%; /* Ensure all images fill their containers */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
 .image-label {
@@ -61,22 +63,24 @@
     margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #ff6b6b; /* Red color for buttons */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .download-button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #28a745;
+    background-color: #45aaf2; /* Blue color for download button */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* Service details */
