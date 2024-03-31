@@ -1,88 +1,70 @@
-/* CSS code for styling the header */
-.header {
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
-    color: #fff; /* White text color */
-    padding: 120px 20px; /* Increased padding */
-    text-align: center;
-    position: relative;
-}
-
-.header:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('header-background.jpg'); /* Image overlay */
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
-.header-content {
-    position: relative;
-    z-index: 1;
-}
-
-.header-title {
-    font-size: 80px; /* Increased font size */
-    margin-bottom: 40px; /* Increased margin */
-}
-
-.header-description {
-    font-size: 36px; /* Increased font size */
-}
-
-/* CSS code for styling the content */
-body {
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
-    color: #333; /* Dark text color */
-    font-family: Arial, sans-serif; /* Font family */
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* CSS code for styling the services */
-.content {
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Style for the showcase images */
-.show-image {
-    width: 100%;
-    height: 500px; /* Increased height for images */
-    object-fit: cover;
-    border-top-left-radius: 30px; /* Increased border radius */
-    border-top-right-radius: 30px; /* Increased border radius */
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
+    color: #fff; /* White text color */
+    padding: 80px 20px; /* Increased padding */
+    text-align: center;
 }
 
-/* Row layout for services */
+.header-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header-description {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* Services Styles */
+.category-section {
+    margin-bottom: 40px;
+}
+
 .row {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: -40px; /* Decreased margin between rows */
+    margin: -20px;
 }
 
-/* Style for each service */
+.col {
+    flex: 0 0 calc(50% - 40px);
+    margin: 20px;
+}
+
 .services-section {
-    margin-bottom: 80px; /* Decreased margin */
-    width: calc(50% - 20px); /* Two services per row */
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
-    border-radius: 30px; /* Increased border radius */
+    background-color: #fff; /* White background */
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
 .services-section:hover {
-    transform: translateY(-10px); /* Hover effect */
+    transform: translateY(-5px);
 }
 
 .showcase {
@@ -90,50 +72,66 @@ body {
     overflow: hidden;
 }
 
+.show-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.show-image:hover {
+    transform: scale(1.05); /* Image zoom effect on hover */
+}
+
 .image-label {
     position: absolute;
     top: 20px;
     left: 20px;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    padding: 15px 30px; /* Increased padding */
-    border-radius: 15px; /* Rounded corners */
+    padding: 10px 20px; /* Increased padding */
+    border-radius: 10px; /* Rounded corners */
     font-weight: bold;
     color: #fff; /* White text color */
 }
 
-/* Style for buttons */
-.service-button {
-    display: block;
-    width: 100%;
-    padding: 20px; /* Decreased padding */
-    margin-bottom: 20px; /* Increased margin */
+.button-container {
     text-align: center;
-    background-color: #87CEEB; /* Sky blue color */
-    color: #fff; /* White text color */
+    margin-top: 20px;
+}
+
+.service-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
     border: none;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 5px;
+    background-color: #8A2BE2; /* Purple button color */
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
 .service-button:hover {
-    background-color: #4682B4; /* Darker sky blue color on hover */
-    transform: translateY(-5px); /* Button lift on hover */
+    background-color: #FF69B4; /* Pink button color on hover */
+    transform: scale(1.05); /* Button scale effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
 }
 
-/* Footer */
+/* Footer Styles */
 .footer {
     background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
-    padding: 100px 0; /* Increased padding */
+    color: #fff;
     text-align: center;
-    color: #fff; /* White text color */
+    padding: 60px 20px; /* Increased padding */
 }
 
 .footer p {
-    margin: 0;
+    margin: 10px 0;
 }
 
-/* Animation classes */
+/* Animation Classes */
 .animate__animated {
     animation-duration: 1s;
 }
