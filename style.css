@@ -93,7 +93,7 @@ header h1 {
 
 .service-button, .download-button {
     display: inline-block;
-    width: calc(50% - 20px);
+    width: calc(80% - 20px); /* Adjusted width for better visibility */
     padding: 12px;
     margin: 0 10px;
     background-color: #007bff;
