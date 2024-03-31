@@ -2,22 +2,20 @@
 
 /* Container for the content */
 .content {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 50px 20px;
 }
 
 /* Style for the category sections */
 .category-section {
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 
 .category-section h2 {
-    font-size: 72px;
-    margin-bottom: 80px;
-    color: #ff69b4; /* Hot pink */
-    text-transform: uppercase;
-    letter-spacing: 8px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
     text-align: center;
 }
 
@@ -30,18 +28,18 @@
 
 /* Style for each service */
 .services-section {
-    margin-bottom: 150px;
-    width: calc(50% - 80px); /* Two services per row */
-    background: linear-gradient(135deg, #ff9f43, #e74c3c); /* Gradient from orange to red */
-    border-radius: 80px;
+    margin-bottom: 60px;
+    width: calc(50% - 20px); /* Two services per row */
+    background-color: #fff; /* White background */
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .showcase {
     position: relative;
     overflow: hidden;
-    height: 600px; /* Set a fixed height for the showcase */
+    height: 200px; /* Set a fixed height for the showcase */
 }
 
 .show-image {
@@ -52,15 +50,13 @@
 
 .image-label {
     position: absolute;
-    top: 80px;
-    left: 80px;
-    background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
-    padding: 40px 80px;
-    border-radius: 90px;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
     font-weight: bold;
-    color: #ff69b4; /* Hot pink */
-    text-transform: uppercase;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    color: #333;
 }
 
 /* Button container */
@@ -69,54 +65,37 @@
 }
 
 .service-button {
-    margin: 80px;
-    padding: 60px 120px;
-    font-size: 40px;
-    background: linear-gradient(135deg, #1abc9c, #3498db); /* Gradient from turquoise to blue */
+    margin: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff; /* Blue */
     color: #fff;
     border: none;
-    border-radius: 100px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
-.download-button {
-    margin: 80px;
-    padding: 60px 120px;
-    font-size: 40px;
-    background: linear-gradient(135deg, #9b59b6, #f39c12); /* Gradient from purple to yellow */
-    color: #fff;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Soft shadow */
+.service-button:hover {
+    background-color: #0056b3; /* Dark blue on hover */
 }
 
 /* Service details */
 .service-details {
-    padding: 100px;
-    border-top: 10px solid #333; /* Dark gray */
+    padding: 20px;
+    border-top: 1px solid #ccc; /* Light gray */
 }
 
 .service-details p {
-    margin-bottom: 80px;
-    line-height: 2.8;
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 /* Footer */
 footer {
-    background: radial-gradient(circle, #2ecc71, #27ae60); /* Gradient from green to dark green */
-    padding: 200px 0;
+    background-color: #333;
+    padding: 20px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
     color: #fff;
 }
 
