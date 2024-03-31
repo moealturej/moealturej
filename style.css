@@ -1,6 +1,6 @@
 /* CSS code for styling the header */
 .header {
-    background: linear-gradient(135deg, #8A2BE2, #FF8C00, #FF4500); /* Gradient background */
+    background: linear-gradient(135deg, #FF1493, #FF4500); /* Gradient background */
     color: #fff; /* White text color */
     padding: 60px 20px;
     text-align: center;
@@ -44,7 +44,7 @@
 /* Style for the showcase images */
 .show-image {
     width: 100%;
-    height: 200px; /* Fixed height for images */
+    height: 250px; /* Increased height for images */
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -61,7 +61,7 @@
 .services-section {
     margin-bottom: 60px;
     width: calc(50% - 20px); /* Two services per row */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
@@ -88,9 +88,29 @@
     color: #fff; /* White text color */
 }
 
+/* Style for buttons */
+.service-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #FF6347; /* Coral color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.service-button:hover {
+    background-color: #FF4500; /* Darker coral color on hover */
+    transform: translateY(-2px); /* Button lift on hover */
+}
+
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #8A2BE2, #FF8C00, #FF4500); /* Gradient background */
+    background: linear-gradient(135deg, #FF1493, #FF4500); /* Gradient background */
     padding: 40px 0;
     text-align: center;
     color: #fff; /* White text color */
