@@ -29,6 +29,10 @@ body {
     text-align: center;
 }
 
+.header h1 {
+    text-align: center; /* Center-align the text */
+}
+
 .header-title {
     font-size: 48px;
     margin-bottom: 20px;
