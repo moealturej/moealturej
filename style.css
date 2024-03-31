@@ -15,6 +15,7 @@
 .category-section h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #333;
 }
 
 /* Row layout for services */
@@ -48,6 +49,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
+    color: #333;
 }
 
 /* Button container */
@@ -88,7 +90,7 @@
 
 /* Footer */
 footer {
-    background-color: #f8f9fa;
+    background-color: #333;
     padding: 20px 0;
     text-align: center;
     position: fixed;
@@ -98,6 +100,7 @@ footer {
 
 footer p {
     margin: 0;
+    color: #fff;
 }
 
 /* Animation classes */
