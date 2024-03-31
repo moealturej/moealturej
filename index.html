@@ -82,34 +82,36 @@
             var container = document.getElementById(paypalButtonContainers[serviceId]);
             container.innerHTML = '';
 
-            // Render PayPal button for the selected service
-            paypal.Buttons({
-                createOrder: function(data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{
-                            amount: {
-                                value: paypalButtonOptions[serviceId].amount
-                            }
-                        }]
-                    });
-                },
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        console.log(details);
-                        alert('Transaction completed by ' + details.payer.name.given_name + '! Thanks for your purchase.');
-                    });
-                },
-                onError: function(err) {
-                    console.log(err);
-                    alert('An error occurred during the transaction. Please try again later.');
-                },
-                style: {
-                    layout: 'vertical',
-                    color: 'gold',
-                    shape: 'rect',
-                    label: 'paypal'
-                }
-            }).render(container);
+            // Render PayPal button for the selected service if it's a paid service
+            if (serviceId !== 7) { // Assuming 7 is the ID for Combat Master, which is the only free service
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: paypalButtonOptions[serviceId].amount
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            console.log(details);
+                            alert('Transaction completed by ' + details.payer.name.given_name + '! Thanks for your purchase.');
+                        });
+                    },
+                    onError: function(err) {
+                        console.log(err);
+                        alert('An error occurred during the transaction. Please try again later.');
+                    },
+                    style: {
+                        layout: 'vertical',
+                        color: 'gold',
+                        shape: 'rect',
+                        label: 'paypal'
+                    }
+                }).render(container);
+            }
         }
     </script>
 </head>
@@ -148,27 +150,20 @@
                         </div>
                     </section>
                 </div>
-                <!-- Service 2: Warzone 3 accounts -->
+                <!-- Service 7: Combat Master (Assumed to be Free) -->
                 <div class="col">
-                    <section id="service2" class="section services-section animate__animated animate__fadeIn">
+                    <section id="service7" class="section services-section animate__animated animate__fadeIn">
                         <!-- Service section content -->
                         <div class="showcase">
                             <div class="image-container">
-                                <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
-                                <img src="warzone-mw3.jpg" alt="Warzone 3 Accounts" class="show-image">
+                                <p class="image-label">Combat Master</p> <!-- Label for the image -->
+                                <img src="combatmaster.jpg" alt="Combat Master" class="show-image">
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(5)">Battle-net accounts - $25</button>
-                            <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $5</button>
+                            <button class="service-button" onclick="downloadFile()">Download File</button>
                         </div>
-                        <div id="service-details-5" class="service-details" style="display: none;">
-                            <p>Stock 1X</p>
-                            <div id="paypal-button-container-5"></div> <!-- PayPal button container for Warzone 3 accounts -->
-                        </div>
-                        <div id="service-details-6" class="service-details" style="display: none;">
-                            <p>Stock ∞</p>
-                            <div id="paypal-button-container-6"></div> <!-- PayPal button container for Warzone 3 accounts -->
+                        <div id="service-details-7" class="service-details" style="display: none;">
                         </div>
                     </section>
                 </div>
@@ -182,7 +177,7 @@
                         <!-- Service section content -->
                         <div class="showcase">
                             <div class="image-container">
-                                <p class="image-label">Modern Warefare 2 Camo</p> <!-- Label for the image -->
+                                <p class="image-label">Modern Warfare 2 Camo</p> <!-- Label for the image -->
                                 <img src="newmw2icon.webp" alt="New Service" class="show-image">
                             </div>
                         </div>
@@ -231,9 +226,9 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(4)">All weapons - $30</button>
+                            <button class="service-button" onclick="toggleServiceDetails(5)">All weapons - $30</button>
                         </div>
-                        <div id="service-details-4" class="service-details" style="display: none;">
+                        <div id="service-details-5" class="service-details" style="display: none;">
                             <p>2 camos per weapon</p>
                             <p>Any camos</p>
                         </div>
