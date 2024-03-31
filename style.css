@@ -1,43 +1,53 @@
+/* CSS code for styling the header */
+.header {
+    background: linear-gradient(135deg, #8A2BE2, #FF8C00, #FF4500); /* Gradient background */
+    color: #fff; /* White text color */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('header-background.jpg'); /* Image overlay */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.header-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header-description {
+    font-size: 24px;
+}
+
 /* CSS code for styling the services */
-
-/* Body background */
-body {
-    background: linear-gradient(135deg, #ff7675, #fd79a8, #a29bfe, #74b9ff, #55efc4); /* Colorful gradient background */
-    background-size: 500% 500%; /* Background size for gradient animation */
-    animation: gradientAnimation 10s ease infinite; /* Animation for gradient background */
-    margin: 0;
-    padding: 0;
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Container for the content */
 .content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 25px 10px;
+    padding: 20px;
 }
 
-/* Style for the category sections */
-.category-section {
-    margin-bottom: 25px;
-}
-
-.category-section h2 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #fff; /* White text color */
-    text-align: center;
+/* Style for the showcase images */
+.show-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 /* Row layout for services */
@@ -49,89 +59,45 @@ body {
 
 /* Style for each service */
 .services-section {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     width: calc(50% - 20px); /* Two services per row */
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.services-section:hover {
+    transform: translateY(-5px); /* Hover effect */
 }
 
 .showcase {
     position: relative;
     overflow: hidden;
-    height: 100px; /* Set a fixed height for the showcase */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.show-image {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .image-label {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
     color: #fff; /* White text color */
 }
 
-/* Button container */
-.button-container {
-    text-align: center;
-}
-
-.service-button {
-    margin: 10px;
-    padding: 12px 24px;
-    font-size: 16px;
-    background: linear-gradient(135deg, #ff7675, #fd79a8); /* Gradient background for buttons */
-    color: #fff; /* White text color */
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    animation: buttonAnimation 1s infinite alternate; /* Button animation */
-}
-
-.service-button:hover {
-    background: linear-gradient(135deg, #fd79a8, #ff7675); /* Gradient background change on hover */
-}
-
-@keyframes buttonAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-5px);
-    }
-}
-
-/* Service details */
-.service-details {
-    padding: 10px;
-    border-top: 2px solid #ff7675; /* Pink border */
-}
-
-.service-details p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
 /* Footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    padding: 20px 0;
+.footer {
+    background: linear-gradient(135deg, #8A2BE2, #FF8C00, #FF4500); /* Gradient background */
+    padding: 40px 0;
     text-align: center;
     color: #fff; /* White text color */
+}
+
+.footer p {
+    margin: 0;
 }
 
 /* Animation classes */
