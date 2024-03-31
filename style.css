@@ -118,6 +118,24 @@ body {
     transform: scale(1.05); /* Button scale effect on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
 }
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #00FF00, #008000); /* Green gradient background */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background: linear-gradient(135deg, #008000, #00FF00); /* Reversed gradient on hover */
+    transform: scale(1.05); /* Button scale effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+}
 
 /* Footer Styles */
 .footer {
