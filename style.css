@@ -30,7 +30,7 @@
 .services-section {
     margin-bottom: 60px;
     width: calc(50% - 20px); /* Two services per row */
-    background-color: #fff; /* White background */
+    background: linear-gradient(135deg, #6c5ce7, #fd79a8); /* Gradient from purple to pink */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -66,18 +66,19 @@
 
 .service-button {
     margin: 10px;
-    padding: 8px 16px;
+    padding: 12px 24px;
     font-size: 14px;
-    background-color: #007bff; /* Blue */
+    background: linear-gradient(135deg, #6c5ce7, #fd79a8); /* Gradient for buttons */
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    animation: pulse 1.5s infinite alternate; /* Animation for buttons */
 }
 
 .service-button:hover {
-    background-color: #0056b3; /* Dark blue on hover */
+    background: linear-gradient(135deg, #fd79a8, #6c5ce7); /* Gradient on hover */
 }
 
 /* Service details */
@@ -110,4 +111,14 @@ footer {
 
 .animate__fadeInUp {
     animation-name: fadeInUp;
+}
+
+/* Button animation keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
