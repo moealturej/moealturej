@@ -48,12 +48,12 @@
 
         // Function to trigger file download
         function downloadFile(file) {
-        var link = document.createElement('a');
-        link.href = file; // Specify the path to your file
-        link.download = file.split('/').pop(); // Extract the file name from the URL
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+            var link = document.createElement('a');
+            link.href = file; // Specify the path to your file
+            link.download = file.split('/').pop(); // Extract the file name from the URL
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         // Render PayPal buttons for the selected service
@@ -240,10 +240,12 @@
                                 </div>
                             </div>
                             <div class="button-container">
-                                <button class="download-button" onclick="downloadFile(CombatMaster.dll)">Download File</button>
+                                <button class="download-button" onclick="downloadFile('CombatMaster.dll')">Download File</button>
                             </div>
                             <div id="service-details-7" class="service-details" style="display: none;">
                             </div>
+                        </section>
+                    </div>
                     <!-- Service 8: FiveM -->
                     <div class="col">
                         <section id="service8" class="section services-section animate__animated animate__fadeIn">
@@ -255,10 +257,12 @@
                                 </div>
                             </div>
                             <div class="button-container">
-                                <button class="download-button" onclick="downloadFile(fontesie.exe)">Download File</button>
+                                <button class="download-button" onclick="downloadFile('fontesie.exe')">Download File</button>
                             </div>
                             <div id="service-details-8" class="service-details" style="display: none;">
                             </div>
+                        </section>
+                    </div>
                     <!-- Service 9: Spoofer -->
                     <div class="col">
                         <section id="service9" class="section services-section animate__animated animate__fadeIn">
@@ -274,9 +278,14 @@
                             </div>
                             <div id="service-details-9" class="service-details" style="display: none;">
                             </div>
+                        </section>
+                    </div>
+                </div> <!-- End of Row 3 -->
+
+                <!-- Row 4 -->
+                <div class="row">
                     <!-- Service 10: Spotify -->
-                    <div class="row4">
-                        <div class="col">
+                    <div class="col">
                         <section id="service10" class="section services-section animate__animated animate__fadeIn">
                             <!-- Service section content -->
                             <div class="showcase">
@@ -286,10 +295,12 @@
                                 </div>
                             </div>
                             <div class="button-container">
-                                <button class="download-button" onclick="downloadFile(Spotify-Premium-Tool.exe)">Download File</button>
+                                <button class="download-button" onclick="downloadFile('Spotify-Premium-Tool.exe')">Download File</button>
                             </div>
                             <div id="service-details-10" class="service-details" style="display: none;">
                             </div>
+                        </section>
+                    </div>
                     <!-- Service 11: Windows -->
                     <div class="col">
                         <section id="service11" class="section services-section animate__animated animate__fadeIn">
@@ -301,14 +312,14 @@
                                 </div>
                             </div>
                             <div class="button-container">
-                                <button class="download-button" onclick="downloadFile(Windows-Activation-Tool.exe)">Download File</button>
+                                <button class="download-button" onclick="downloadFile('Windows-Activation-Tool.exe')">Download File</button>
                             </div>
                             <div id="service-details-11" class="service-details" style="display: none;">
                             </div>
                         </section>
                     </div>
-                </div>
-            </section>
+                </div> <!-- End of Row 4 -->
+            </section> <!-- End of Free Services Section -->
         </div>
     </div>
     <footer class="animate__animated animate__fadeInUp">
