@@ -47,13 +47,13 @@
         }
 
         // Function to trigger file download
-        function downloadFile() {
-            var link = document.createElement('a');
-            link.href = 'CombatMaster.dll'; // Specify the path to your file
-            link.download = 'CombatMaster.dll'; // Specify the file name
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+        function downloadFile(file) {
+        var link = document.createElement('a');
+        link.href = file; // Specify the path to your file
+        link.download = file.split('/').pop(); // Extract the file name from the URL
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
         }
 
         // Render PayPal buttons for the selected service
@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="button-container">
-                                <button class="download-button" onclick="downloadFile()">Download File</button>
+                                <button class="download-button" onclick="downloadFile(CombatMaster.dll)">Download File</button>
                             </div>
                             <div id="service-details-7" class="service-details" style="display: none;">
                             </div>
@@ -267,12 +267,12 @@
                             <!-- Service section content -->
                             <div class="showcase">
                                 <div class="image-container">
-                                    <p class="image-label">CM ESP-Aimbot</p> <!-- Label for the image -->
+                                    <p class="image-label">tester</p> <!-- Label for the image -->
                                     <img src="Combat Master 2024.03.22 - 16.46.29.02 - frame at 0m9s.jpg" alt="Combat Master" class="show-image">
                                 </div>
                             </div>
                             <div class="button-container">
-                                <button class="download-button" onclick="downloadFile('show.jpg')">Download Service 8</button>
+                                <button class="download-button" onclick="downloadFile('show.jpg')">Download Service asdads</button>
                             </div>
                             <div id="service-details-11122222227" class="service-details" style="display: none;">
                             </div>
