@@ -26,7 +26,6 @@ body {
     background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
     color: #fff; /* White text color */
     padding: 80px 20px; /* Increased padding */
-    text-align: center;
 }
 
 .header h1 {
