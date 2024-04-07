@@ -36,16 +36,6 @@
             lastShownDetailsId = id;
         }
 
-        // Show or hide contact form
-        function toggleContactForm() {
-            var form = document.getElementById('contact-form');
-            if (form.style.display === 'block') {
-                form.style.display = 'none';
-            } else {
-                form.style.display = 'block';
-            }
-        }
-
         // Function to trigger file download
         function downloadFile(file) {
             var link = document.createElement('a');
@@ -116,6 +106,7 @@
 <body>
     <div class="content">
         <header>
+            <img src="show.jpg" alt= class="show-image">
             <h1 class="animate__animated animate__fadeInDown">moealturej services</h1>
         </header>
         <div class="container">
