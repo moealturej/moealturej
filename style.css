@@ -30,9 +30,9 @@ body {
 }
 
 .header h1 {
-    text-align: center; /* Center-align the text */
-    border: 2px solid #fff; /* White border around the header text */
-    padding: 10px 20px; /* Padding for the header text */
+    text-align: center top; /* Center-align the text */
+    border: 4px solid #fff; /* White border around the header text */
+    padding: 20px 40px; /* Padding for the header text */
     display: inline-block; /* Make the border wrap around the text */
 }
 
