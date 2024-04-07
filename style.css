@@ -30,14 +30,13 @@ body {
 }
 
 .header h1 {
-    text-align: center top; /* Center-align the text */
     border: 4px solid #fff; /* White border around the header text */
     padding: 20px 40px; /* Padding for the header text */
     display: inline-block; /* Make the border wrap around the text */
 }
 
 .header-title {
-    font-size: 48px;
+    font-size: 54px;
     margin-bottom: 20px;
 }
 
@@ -52,20 +51,20 @@ body {
 }
 
 .services-heading {
-    border: 2px solid #fff; /* White border around the services headings */
-    padding: 10px 20px; /* Padding for the services headings */
+    border: 1.5px solid #fff; /* White border around the services headings */
+    padding: 5px 10px; /* Padding for the services headings */
     display: inline-block; /* Make the border wrap around the text */
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: -20px;
+    margin: -17px;
 }
 
 .col {
     flex: 0 0 calc(50% - 40px);
-    margin: 20px;
+    margin: 18px;
 }
 
 .services-section {
