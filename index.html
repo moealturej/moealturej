@@ -61,7 +61,6 @@
             // PayPal buttons container IDs
             var paypalButtonContainers = {
                 1: 'paypal-button-container-1',
-                2: 'paypal-button-container-2',
                 3: 'paypal-button-container-3',
                 4: 'paypal-button-container-4',
                 5: 'paypal-button-container-5',
@@ -71,7 +70,6 @@
             // PayPal button creation options based on service ID
             var paypalButtonOptions = {
                 1: { amount: '30.00', description: 'All wz3 Weapons' },
-                2: { amount: '15.00', description: '10 wz3 Weapons' },
                 3: { amount: '30.00', description: 'All mw2 weapons' },
                 4: { amount: '30.00', description: 'All mw19 weapons' },
                 5: { amount: '75.00', description: 'Bnet accounts' },
@@ -138,7 +136,7 @@
                             </div>
                             <div class="button-container">
                                 <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
-                                <button class="service-button" onclick="toggleServiceDetails(2)">10 Weapons - $15</button>
+                                <div
                                 <button class="service-button" onclick="toggleContactForm()">Provide Details</button>
                             </div>
                             <div id="service-details-1" class="service-details" style="display: none;">
