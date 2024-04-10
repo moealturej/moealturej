@@ -103,38 +103,32 @@
                 }).render(container);
             }
         }
-    // Function to fetch Discord messages
-        async function fetchDiscordMessages() {
-            try {
-                const response = await fetch('https://discord.com/api/channels/1225948305113223230/messages');
 
-                const data = await response.json();
+        // Function to fetch customer reviews
+        function fetchCustomerReviews() {
+            // Sample reviews data
+            var reviews = [
+                { review: "REP LEGIT/FAST SERVICE, got me hooked up with 5 camos", author: "- iday" },
+                { review: "Rep+ legit and would definitely buy again", author: "- Jukkiesalt" }
+                { review: "REP+++ this dude hooked me up with my favorite camo", author: "- Kewt'n" }
+            ];
 
-                // Check if messages were fetched successfully
-                if (response.ok) {
-                    const messagesContainer = document.getElementById('discord-messages');
-                    // Clear any existing messages
-                    messagesContainer.innerHTML = '';
+            var reviewsContainer = document.getElementById('customer-reviews');
 
-                    // Loop through fetched messages and display them
-                    data.forEach(message => {
-                        const messageElement = document.createElement('div');
-                        messageElement.classList.add('message');
-                        messageElement.innerHTML = `
-                            <p><strong>${message.author.username}:</strong> ${message.content}</p>
-                        `;
-                        messagesContainer.appendChild(messageElement);
-                    });
-                } else {
-                    console.error('Failed to fetch Discord messages:', data.message);
-                }
-            } catch (error) {
-                console.error('Error fetching Discord messages:', error);
-            }
+            // Clear any existing reviews
+            reviewsContainer.innerHTML = '';
+
+            // Loop through reviews data and display them
+            reviews.forEach(function(review) {
+                var reviewDiv = document.createElement('div');
+                reviewDiv.classList.add('review');
+                reviewDiv.innerHTML = '<p>"' + review.review + '"</p><p class="author">' + review.author + '</p>';
+                reviewsContainer.appendChild(reviewDiv);
+            });
         }
 
-        // Fetch Discord messages when the page loads
-        window.onload = fetchDiscordMessages;
+        // Fetch customer reviews when the page loads
+        window.onload = fetchCustomerReviews;
     </script>
 </head>
 <body>
@@ -338,14 +332,14 @@
             </div> <!-- End of Row 4 -->
         </section> <!-- End of Free Services Section -->
 
-        <!-- Discord Messages Section -->
+        <!-- Reviews Section -->
         <section class="category-section">
-            <h2>Discord Messages</h2>
-            <!-- Container to display Discord messages -->
-            <div id="discord-messages" class="discord-messages">
-                <!-- Messages will be dynamically added here -->
+            <h2>Customer Reviews</h2>
+            <!-- Container for customer reviews -->
+            <div id="customer-reviews" class="customer-reviews">
+                <!-- Reviews will be dynamically added here -->
             </div>
-        </section> <!-- End of Discord Messages Section -->
+        </section> <!-- End of Reviews Section -->
     </div>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
