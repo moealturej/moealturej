@@ -217,12 +217,31 @@ body {
     text-decoration: none;
     color: #fff; /* White text color */
     font-weight: bold;
-    padding: 8px 16px; /* Padding around the link */
-    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around the link */
+    border-radius: 30px; /* Rounder corners to create a bubble effect */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color */
     transition: background-color 0.3s ease; /* Smooth transition */
+    position: relative;
+}
+
+.navbar-item a:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #fff; /* White background color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.navbar-item a:hover:before {
+    opacity: 1; /* Show the bubble background on hover */
 }
 
 .navbar-item a:hover {
-    background-color: #FF69B4; /* Pink background color on hover */
     color: #333; /* Dark text color on hover */
 }
