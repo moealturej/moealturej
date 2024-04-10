@@ -219,9 +219,10 @@ body {
     font-weight: bold;
     padding: 10px 20px; /* Padding around the link */
     border-radius: 30px; /* Rounder corners to create a bubble effect */
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color */
+    background-color: #FF69B4; /* Pink background color */
     transition: background-color 0.3s ease; /* Smooth transition */
     position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
 .navbar-item a:before {
@@ -229,10 +230,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background-color: #fff; /* White background color */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color */
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
@@ -243,5 +245,5 @@ body {
 }
 
 .navbar-item a:hover {
-    color: #333; /* Dark text color on hover */
+    background-color: #FFC0CB; /* Lighter pink background color on hover */
 }
