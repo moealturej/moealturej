@@ -168,3 +168,26 @@ body {
 .animate__fadeInDown {
     animation-name: fadeInDown;
 }
+
+/* Reviews Section Styles */
+.customer-reviews {
+    margin-top: 40px;
+}
+
+.review {
+    background-color: #f9f9f9; /* Light gray background for reviews */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.review p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.review .author {
+    font-style: italic;
+    font-weight: bold;
+}
