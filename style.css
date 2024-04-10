@@ -193,3 +193,31 @@ body {
     color: #000;
     font-weight: bold;
 }
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #333; /* Dark background color */
+    padding: 10px 0;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-weight: bold;
+}
+
+.navbar-item a:hover {
+    color: #8A2BE2; /* Purple text color on hover */
+}
