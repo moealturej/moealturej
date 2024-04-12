@@ -8,7 +8,7 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
     color: #fff;
     margin: 0;
     padding: 0;
@@ -22,16 +22,15 @@ body {
 }
 
 /* Header Styles */
-.header {
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
-    color: #fff; /* White text color */
-    padding: 80px 20px; /* Increased padding */
+.header, .footer {
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    color: #fff;
 }
 
-.header h1 {
-    border: 4px solid #fff; /* White border around the header text */
-    padding: 20px 40px; /* Padding for the header text */
-    display: inline-block; /* Make the border wrap around the text */
+.header h1, .header-title {
+    border: 4px solid #fff;
+    padding: 20px 40px;
+    display: inline-block;
 }
 
 .header-title {
@@ -49,124 +48,42 @@ body {
     margin-bottom: 40px;
 }
 
-.services-heading {
-    border: 1.5px solid #fff; /* White border around the services headings */
-    padding: 5px 10px; /* Padding for the services headings */
-    display: inline-block; /* Make the border wrap around the text */
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -17px;
-}
-
-.col {
-    flex: 0 0 calc(50% - 40px);
-    margin: 18px;
-}
-
 .services-section {
-    background-color: #fff; /* White background */
+    background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
-.services-section:hover {
-    transform: translateY(-5px);
-}
-
-.showcase {
-    position: relative;
-    overflow: hidden;
-}
-
-.show-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-    transition: transform 0.3s ease;
-}
-
-.show-image:hover {
-    transform: scale(1.05); /* Image zoom effect on hover */
-}
-
-.image-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    padding: 10px 20px; /* Increased padding */
-    border-radius: 10px; /* Rounded corners */
-    font-weight: bold;
-    color: #fff; /* White text color */
-}
-
-.button-container {
-    text-align: center;
-    margin-top: 20px;
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #8A2BE2; /* Purple button color */
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #8A2BE2;
 }
 
-.service-button:hover {
-    background-color: #FF69B4; /* Pink button color on hover */
-    transform: scale(1.05); /* Button scale effect on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
-}
 .download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(135deg, #00FF00, #008000); /* Green gradient background */
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #00FF00, #008000);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .download-button:hover {
-    background: linear-gradient(135deg, #008000, #00FF00); /* Reversed gradient on hover */
-    transform: scale(1.05); /* Button scale effect on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
-}
-
-/* Footer Styles */
-.footer {
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4); /* Purple to pink gradient background */
-    color: #000;
-    text-align: center;
-    padding: 60px 20px; /* Increased padding */
-}
-
-.footer p {
-    margin: 10px 0;
-}
-
-/* Animation Classes */
-.animate__animated {
-    animation-duration: 1s;
-}
-
-.animate__fadeInDown {
-    animation-name: fadeInDown;
+    background: linear-gradient(135deg, #008000, #00FF00);
 }
 
 /* Reviews Section Styles */
@@ -175,8 +92,8 @@ body {
 }
 
 .review {
-    background-color: #ffffff; /* Light gray background for reviews */
-    border-radius: 5.0px;
+    background-color: #ffffff;
+    border-radius: 5px;
     padding: 10px;
     color: #000;
     margin-bottom: 10px;
@@ -192,58 +109,4 @@ body {
     font-style: italic;
     color: #000;
     font-weight: bold;
-}
-
-/* Navigation Bar Styles */
-.navbar {
-    background-color: #8A2BE2; /* Purple background color */
-    padding: 10px 0;
-    border-bottom: 2px solid #333; /* Dark border at the bottom */
-}
-
-.navbar-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.navbar-item {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.navbar-item a {
-    text-decoration: none;
-    color: #fff; /* White text color */
-    font-weight: bold;
-    padding: 10px 20px; /* Padding around the link */
-    border-radius: 30px; /* Rounder corners to create a bubble effect */
-    background-color: #FF69B4; /* Pink background color */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
-}
-
-.navbar-item a:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.navbar-item a:hover:before {
-    opacity: 1; /* Show the bubble background on hover */
-}
-
-.navbar-item a:hover {
-    background-color: #FFC0CB; /* Lighter pink background color on hover */
 }
