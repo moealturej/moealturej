@@ -7,7 +7,7 @@
 
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Use Google Font Roboto */
     background: linear-gradient(135deg, #8A2BE2, #FF69B4);
     color: #fff;
     margin: 0;
@@ -25,21 +25,25 @@ body {
 .header, .footer {
     background: linear-gradient(135deg, #8A2BE2, #FF69B4);
     color: #fff;
+    text-align: center; /* Center align text */
+    padding: 50px 20px; /* Increased padding */
 }
 
 .header h1, .header-title {
     border: 4px solid #fff;
     padding: 20px 40px;
     display: inline-block;
+    border-radius: 20px; /* Rounded corners */
+    text-transform: uppercase; /* Uppercase text */
 }
 
 .header-title {
-    font-size: 54px;
+    font-size: 48px; /* Slightly smaller font size */
     margin-bottom: 20px;
 }
 
 .header-description {
-    font-size: 24px;
+    font-size: 20px; /* Smaller font size */
     margin-bottom: 40px;
 }
 
@@ -59,11 +63,11 @@ body {
 /* Button Styles */
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
+    padding: 15px 30px; /* Increased padding */
+    margin: 20px 10px; /* Increased margin */
+    font-size: 18px; /* Increased font size */
     border: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Rounded corners */
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -78,8 +82,8 @@ body {
 }
 
 .button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Slightly larger scale on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
 }
 
 .download-button:hover {
@@ -88,25 +92,27 @@ body {
 
 /* Reviews Section Styles */
 .customer-reviews {
-    margin-top: 20px;
+    margin-top: 50px; /* Increased margin from the top */
+    text-align: center; /* Center align text */
 }
 
 .review {
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 10px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Increased padding */
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Increased margin */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .review p {
-    font-size: 16px;
+    font-size: 18px; /* Increased font size */
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
 .review .author {
     font-style: italic;
-    color: #000;
+    color: #333; /* Darker text color */
     font-weight: bold;
 }
