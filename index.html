@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <body>
-        <div class="container">
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li class="navbar-item"><a href="#paid-services">Paid Services</a></li>
-                <li class="navbar-item"><a href="#free-services">Free Services</a></li>
-                <li class="navbar-item"><a href="#customer-reviews">Reviews</a></li>
-            </ul>
-        </nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Services</title>
     <!-- External Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -22,9 +12,233 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="#paid-services">Paid Services</a></li>
+                <li class="navbar-item"><a href="#free-services">Free Services</a></li>
+                <li class="navbar-item"><a href="#customer-reviews">Reviews</a></li>
+            </ul>
+        </nav>
+
+        <!-- Paid Services Section -->
+        <section id="paid-services" class="category-section">
+            <h2>Paid Services</h2>
+            <div class="row">
+                <!-- Service 1: Warzone 3 Camos -->
+                <div class="col">
+                    <section id="service1" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
+                                <img src="show.jpg" alt="Warzone 3 Camos" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
+                            <button class="service-button" onclick="toggleServiceDetails(2)">5 Weapons - $10</button>
+                        </div>
+                        <div id="service-details-1" class="service-details" style="display: none;">
+                            <p>2 camos per weapon</p>
+                            <p>Any camos</p>
+                            <div id="paypal-button-container-1" class="paypal-button-container"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                        </div>
+                        <div id="service-details-2" class="service-details" style="display: none;">
+                            <p>2 camos per weapon</p>
+                            <p>Any camos</p>
+                            <div id="paypal-button-container-2" class="paypal-button-container"></div> <!-- PayPal button container for Warzone 3 Camos -->
+                        </div>
+                    </section>
+                </div>
+                <!-- Service 2: Warzone 3 accounts -->
+                <div class="col">
+                    <section id="service2" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
+                                <img src="warzone-mw3.jpg" alt="Warzone 3 Accounts" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="service-button" onclick="toggleServiceDetails(5)">Battle-net accounts - $75</button>
+                            <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $5</button>
+                        </div>
+                        <div id="service-details-5" class="service-details" style="display: none;">
+                            <p>Stock 1X</p>
+                            <div id="paypal-button-container-5" class="paypal-button-container"></div> <!-- PayPal button container for Warzone 3 accounts -->
+                        </div>
+                        <div id="service-details-6" class="service-details" style="display: none;">
+                            <p>Stock ∞</p>
+                            <div id="paypal-button-container-6" class="paypal-button-container"></div> <!-- PayPal button container for Warzone 3 accounts -->
+                        </div>
+                    </section>
+                </div>
+            </div> <!-- End of Row 1 -->
+            <!-- Row 2 -->
+            <div class="row">
+                <!-- Service 3: New Service -->
+                <div class="col">
+                    <section id="service3" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Modern Warfare 2 Camo</p> <!-- Label for the image -->
+                                <img src="newmw2icon.webp" alt="New Service" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="service-button" onclick="toggleServiceDetails(3)">All weapons - $30</button>
+                        </div>
+                        <div id="service-details-3" class="service-details" style="display: none;">
+                            <p>2 camos per weapon</p>
+                            <p>Any camos</p>
+                            <div id="paypal-button-container-3"></div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Service 4: Another New Service -->
+                <div class="col">
+                    <section id="service4" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">MW19 Camos</p> <!-- Label for the image -->
+                                <img src="newmw1icon.webp" alt="Another New Service" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="service-button" onclick="toggleServiceDetails(4)">All weapons - $30</button>
+                        </div>
+                        <div id="service-details-4" class="service-details" style="display: none;">
+                            <p>2 camos per weapon</p>
+                            <p>Any camos</p>
+                            <div id="paypal-button-container-4"></div>
+                        </div>
+                    </section>
+                </div>
+            </div> <!-- End of Row 2 -->
+        </section> <!-- End of Paid Services Section -->
+        </section> <!-- End of Paid Services Section -->
+
+        <!-- Free Services Section -->
+        <section id="free-services" class="category-section">
+            <h2>Free Services</h2>
+            <div class="row">
+                <!-- Service 7: Combat Master -->
+                <div class="col">
+                    <section id="service7" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">CM ESP-Aimbot</p> <!-- Label for the image -->
+                                <img src="Combat Master 2024.03.22 - 16.46.29.02 - frame at 0m9s.jpg" alt="Combat Master" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="download-button" onclick="downloadFile('CombatMaster.dll')">Download File</button>
+                        </div>
+                    </section>
+                </div>
+                <!-- More service sections go here -->
+            </div> <!-- End of Row 3 -->
+         <!-- Service 8: FiveM -->
+                <div class="col">
+                    <section id="service8" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Simple FiveM Cheat</p> <!-- Label for the image -->
+                                <img src="fivem-gta-v6882.jpg" alt="FiveM Cheat" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="download-button" onclick="downloadFile('fontesie.exe')">Download File</button>
+                        </div>
+                        <div id="service-details-8" class="service-details" style="display: none;">
+                        </div>
+                    </section>
+                </div>
+                <!-- Service 9: Spoofer -->
+                <div class="col">
+                    <section id="service9" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">SecHex Spoofy</p> <!-- Label for the image -->
+                                <img src="newspoofericon.webp" alt="Spoofer" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="download-button" onclick="downloadFile('SecHex-Spoofy V1.5.8.zip')">Download File</button>
+                        </div>
+                        <div id="service-details-9" class="service-details" style="display: none;">
+                        </div>
+                    </section>
+                </div>
+            </div> <!-- End of Row 3 -->
+
+            <!-- Row 4 -->
+            <div class="row">
+                <!-- Service 10: Spotify -->
+                <div class="col">
+                    <section id="service10" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Spotify Premium Tool</p> <!-- Label for the image -->
+                                <img src="open-graph-default.png" alt="Spotify" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="download-button" onclick="downloadFile('Spotify-Premium-Tool.exe')">Download File</button>
+                        </div>
+                        <div id="service-details-10" class="service-details" style="display: none;">
+                        </div>
+                    </section>
+                </div>
+                <!-- Service 11: Windows -->
+                <div class="col">
+                    <section id="service11" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Windows Activation Tool</p> <!-- Label for the image -->
+                                <img src="microsoft_windows_10x_logo_glowing_blue_circuits_by_vchal_gettyimages-1186902469_2400x1600-100882265-large.webp" alt="Windows" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="download-button" onclick="downloadFile('Windows-Activation-Tool.exe')">Download File</button>
+                        </div>
+                        <div id="service-details-11" class="service-details" style="display: none;">
+                        </div>
+                    </section>
+                </div>
+            </div> <!-- End of Row 4 -->
+        </section> <!-- End of Free Services Section -->
+        </section> <!-- End of Free Services Section -->
+
+        <!-- Reviews Section -->
+        <section id="customer-reviews" class="category-section">
+            <h2>Customer Reviews</h2>
+            <div id="customer-reviews-container" class="customer-reviews">
+                <!-- Reviews will be dynamically added here -->
+            </div>
+        </section> <!-- End of Reviews Section -->
+    </div>
+    <footer class="animate__animated animate__fadeInUp">
+        <div class="container">
+            <p>&copy; 2024 moealturej-services. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- PayPal Script -->
     <script src="https://www.paypal.com/sdk/js?client-id=Adhk_JJCzzgbAAHnJQHQvSqevZQIgmr3v2W933e3RTL_acJfkNxCNhk-pH4xydn3tRAkHnhjc1g6YTSt&currency=USD"></script>
-    <!-- JavaScript for PayPal buttons -->
+    <!-- JavaScript for PayPal buttons and other functionalities -->
     <script>
         // Variable to keep track of the last service details shown
         var lastShownDetailsId = null;
@@ -124,7 +338,7 @@
                 { review: "He tha best he got me right with the camos", author: "- synaq_8" }
             ];
 
-            var reviewsContainer = document.getElementById('customer-reviews');
+            var reviewsContainer = document.getElementById('customer-reviews-container');
 
             // Clear any existing reviews
             reviewsContainer.innerHTML = '';
@@ -141,224 +355,5 @@
         // Fetch customer reviews when the page loads
         window.onload = fetchCustomerReviews;
     </script>
-</head>
-<body>
-    <div class="container">
-        <!-- Paid Services Section -->
-        <section id="paid-services" class="category-section">
-        <section class="category-section">
-            <h2>Paid Services</h2>
-            <!-- Row 1 -->
-            <div class="row">
-                <!-- Service 1: Warzone 3 Camos -->
-                <div class="col">
-                    <section id="service1" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Warzone 3 Camos</p> <!-- Label for the image -->
-                                <img src="show.jpg" alt="Warzone 3 Camos" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(1)">All Weapons - $30</button>
-                            <button class="service-button" onclick="toggleServiceDetails(2)">5 Weapons - $10</button>
-                        </div>
-                        <div id="service-details-1" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-1"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                        </div>
-                        <div id="service-details-2" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-2"></div> <!-- PayPal button container for Warzone 3 Camos -->
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 2: Warzone 3 accounts -->
-                <div class="col">
-                    <section id="service2" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Warzone 3 accounts</p> <!-- Label for the image -->
-                                <img src="warzone-mw3.jpg" alt="Warzone 3 Accounts" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(5)">Battle-net accounts - $75</button>
-                            <button class="service-button" onclick="toggleServiceDetails(6)">Steam accounts - $5</button>
-                        </div>
-                        <div id="service-details-5" class="service-details" style="display: none;">
-                            <p>Stock 1X</p>
-                            <div id="paypal-button-container-5"></div> <!-- PayPal button container for Warzone 3 accounts -->
-                        </div>
-                        <div id="service-details-6" class="service-details" style="display: none;">
-                            <p>Stock ∞</p>
-                            <div id="paypal-button-container-6"></div> <!-- PayPal button container for Warzone 3 accounts -->
-                        </div>
-                    </section>
-                </div>
-            </div> <!-- End of Row 1 -->
-
-            <!-- Row 2 -->
-            <div class="row">
-                <!-- Service 3: New Service -->
-                <div class="col">
-                    <section id="service3" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Modern Warfare 2 Camo</p> <!-- Label for the image -->
-                                <img src="newmw2icon.webp" alt="New Service" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(3)">All weapons - $30</button>
-                        </div>
-                        <div id="service-details-3" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-3"></div>
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 4: Another New Service -->
-                <div class="col">
-                    <section id="service4" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">MW19 Camos</p> <!-- Label for the image -->
-                                <img src="newmw1icon.webp" alt="Another New Service" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="service-button" onclick="toggleServiceDetails(4)">All weapons - $30</button>
-                        </div>
-                        <div id="service-details-4" class="service-details" style="display: none;">
-                            <p>2 camos per weapon</p>
-                            <p>Any camos</p>
-                            <div id="paypal-button-container-4"></div>
-                        </div>
-                    </section>
-                </div>
-            </div> <!-- End of Row 2 -->
-        </section> <!-- End of Paid Services Section -->
-
-        <!-- Free Services Section -->
-        <section id="free-services" class="category-section">
-        <section class="category-section">
-            <h2>Free Services</h2>
-            <!-- Row 3 -->
-            <div class="row">
-                <!-- Service 7: Combat Master -->
-                <div class="col">
-                    <section id="service7" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">CM ESP-Aimbot</p> <!-- Label for the image -->
-                                <img src="Combat Master 2024.03.22 - 16.46.29.02 - frame at 0m9s.jpg" alt="Combat Master" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="download-button" onclick="downloadFile('CombatMaster.dll')">Download File</button>
-                        </div>
-                        <div id="service-details-7" class="service-details" style="display: none;">
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 8: FiveM -->
-                <div class="col">
-                    <section id="service8" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Simple FiveM Cheat</p> <!-- Label for the image -->
-                                <img src="fivem-gta-v6882.jpg" alt="FiveM Cheat" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="download-button" onclick="downloadFile('fontesie.exe')">Download File</button>
-                        </div>
-                        <div id="service-details-8" class="service-details" style="display: none;">
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 9: Spoofer -->
-                <div class="col">
-                    <section id="service9" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">SecHex Spoofy</p> <!-- Label for the image -->
-                                <img src="newspoofericon.webp" alt="Spoofer" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="download-button" onclick="downloadFile('SecHex-Spoofy V1.5.8.zip')">Download File</button>
-                        </div>
-                        <div id="service-details-9" class="service-details" style="display: none;">
-                        </div>
-                    </section>
-                </div>
-            </div> <!-- End of Row 3 -->
-
-            <!-- Row 4 -->
-            <div class="row">
-                <!-- Service 10: Spotify -->
-                <div class="col">
-                    <section id="service10" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Spotify Premium Tool</p> <!-- Label for the image -->
-                                <img src="open-graph-default.png" alt="Spotify" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="download-button" onclick="downloadFile('Spotify-Premium-Tool.exe')">Download File</button>
-                        </div>
-                        <div id="service-details-10" class="service-details" style="display: none;">
-                        </div>
-                    </section>
-                </div>
-                <!-- Service 11: Windows -->
-                <div class="col">
-                    <section id="service11" class="section services-section animate__animated animate__fadeIn">
-                        <!-- Service section content -->
-                        <div class="showcase">
-                            <div class="image-container">
-                                <p class="image-label">Windows Activation Tool</p> <!-- Label for the image -->
-                                <img src="microsoft_windows_10x_logo_glowing_blue_circuits_by_vchal_gettyimages-1186902469_2400x1600-100882265-large.webp" alt="Windows" class="show-image">
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="download-button" onclick="downloadFile('Windows-Activation-Tool.exe')">Download File</button>
-                        </div>
-                        <div id="service-details-11" class="service-details" style="display: none;">
-                        </div>
-                    </section>
-                </div>
-            </div> <!-- End of Row 4 -->
-        </section> <!-- End of Free Services Section -->
-
-        <!-- Reviews Section -->
-        <section id="customer-reviews" class="category-section">
-        <section class="category-section animate__animated animate__fadeIn">
-            <h2>Customer Reviews</h2>
-            <!-- Container for customer reviews -->
-            <div id="customer-reviews" class="customer-reviews">
-                <!-- Reviews will be dynamically added here -->
-            </div>
-        </section> <!-- End of Reviews Section -->
-    </div>
-    <footer class="animate__animated animate__fadeInUp">
-        <div class="container">
-            <p>&copy; 2024 moealturej-services. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
