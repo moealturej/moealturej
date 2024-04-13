@@ -245,9 +245,10 @@ body {
 }
 
 input[type="image"] {
-    width: 170px; /* Adjust width as needed */
+    width: 175px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure block-level display */
     margin: 0 auto; /* Center horizontally */
     margin-top: 17px; /* Add margin from the top */
+    border-radius: 17px; /* Rounded edges */
 }
