@@ -243,3 +243,11 @@ body {
 .navbar-item a:hover {
     background-color: #FFC0CB; /* Lighter pink background color on hover */
 }
+
+input[type="image"] {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure block-level display */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 10px; /* Add margin from the top */
+}
