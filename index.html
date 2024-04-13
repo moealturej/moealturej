@@ -153,6 +153,25 @@
             <p>&copy; 2024 moealturej-services. All rights reserved.</p>
         </div>
     </footer>
+
+  <!-- JavaScript for PayPal buttons and other functionalities -->
+    <script>
+        // Variable to keep track of the last service details shown
+        var lastShownDetailsId = null;
+
+        // Toggle service details visibility
+        function toggleServiceDetails(id) {
+            var details = document.getElementById('service-details-' + id);
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+            } else {
+                // If another service details is already shown, hide it first
+                if (lastShownDetailsId !== null) {
+                    var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
+                    lastShownDetails.style.display = 'none';
+                }
+                details.style.display = 'block';
+                renderPayPalButtons(id); // Render PayPal buttons for the selected service
             }
             lastShownDetailsId = id;
         }
