@@ -134,7 +134,7 @@ body {
 }
 
 .download-button {
-    background: linear-gradient(135deg, #00FF00, #008000);
+    background: color: #34fe00;
 }
 
 .service-button:hover, .download-button:hover {
