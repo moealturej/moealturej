@@ -245,7 +245,7 @@ body {
 }
 
 input[type="image"] {
-    width: 175px; /* Adjust width as needed */
+    width: 171px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure block-level display */
     margin: 0 auto; /* Center horizontally */
