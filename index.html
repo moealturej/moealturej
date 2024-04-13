@@ -228,26 +228,6 @@
     <script src="https://www.paypal.com/sdk/js?client-id=Adhk_JJCzzgbAAHnJQHQvSqevZQIgmr3v2W933e3RTL_acJfkNxCNhk-pH4xydn3tRAkHnhjc1g6YTSt&currency=USD"></script>
     <!-- JavaScript for PayPal buttons and other functionalities -->
     <script>
-        // Variable to keep track of the last service details shown
-        var lastShownDetailsId = null;
-
-        // Toggle service details visibility
-        function toggleServiceDetails(id) {
-            var details = document.getElementById('service-details-' + id);
-            if (details.style.display === 'block') {
-                details.style.display = 'none';
-            } else {
-                // If another service details is already shown, hide it first
-                if (lastShownDetailsId !== null) {
-                    var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
-                    lastShownDetails.style.display = 'none';
-                }
-                details.style.display = 'block';
-                renderPayPalButtons(id); // Render PayPal buttons for the selected service
-            }
-            lastShownDetailsId = id;
-        }
-
         // Function to trigger file download
         function downloadFile(file) {
             var link = document.createElement('a');
@@ -258,90 +238,60 @@
             document.body.removeChild(link);
         }
 
-        // Render PayPal buttons for the selected service
-        function renderPayPalButtons(serviceId) {
-            // PayPal buttons container IDs
-            var paypalButtonContainers = {
-                1: 'paypal-button-container-1',
-                2: 'paypal-button-container-2',
-                3: 'paypal-button-container-3',
-                4: 'paypal-button-container-4',
-                5: 'paypal-button-container-5',
-                6: 'paypal-button-container-6'
-            };
+        // Render PayPal donate button for the selected service (All wz3 Weapons - $30)
+        function renderPayPalDonateButton() {
+            var form = document.createElement('form');
+            form.setAttribute('action', 'https://www.paypal.com/donate');
+            form.setAttribute('method', 'post');
+            form.setAttribute('target', '_top');
 
-            // PayPal button creation options based on service ID
-            var paypalButtonOptions = {
-                1: { amount: '30.00', description: 'All wz3 Weapons' },
-                2: { amount: '10.00', description: '5 wz3 Weapons' },
-                3: { amount: '30.00', description: 'All mw2 weapons' },
-                4: { amount: '30.00', description: 'All mw19 weapons' },
-                5: { amount: '75.00', description: 'Bnet accounts' },
-                6: { amount: '5.00', description: 'Steam accounts' }
-            };
+            var businessInput = document.createElement('input');
+            businessInput.setAttribute('type', 'hidden');
+            businessInput.setAttribute('name', 'business');
+            businessInput.setAttribute('value', '3N5JTW6SEY5SL');
+            form.appendChild(businessInput);
 
-            // Clear previous PayPal buttons
-            var container = document.getElementById(paypalButtonContainers[serviceId]);
-            container.innerHTML = '';
+            var amountInput = document.createElement('input');
+            amountInput.setAttribute('type', 'hidden');
+            amountInput.setAttribute('name', 'amount');
+            amountInput.setAttribute('value', '30');
+            form.appendChild(amountInput);
 
-            // Render PayPal button for the selected service
-            if (serviceId !== 7) { // Assuming 7 is the ID for Combat Master, which is the only free service
-                paypal.Buttons({
-                    createOrder: function(data, actions) {
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                    value: paypalButtonOptions[serviceId].amount
-                                }
-                            }]
-                        });
-                    },
-                    onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
-                            console.log(details);
-                            alert('Transaction completed by ' + details.payer.name.given_name + '! Thanks for your purchase.');
-                        });
-                    },
-                    onError: function(err) {
-                        console.log(err);
-                        alert('An error occurred during the transaction. Please try again later.');
-                    },
-                    style: {
-                        layout: 'vertical',
-                        color: 'gold',
-                        shape: 'rect',
-                        label: 'paypal'
-                    }
-                }).render(container);
-            }
+            var noRecurringInput = document.createElement('input');
+            noRecurringInput.setAttribute('type', 'hidden');
+            noRecurringInput.setAttribute('name', 'no_recurring');
+            noRecurringInput.setAttribute('value', '1');
+            form.appendChild(noRecurringInput);
+
+            var currencyInput = document.createElement('input');
+            currencyInput.setAttribute('type', 'hidden');
+            currencyInput.setAttribute('name', 'currency_code');
+            currencyInput.setAttribute('value', 'USD');
+            form.appendChild(currencyInput);
+
+            var imageInput = document.createElement('input');
+            imageInput.setAttribute('type', 'image');
+            imageInput.setAttribute('src', 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif');
+            imageInput.setAttribute('border', '0');
+            imageInput.setAttribute('name', 'submit');
+            imageInput.setAttribute('title', 'PayPal - The safer, easier way to pay online!');
+            imageInput.setAttribute('alt', 'Donate with PayPal button');
+            form.appendChild(imageInput);
+
+            var pixelImage = document.createElement('img');
+            pixelImage.setAttribute('src', 'https://www.paypal.com/en_CA/i/scr/pixel.gif');
+            pixelImage.setAttribute('alt', '');
+            pixelImage.setAttribute('border', '0');
+            pixelImage.setAttribute('width', '1');
+            pixelImage.setAttribute('height', '1');
+            form.appendChild(pixelImage);
+
+            var container = document.getElementById('paypal-button-container-1'); // Assuming this is the container for the PayPal button
+            container.appendChild(form);
         }
 
-        // Function to fetch customer reviews
-        function fetchCustomerReviews() {
-            // Sample reviews data
-            var reviews = [
-                { review: "REP LEGIT/FAST SERVICE, got me hooked up with 5 camos", author: "- iday" },
-                { review: "Rep+ legit and would definitely buy again", author: "- Jukkiesalt" },
-                { review: "REP+++ this dude hooked me up with my favorite camo", author: "- Kewt'n" },
-                { review: "He tha best he got me right with the camos", author: "- synaq_8" }
-            ];
-
-            var reviewsContainer = document.getElementById('customer-reviews-container');
-
-            // Clear any existing reviews
-            reviewsContainer.innerHTML = '';
-
-            // Loop through reviews data and display them
-            reviews.forEach(function(review) {
-                var reviewDiv = document.createElement('div');
-                reviewDiv.classList.add('review');
-                reviewDiv.innerHTML = '<p>"' + review.review + '"</p><p class="author">' + review.author + '</p>';
-                reviewsContainer.appendChild(reviewDiv);
-            });
-        }
-
-        // Fetch customer reviews when the page loads
-        window.onload = fetchCustomerReviews;
+        // Call the function to render the PayPal donate button when the page loads
+        window.onload = renderPayPalDonateButton;
     </script>
 </body>
 </html>
