@@ -1,4 +1,4 @@
-/* Reset CSS */
+ /* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +19,175 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center; /* Center align text */
+}
+
+.header h1 {
+    border: 4px solid #fff;
+    padding: 20px 40px;
+    display: inline-block;
+    border-radius: 20px;
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold font weight */
+}
+
+.header-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header-description {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Services Styles */
+.category-section {
+    margin-bottom: 40px;
+}
+
+.services-heading {
+    border: 1.5px solid #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 10px; /* Rounded corners */
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -17px;
+}
+
+.col {
+    flex: 0 0 calc(50% - 40px);
+    margin: 18px;
+}
+
+.services-section {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services-section:hover {
+    transform: translateY(-5px);
+}
+
+.showcase {
+    position: relative;
+    overflow: hidden;
+}
+
+.show-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.show-image:hover {
+    transform: scale(1.05);
+}
+
+.image-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.service-button, .download-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-button {
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+}
+
+.download-button {
+    background: color: #34fe00;
+}
+
+.service-button:hover, .download-button:hover {
+    transform: scale(1.1); /* Slightly larger scale on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+/* Animation Classes */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+}
+
+/* Reviews Section Styles */
+.customer-reviews {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.review {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.review .author {
+    font-style: italic;
+    color: #333;
+    font-weight: bold;
 }
 
 /* Navigation Bar Styles */
@@ -75,34 +244,6 @@ body {
     background-color: #FFC0CB; /* Lighter pink background color on hover */
 }
 
-/* Review Section Styles */
-.customer-reviews-container {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.review {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 10px;
-    color: #000;
-    margin-bottom: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.review p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.review .author {
-    font-style: italic;
-    color: #333;
-    font-weight: bold;
-}
-
-/* PayPal Button Styles */
 input[type="image"] {
     width: 171px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
@@ -110,32 +251,4 @@ input[type="image"] {
     margin: 0 auto; /* Center horizontally */
     margin-top: 17px; /* Add margin from the top */
     border-radius: 17px; /* Rounded edges */
-}
-
-/* Download Button Styles */
-.download-button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #34fe00;
-}
-
-.download-button:hover {
-    transform: scale(1.1); /* Slightly larger scale on hover */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
-}
-
-/* Animation Classes */
-.animate__animated {
-    animation-duration: 1s;
-}
-
-.animate__fadeInDown {
-    animation-name: fadeInDown;
 }
