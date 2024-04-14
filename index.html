@@ -25,12 +25,12 @@
         </nav>
 
         <!-- Paid Services Section -->
-        <div id="paid-services" class="category-section">
+        <section id="paid-services" class="category-section">
             <h2>Paid Services</h2>
             <div class="row">
                 <!-- Service 1: Warzone 3 Camos -->
                 <div class="col">
-                    <div class="section services-section animate__animated animate__fadeIn" id="service1">
+                    <section id="service1" class="section services-section animate__animated animate__fadeIn">
                         <!-- Service section content -->
                         <div class="showcase">
                             <div class="image-container">
@@ -50,18 +50,17 @@
                             </form>
                             <!-- End of PayPal Donate Button -->
                         </div>
-                    </div>
+                    </section>
                 </div>
-            </div>
-        </div> <!-- End of Paid Services Section -->
+        </section> <!-- End of Paid Services Section -->
 
         <!-- Free Services Section -->
-        <div id="free-services" class="category-section">
+        <section id="free-services" class="category-section">
             <h2>Free Services</h2>
             <div class="row">
                 <!-- Service 7: Combat Master -->
                 <div class="col">
-                    <div class="section services-section animate__animated animate__fadeIn" id="service7">
+                    <section id="service7" class="section services-section animate__animated animate__fadeIn">
                         <!-- Service section content -->
                         <div class="showcase">
                             <div class="image-container">
@@ -70,13 +69,14 @@
                             </div>
                         </div>
                         <div class="button-container">
+                            <input type="image" src="https://i.postimg.cc/FRhrjGpy/Download-4-13-2024-1.gif"
                             <button class="download-button" onclick="downloadFile('CombatMaster.dll')">Download File</button>
                         </div>
-                    </div>
+                    </section>
                 </div>
                 <!-- Service 8: FiveM -->
                 <div class="col">
-                    <div class="section services-section animate__animated animate__fadeIn" id="service8">
+                    <section id="service8" class="section services-section animate__animated animate__fadeIn">
                         <!-- Service section content -->
                         <div class="showcase">
                             <div class="image-container">
@@ -85,13 +85,14 @@
                             </div>
                         </div>
                         <div class="button-container">
+                            <input type="image" src="https://i.postimg.cc/FRhrjGpy/Download-4-13-2024-1.gif"
                             <button class="download-button" onclick="downloadFile('fontesie.exe')">Download File</button>
                         </div>
-                    </div>
+                    </section>
                 </div>
                 <!-- Service 9: Spoofer -->
                 <div class="col">
-                    <div class="section services-section animate__animated animate__fadeIn" id="service9">
+                    <section id="service9" class="section services-section animate__animated animate__fadeIn">
                         <!-- Service section content -->
                         <div class="showcase">
                             <div class="image-container">
@@ -100,20 +101,57 @@
                             </div>
                         </div>
                         <div class="button-container">
+                            <input type="image" src="https://i.postimg.cc/FRhrjGpy/Download-4-13-2024-1.gif"
                             <button class="download-button" onclick="downloadFile('SecHex-Spoofy V1.5.8.zip')">Download File</button>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div> <!-- End of Row 3 -->
-        </div> <!-- End of Free Services Section -->
+
+            <!-- Row 4 -->
+            <div class="row">
+                <!-- Service 10: Spotify -->
+                <div class="col">
+                    <section id="service10" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Spotify Premium Tool</p> <!-- Label for the image -->
+                                <img src="open-graph-default.png" alt="Spotify" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <input type="image" src="https://i.postimg.cc/FRhrjGpy/Download-4-13-2024-1.gif"
+                            <button class="download-button" onclick="downloadFile('Spotify-Premium-Tool.exe')">Download File</button>
+                        </div>
+                    </section>
+                </div>
+                <!-- Service 11: Windows -->
+                <div class="col">
+                    <section id="service11" class="section services-section animate__animated animate__fadeIn">
+                        <!-- Service section content -->
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Windows Activation Tool</p> <!-- Label for the image -->
+                                <img src="microsoft_windows_10x_logo_glowing_blue_circuits_by_vchal_gettyimages-1186902469_2400x1600-100882265-large.webp" alt="Windows" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <input type="image" src="https://i.postimg.cc/FRhrjGpy/Download-4-13-2024-1.gif"
+                            <button class="download-button" onclick="downloadFile('Windows-Activation-Tool.exe')">Download File</button>
+                        </div>
+                    </section>
+                </div>
+            </div> <!-- End of Row 4 -->
+        </section> <!-- End of Free Services Section -->
 
         <!-- Reviews Section -->
-        <div id="customer-reviews" class="category-section">
+        <section id="customer-reviews" class="category-section">
             <h2>Reviews</h2>
-            <div class="customer-reviews-container customer-reviews">
+            <div id="customer-reviews-container" class="customer-reviews">
                 <!-- Reviews will be dynamically added here -->
             </div>
-        </div> <!-- End of Reviews Section -->
+        </section> <!-- End of Reviews Section -->
     </div>
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
@@ -122,6 +160,64 @@
     </footer>
 
   <!-- JavaScript for PayPal buttons and other functionalities -->
-    <script src="script.js"></script>
+    <script>
+        // Variable to keep track of the last service details shown
+        var lastShownDetailsId = null;
+
+        // Toggle service details visibility
+        function toggleServiceDetails(id) {
+            var details = document.getElementById('service-details-' + id);
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+            } else {
+                // If another service details is already shown, hide it first
+                if (lastShownDetailsId !== null) {
+                    var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
+                    lastShownDetails.style.display = 'none';
+                }
+                details.style.display = 'block';
+                renderPayPalButtons(id); // Render PayPal buttons for the selected service
+            }
+            lastShownDetailsId = id;
+        }
+
+        // Function to trigger file download
+        function downloadFile(file) {
+            var link = document.createElement('a');
+            link.href = file; // Specify the path to your file
+            link.download = file.split('/').pop(); // Extract the file name from the URL
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Function to fetch customer reviews
+        function fetchCustomerReviews() {
+            // Sample reviews data
+            var reviews = [
+                { review: "REP LEGIT/FAST SERVICE, got me hooked up with 5 camos", author: "- iday" },
+                { review: "Rep+ legit and would definitely buy again", author: "- Jukkiesalt" },
+                { review: "REP+++ this dude hooked me up with my favorite camo", author: "- Kewt'n" },
+                { review: "He tha best he got me right with the camos", author: "- synaq_8" },
+                { review: "I would like to thank you the owner and his hole team to for helping me I appreciate them it was fast and simple all I did was pay and show them I paid and I got the account 👍", author: "- 𝙸𝚌𝚘𝚗 💫" }
+            ];
+
+            var reviewsContainer = document.getElementById('customer-reviews-container');
+
+            // Clear any existing reviews
+            reviewsContainer.innerHTML = '';
+
+            // Loop through reviews data and display them
+            reviews.forEach(function(review) {
+                var reviewDiv = document.createElement('div');
+                reviewDiv.classList.add('review');
+                reviewDiv.innerHTML = '<p>"' + review.review + '"</p><p class="author">' + review.author + '</p>';
+                reviewsContainer.appendChild(reviewDiv);
+            });
+        }
+
+        // Fetch customer reviews when the page loads
+        window.onload = fetchCustomerReviews;
+    </script>
 </body>
 </html>
