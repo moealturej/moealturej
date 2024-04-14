@@ -237,7 +237,7 @@ input[type="image"]:hover {
     top: 0;
     left: -200px;
     width: 200px;
-    height: 100%;
+    height: 75%;
     background-color: #000;
     transition: left 0.3s ease;
     z-index: 1000;
@@ -246,13 +246,13 @@ input[type="image"]:hover {
 }
 
 .sidebar-list {
-    padding: 20px 0;
+    padding: 40px 0;
     margin: 0;
 }
 
 .sidebar-item a {
     text-decoration: none;
-    color: #ccc;
+    color: #000;
     display: block;
     padding: 15px 20px;
     transition: color 0.3s ease;
