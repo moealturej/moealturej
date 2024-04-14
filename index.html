@@ -208,17 +208,24 @@
         }
 
         // Function to toggle sidebar
-        function toggleSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            var mainContent = document.querySelector('.main-content');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px'; // Hide sidebar
-                mainContent.style.marginLeft = '0'; // Shift main content back to original position
-            } else {
-                sidebar.style.left = '0px'; // Show sidebar
-                mainContent.style.marginLeft = '250px'; // Shift main content to accommodate sidebar
-            }
-        }
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var mainContent = document.querySelector('.main-content');
+    var toggleButton = document.querySelector('.toggle-sidebar');
+
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px'; // Hide sidebar
+        mainContent.style.marginLeft = '0'; // Shift main content back to original position
+        toggleButton.textContent = 'Open Sidebar';
+    } else {
+        sidebar.style.left = '0px'; // Show sidebar
+        mainContent.style.marginLeft = '250px'; // Shift main content to accommodate sidebar
+        toggleButton.textContent = 'Close Sidebar';
+    }
+}
+
+// Ensure sidebar is initially shown
+toggleSidebar();
 
         // Function to fetch customer reviews
         function fetchCustomerReviews() {
