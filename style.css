@@ -17,9 +17,9 @@ body {
 
 /* Define custom properties for gradient colors */
 :root {
-    --color-1: #8A2BE2; /* Purple */
-    --color-2: #FF69B4; /* Pink */
-    --color-3: #00CED1; /* Blue */
+    --color-1: #2c3e50; /* Dark Blue */
+    --color-2: #2980b9; /* Blue */
+    --color-3: #16a085; /* Green */
 }
 
 /* Animation for gradient background */
@@ -44,7 +44,7 @@ body {
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
     color: #fff;
     padding: 80px 20px;
     text-align: center;
@@ -94,7 +94,7 @@ body {
 }
 
 .services-section {
-    background-color: #fff;
+    background-color: #1a1a1a;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -151,7 +151,7 @@ body {
 }
 
 .service-button {
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
 }
 
 .download-button {
@@ -165,7 +165,7 @@ body {
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
     color: #fff;
     text-align: center;
     padding: 60px 20px;
@@ -232,7 +232,7 @@ input[type="image"] {
     left: -200px;
     width: 200px;
     height: 100%;
-    background-color: #1a1a1a;
+    background-color: #000;
     transition: left 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
@@ -253,7 +253,7 @@ input[type="image"] {
 }
 
 .sidebar-item a:hover {
-    background-color: #555;
+    background-color: #333;
     color: #fff;
 }
 
