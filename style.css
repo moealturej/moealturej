@@ -219,56 +219,7 @@ body {
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #8A2BE2; /* Purple background color */
-    padding: 10px 0;
-    border-bottom: 2px solid #333; /* Dark border at the bottom */
-}
-
-.navbar-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.navbar-item {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.navbar-item a {
-    text-decoration: none;
-    color: #fff; /* White text color */
-    font-weight: bold;
-    padding: 10px 20px; /* Padding around the link */
-    border-radius: 30px; /* Rounder corners to create a bubble effect */
-    background-color: #FF69B4; /* Pink background color */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
-}
-
-.navbar-item a:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.navbar-item a:hover:before {
-    opacity: 1; /* Show the bubble background on hover */
-}
-
-.navbar-item a:hover {
-    background-color: #FFC0CB; /* Lighter pink background color on hover */
+    display: none;
 }
 
 input[type="image"] {
