@@ -20,13 +20,36 @@ body {
     0% {
         background: linear-gradient(135deg, #8A2BE2, #FF69B4);
     }
+    10% {
+        background: linear-gradient(135deg, #8A2BE2, #CC66FF);
+    }
+    20% {
+        background: linear-gradient(135deg, #CC66FF, #FF69B4);
+    }
+    30% {
+        background: linear-gradient(135deg, #FF69B4, #FF8C00);
+    }
+    40% {
+        background: linear-gradient(135deg, #FF8C00, #FF6347);
+    }
     50% {
-        background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+        background: linear-gradient(135deg, #FF6347, #7FFF00);
+    }
+    60% {
+        background: linear-gradient(135deg, #7FFF00, #00FFFF);
+    }
+    70% {
+        background: linear-gradient(135deg, #00FFFF, #00CED1);
+    }
+    80% {
+        background: linear-gradient(135deg, #00CED1, #0000FF);
+    }
+    90% {
+        background: linear-gradient(135deg, #0000FF, #8A2BE2);
     }
     100% {
         background: linear-gradient(135deg, #8A2BE2, #FF69B4);
     }
- 
 }
 
 .container {
