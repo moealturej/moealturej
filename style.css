@@ -15,14 +15,40 @@ body {
     animation: gradientBackground 10s infinite alternate; /* Apply animation */
 }
 
+/* Define custom properties for gradient colors */
+:root {
+    --color-1: #8A2BE2;
+    --color-2: #FF69B4;
+    --color-3: #00FFFF;
+    --color-4: #00CED1;
+    --color-5: #0000FF;
+}
+
 /* Animation for gradient background */
 @keyframes gradientBackground {
     0% {
-        background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+        background: var(--color-1);
+    }
+    20% {
+        background: var(--color-2);
+    }
+    40% {
+        background: var(--color-3);
+    }
+    60% {
+        background: var(--color-4);
+    }
+    80% {
+        background: var(--color-5);
     }
     100% {
-        background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+        background: var(--color-1);
     }
+}
+
+/* Apply animation to body */
+body {
+    animation: gradientBackground 30s infinite linear;
 }
 
 /* Apply cubic-bezier timing function for smoother transition */
