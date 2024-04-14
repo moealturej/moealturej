@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>moealturej Services</title>
-    <!-- External Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
-    <!-- Meta Tags for Cache Control -->
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -26,34 +23,22 @@
 
         <!-- Main content -->
         <div class="main-content">
-            <!-- Navigation Bar -->
             <nav class="navbar">
-                <!-- Button to toggle sidebar -->
-                <button class="toggle-sidebar" onclick="toggleSidebar()">Toggle Sidebar</button>
-                <!-- Navigation links -->
-                <ul class="navbar-list">
-                    <li class="navbar-item"><a href="#paid-services">Paid Services</a></li>
-                    <li class="navbar-item"><a href="#free-services">Free Services</a></li>
-                    <li class="navbar-item"><a href="#customer-reviews">Reviews</a></li>
-                </ul>
+                <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
             </nav>
 
-            <!-- Paid Services Section -->
             <section id="paid-services" class="category-section">
                 <h2 class="section-title">Paid Services</h2>
                 <div class="row">
-                    <!-- Service 1: Warzone 3 Camos -->
                     <div class="col">
                         <section id="service1" class="section services-section animate__animated animate__fadeIn">
-                            <!-- Service section content -->
                             <div class="showcase">
                                 <div class="image-container">
-                                    <p class="image-label">3 Camos Per Weapon - All Weapons</p> <!-- Label for the image -->
+                                    <p class="image-label">3 Camos Per Weapon - All Weapons</p>
                                     <img src="image-3.jpg" alt="Warzone 3 Camos" class="show-image">
                                 </div>
                             </div>
                             <div class="button-container">
-                                <!-- PayPal Donate Button -->
                                 <form action="https://www.paypal.com/donate" method="post" target="_top">
                                     <input type="hidden" name="business" value="3N5JTW6SEY5SL" />
                                     <input type="hidden" name="amount" value="30" />
@@ -62,12 +47,11 @@
                                     <input type="image" src="https://i.postimg.cc/MTsXryMC/Purchase-4-13-2024.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                                     <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
                                 </form>
-                                <!-- End of PayPal Donate Button -->
                             </div>
                         </section>
                     </div>
                 </div>
-            </section> <!-- End of Paid Services Section -->
+            </section>
 
             <!-- Free Services Section -->
             <section id="free-services" class="category-section">
@@ -166,16 +150,16 @@
                 <div id="customer-reviews-container" class="customer-reviews">
                     <!-- Reviews will be dynamically added here -->
                 </div>
-            </section> <!-- End of Reviews Section -->
+            </section>
         </div>
     </div>
+
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
             <p>&copy; 2024 moealturej-services. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for PayPal buttons and other functionalities -->
     <script>
         // Variable to keep track of the last service details shown
         var lastShownDetailsId = null;
