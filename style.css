@@ -229,8 +229,8 @@ input[type="image"] {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 250px;
+    left: -200px; /* Adjusted width */
+    width: 200px; /* Smaller width */
     height: 100%;
     background-color: #1a1a1a; /* Dark background color */
     transition: left 0.3s ease;
@@ -246,14 +246,18 @@ input[type="image"] {
 
 .sidebar-item a {
     text-decoration: none;
-    color: #fff;
+    color: #ccc; /* Lighter text color */
     display: block;
     padding: 15px 20px; /* Adjust padding */
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition for text color */
 }
 
 .sidebar-item a:hover {
     background-color: #555; /* Darker background color on hover */
+}
+
+.sidebar-item a:hover {
+    color: #fff; /* Change text color on hover */
 }
 
 /* Add futuristic styling */
