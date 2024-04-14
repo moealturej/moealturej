@@ -12,7 +12,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: gradientBackground 10s infinite alternate; /* Apply animation */
 }
 
 /* Define custom properties for gradient colors */
@@ -40,17 +39,7 @@ body {
 
 /* Apply animation to body */
 body {
-    animation: gradientBackground 10s infinite linear;
-}
-
-/* Apply animation to body */
-body {
     animation: gradientBackground 30s infinite linear;
-}
-
-/* Apply cubic-bezier timing function for smoother transition */
-body {
-    animation: gradientBackground 10s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
