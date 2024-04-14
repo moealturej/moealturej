@@ -7,11 +7,12 @@
 
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Use Google Font Roboto */
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: gradientBackground 30s infinite linear; /* Apply animation to body */
 }
 
 /* Define custom properties for gradient colors */
@@ -23,7 +24,7 @@ body {
 
 /* Animation for gradient background */
 @keyframes gradientBackground {
-    0% {
+    0%, 100% {
         background: var(--color-1);
     }
     33.33% {
@@ -32,16 +33,9 @@ body {
     66.66% {
         background: var(--color-3);
     }
-    100% {
-        background: var(--color-1);
-    }
 }
 
-/* Apply animation to body */
-body {
-    animation: gradientBackground 30s infinite linear;
-}
-
+/* Container Styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -53,7 +47,7 @@ body {
     background: linear-gradient(135deg, #8A2BE2, #FF69B4);
     color: #fff;
     padding: 80px 20px;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
 .header h1 {
@@ -61,8 +55,8 @@ body {
     padding: 20px 40px;
     display: inline-block;
     border-radius: 20px;
-    text-transform: uppercase; /* Uppercase text */
-    font-weight: bold; /* Bold font weight */
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .header-title {
@@ -84,7 +78,7 @@ body {
     border: 1.5px solid #fff;
     padding: 5px 10px;
     display: inline-block;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     font-weight: bold;
 }
 
@@ -161,12 +155,12 @@ body {
 }
 
 .download-button {
-    background: #34fe00; /* Fixed the typo here */
+    background: #34fe00;
 }
 
 .service-button:hover, .download-button:hover {
-    transform: scale(1.1); /* Slightly larger scale on hover */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer Styles */
@@ -223,24 +217,24 @@ body {
 }
 
 input[type="image"] {
-    width: 171px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure block-level display */
-    margin: 0 auto; /* Center horizontally */
-    margin-top: 17px; /* Add margin from the top */
-    border-radius: 17px; /* Rounded edges */
+    width: 171px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    border-radius: 17px;
 }
 
-/* Add sidebar styles */
+/* Sidebar Styles */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hide the sidebar */
+    left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #333; /* Dark background color */
-    transition: left 0.3s ease; /* Smooth transition for sliding effect */
-    z-index: 1000; /* Ensure sidebar is above other content */
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 1000;
 }
 
 .sidebar-list {
@@ -257,12 +251,12 @@ input[type="image"] {
 }
 
 .sidebar-item a:hover {
-    background-color: #555; /* Darker background color on hover */
+    background-color: #555;
 }
 
 .main-content {
-    margin-left: 0; /* Adjust margin to accommodate the sidebar */
-    transition: margin-left 0.3s ease; /* Smooth transition for content movement */
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
 }
 
 .toggle-sidebar {
@@ -274,5 +268,5 @@ input[type="image"] {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 1002; /* Increase the z-index value */
+    z-index: 1002;
 }
