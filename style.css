@@ -279,3 +279,49 @@ input[type="image"] {
     margin-top: 17px; /* Add margin from the top */
     border-radius: 17px; /* Rounded edges */
 }
+
+/* Add sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hide the sidebar */
+    width: 250px;
+    height: 100%;
+    background-color: #333; /* Dark background color */
+    transition: left 0.3s ease; /* Smooth transition for sliding effect */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar-list {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.sidebar-item a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-item a:hover {
+    background-color: #555; /* Darker background color on hover */
+}
+
+.main-content {
+    margin-left: 0; /* Adjust margin to accommodate the sidebar */
+    transition: margin-left 0.3s ease; /* Smooth transition for content movement */
+}
+
+.toggle-sidebar {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001; /* Ensure button is above the sidebar */
+}
