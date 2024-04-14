@@ -223,6 +223,12 @@ input[type="image"] {
     margin: 0 auto;
     margin-top: 17px;
     border-radius: 17px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition property */
+}
+
+input[type="image"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Sidebar Styles */
