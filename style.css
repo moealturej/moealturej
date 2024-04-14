@@ -1,4 +1,4 @@
- /* Reset CSS */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -161,7 +161,7 @@ body {
 }
 
 .download-button {
-    background: color: #34fe00;
+    background: #34fe00; /* Fixed the typo here */
 }
 
 .service-button:hover, .download-button:hover {
