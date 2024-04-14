@@ -8,11 +8,25 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif; /* Use Google Font Roboto */
-    background: linear-gradient(135deg, #8A2BE2, #FF69B4);
     color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: gradientBackground 10s infinite alternate; /* Apply animation */
+}
+
+/* Animation for gradient background */
+@keyframes gradientBackground {
+    0% {
+        background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    }
+    50% {
+        background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+    }
+    100% {
+        background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+    }
+ 
 }
 
 .container {
