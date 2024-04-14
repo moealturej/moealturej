@@ -15,14 +15,28 @@
 </head>
 <body>
     <div class="container">
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li class="navbar-item"><a href="#paid-services">Paid Services</a></li>
-                <li class="navbar-item"><a href="#free-services">Free Services</a></li>
-                <li class="navbar-item"><a href="#customer-reviews">Reviews</a></li>
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-item"><a href="#paid-services">Paid Services</a></li>
+                <li class="sidebar-item"><a href="#free-services">Free Services</a></li>
+                <li class="sidebar-item"><a href="#customer-reviews">Reviews</a></li>
             </ul>
         </nav>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <!-- Button to toggle sidebar -->
+                <button class="toggle-sidebar" onclick="toggleSidebar()">Toggle Sidebar</button>
+                <!-- Navigation links -->
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a href="#paid-services">Paid Services</a></li>
+                    <li class="navbar-item"><a href="#free-services">Free Services</a></li>
+                    <li class="navbar-item"><a href="#customer-reviews">Reviews</a></li>
+                </ul>
+            </nav>
 
         <!-- Paid Services Section -->
         <section id="paid-services" class="category-section">
@@ -190,6 +204,18 @@
             link.click();
             document.body.removeChild(link);
         }
+
+        // Function to toggle sidebar
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var mainContent = document.querySelector('.main-content');
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px'; // Hide sidebar
+        mainContent.style.marginLeft = '0'; // Shift main content back to original position
+    } else {
+        sidebar.style.left = '0px'; // Show sidebar
+        mainContent.style.marginLeft = '250px'; // Shift main content to accommodate sidebar
+    }
 
         // Function to fetch customer reviews
         function fetchCustomerReviews() {
