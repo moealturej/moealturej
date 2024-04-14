@@ -232,26 +232,45 @@ input[type="image"] {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #333;
+    background-color: #1a1a1a; /* Dark background color */
     transition: left 0.3s ease;
     z-index: 1000;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
 }
 
 .sidebar-list {
     list-style-type: none;
-    padding: 20px;
+    padding: 20px 0; /* Add padding to the list */
 }
 
 .sidebar-item a {
     text-decoration: none;
     color: #fff;
     display: block;
-    padding: 10px 0;
+    padding: 15px 20px; /* Adjust padding */
     transition: background-color 0.3s ease;
 }
 
 .sidebar-item a:hover {
-    background-color: #555;
+    background-color: #555; /* Darker background color on hover */
+}
+
+/* Add futuristic styling */
+.sidebar-item a::before {
+    content: ''; /* Add pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease;
+    border-radius: 50%; /* Create a circular shape */
+}
+
+.sidebar-item a:hover::before {
+    background-color: #fff; /* Change color on hover */
 }
 
 .main-content {
@@ -260,7 +279,7 @@ input[type="image"] {
 }
 
 .toggle-sidebar {
-    background-color: #333;
+    background-color: #1a1a1a; /* Dark background color */
     color: #fff;
     border: none;
     padding: 10px 20px;
