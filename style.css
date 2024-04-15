@@ -132,13 +132,27 @@ body {
 }
 
 .service-button, .download-button {
-    display: inline-block;
+    display: block;
+    width: 100%;
     padding: 12px 24px; /* Adjusted padding for mobile */
-    margin: 10px;
+    margin-bottom: 10px; /* Adjusted margin for mobile */
     font-size: 16px;
     border-radius: 30px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-button {
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
+}
+
+.download-button {
+    background: #34fe00;
+}
+
+.service-button:hover, .download-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer Styles */
@@ -151,6 +165,33 @@ body {
 
 .footer p {
     margin: 10px 0;
+}
+
+/* Reviews Section Styles */
+.customer-reviews {
+    margin-top: 40px; /* Adjusted margin for mobile */
+    text-align: center;
+}
+
+.review {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    color: #000;
+    margin-bottom: 20px; /* Adjusted margin for mobile */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    font-size: 16px; /* Adjusted font size for mobile */
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.review .author {
+    font-style: italic;
+    color: #333;
+    font-weight: bold;
 }
 
 /* Sidebar Styles */
@@ -168,15 +209,14 @@ body {
 }
 
 .sidebar-list {
-    padding: 40px 0;
-    margin: 0;
+    padding: 20px 0; /* Adjusted padding for mobile */
 }
 
 .sidebar-item a {
     text-decoration: none;
     color: #fff;
     display: block;
-    padding: 15px 20px;
+    padding: 10px 20px;
     transition: color 0.3s ease;
 }
 
