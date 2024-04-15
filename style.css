@@ -8,18 +8,18 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #fff;
+    color: #333;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: gradientBackground 30s infinite linear; /* Apply animation to body */
+    background-color: #f8f8f8; /* Soft Gray Background */
 }
 
 /* Define custom properties for gradient colors */
 :root {
-    --color-1: #1a1a1a; /* Very Dark Gray */
-    --color-2: #0d0d0d; /* Very Dark Gray */
-    --color-3: #030303; /* Almost Black */
+    --color-1: #ff7f50; /* Coral */
+    --color-2: #ffd700; /* Gold */
+    --color-3: #87ceeb; /* Sky Blue */
 }
 
 /* Animation for gradient background */
@@ -37,16 +37,16 @@ body {
 
 /* Container Styles */
 .container {
-    max-width: 100%; /* Adjusted max-width for responsiveness */
-    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
+    background: linear-gradient(135deg, #ff7f50, #ffd700); /* Coral to Gold */
     color: #fff;
-    padding: 80px 20px; /* Adjusted padding for mobile */
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .services-heading {
-    border: 1.5px solid #fff;
+    border: 1.5px solid #333;
     padding: 5px 10px;
     display: inline-block;
     border-radius: 10px;
@@ -94,12 +94,11 @@ body {
 }
 
 .services-section {
-    background-color: #1a1a1a;
+    background-color: #fff; /* White Background */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    padding: 20px; /* Adjusted padding for mobile */
 }
 
 .services-section:hover {
@@ -113,7 +112,7 @@ body {
 
 .show-image {
     width: 100%;
-    height: auto; /* Adjusted height for responsiveness */
+    height: 300px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     transition: transform 0.3s ease;
@@ -152,11 +151,11 @@ body {
 }
 
 .service-button {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
+    background: linear-gradient(135deg, #ff7f50, #ffd700); /* Coral to Gold */
 }
 
 .download-button {
-    background: #34fe00;
+    background: #87ceeb; /* Sky Blue */
 }
 
 .service-button:hover, .download-button:hover {
@@ -166,8 +165,8 @@ body {
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-    color: #fff;
+    background: linear-gradient(135deg, #ff7f50, #ffd700); /* Coral to Gold */
+    color: #333;
     text-align: center;
     padding: 60px 20px;
 }
@@ -187,49 +186,34 @@ body {
 
 /* Reviews Section Styles */
 .customer-reviews {
-    margin-top: 40px; /* Adjusted margin for mobile */
+    margin-top: 10px;
     text-align: center;
 }
 
 .review {
-    background-color: #f9f9f9;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 10px;
     padding: 20px;
-    color: #000;
-    margin-bottom: 20px; /* Adjusted margin for mobile */
+    color: #333;
+    margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .review p {
-    font-size: 16px; /* Adjusted font size for mobile */
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
 .review .author {
     font-style: italic;
-    color: #333;
+    color: #666;
     font-weight: bold;
 }
 
 /* Navigation Bar Styles */
 .navbar {
     display: none;
-}
-
-input[type="image"] {
-    width: 171px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-top: 17px;
-    border-radius: 17px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition property */
-}
-
-input[type="image"]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Sidebar Styles */
@@ -239,7 +223,7 @@ input[type="image"]:hover {
     left: -200px;
     width: 200px;
     height: 100%;
-    background-color: #000;
+    background-color: #fff; /* White Background */
     transition: left 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
@@ -247,20 +231,21 @@ input[type="image"]:hover {
 }
 
 .sidebar-list {
-    padding: 20px 0; /* Adjusted padding for mobile */
+    padding: 40px 0;
+    margin: 0;
 }
 
 .sidebar-item a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     display: block;
-    padding: 10px 20px;
+    padding: 15px 20px;
     transition: color 0.3s ease;
 }
 
 .sidebar-item a:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #f8f8f8; /* Soft Gray Background */
+    color: #333;
 }
 
 .sidebar-item a::before {
@@ -276,7 +261,7 @@ input[type="image"]:hover {
 }
 
 .sidebar-item a:hover::before {
-    background-color: #fff;
+    background-color: #333;
 }
 
 .main-content {
@@ -285,7 +270,7 @@ input[type="image"]:hover {
 }
 
 .toggle-sidebar {
-    background-color: #1a1a1a;
+    background-color: #333;
     color: #fff;
     border: none;
     padding: 10px 20px;
