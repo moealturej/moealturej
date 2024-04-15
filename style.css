@@ -70,36 +70,13 @@ body {
 }
 
 /* Services Styles */
-.category-section {
-    margin-bottom: 40px;
-}
-
-.services-heading {
-    border: 1.5px solid #fff;
-    padding: 8px 16px; /* Adjusted padding for mobile */
-    display: inline-block;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px; /* Adjusted negative margin for mobile */
-}
-
-.col {
-    flex: 0 0 calc(50% - 20px);
-    margin: 10px;
-}
-
 .services-section {
     background-color: #1a1a1a;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    padding: 20px; /* Adjusted padding for mobile */
 }
 
 .showcase {
@@ -126,9 +103,8 @@ body {
     color: #fff;
 }
 
-.button-container {
-    text-align: center;
-    margin-top: 20px;
+.service-details {
+    padding: 20px 0; /* Adjusted padding for mobile */
 }
 
 .service-button, .download-button {
