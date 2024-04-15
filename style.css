@@ -37,16 +37,16 @@ body {
 
 /* Container Styles */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%; /* Adjusted max-width for responsiveness */
     padding: 20px;
+    margin: 0 auto;
 }
 
 /* Header Styles */
 .header {
     background: linear-gradient(135deg, #2c3e50, #2980b9);
     color: #fff;
-    padding: 60px 20px; /* Adjusted padding for mobile */
+    padding: 80px 20px; /* Adjusted padding for mobile */
     text-align: center;
 }
 
@@ -60,16 +60,39 @@ body {
 }
 
 .header-title {
-    font-size: 32px; /* Adjusted font size for mobile */
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
 .header-description {
-    font-size: 18px; /* Adjusted font size for mobile */
+    font-size: 20px;
     margin-bottom: 40px;
 }
 
 /* Services Styles */
+.category-section {
+    margin-bottom: 40px;
+}
+
+.services-heading {
+    border: 1.5px solid #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -17px;
+}
+
+.col {
+    flex: 0 0 calc(50% - 40px);
+    margin: 18px;
+}
+
 .services-section {
     background-color: #1a1a1a;
     border-radius: 20px;
@@ -79,6 +102,10 @@ body {
     padding: 20px; /* Adjusted padding for mobile */
 }
 
+.services-section:hover {
+    transform: translateY(-5px);
+}
+
 .showcase {
     position: relative;
     overflow: hidden;
@@ -86,10 +113,14 @@ body {
 
 .show-image {
     width: 100%;
-    height: 200px; /* Adjusted height for mobile */
+    height: auto; /* Adjusted height for responsiveness */
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     transition: transform 0.3s ease;
+}
+
+.show-image:hover {
+    transform: scale(1.05);
 }
 
 .image-label {
@@ -103,17 +134,19 @@ body {
     color: #fff;
 }
 
-.service-details {
-    padding: 20px 0; /* Adjusted padding for mobile */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .service-button, .download-button {
-    display: block;
-    width: 100%;
-    padding: 12px 24px; /* Adjusted padding for mobile */
-    margin-bottom: 10px; /* Adjusted margin for mobile */
-    font-size: 16px;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
     border-radius: 30px;
+    color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -127,7 +160,7 @@ body {
 }
 
 .service-button:hover, .download-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -136,11 +169,20 @@ body {
     background: linear-gradient(135deg, #2c3e50, #2980b9);
     color: #fff;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .footer p {
     margin: 10px 0;
+}
+
+/* Animation Classes */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
 }
 
 /* Reviews Section Styles */
@@ -168,6 +210,26 @@ body {
     font-style: italic;
     color: #333;
     font-weight: bold;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: none;
+}
+
+input[type="image"] {
+    width: 171px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    border-radius: 17px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition property */
+}
+
+input[type="image"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Sidebar Styles */
