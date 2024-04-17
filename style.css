@@ -296,3 +296,21 @@ input[type="image"]:hover {
     left: 20px;
     z-index: 1002;
 }
+
+/* Social Media Icons Styles */
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px; /* Adjust the width as needed */
+    height: auto;
+    max-height: 20px; /* Limit the height to ensure consistent size */
+    vertical-align: middle; /* Align the icons vertically */
+}
