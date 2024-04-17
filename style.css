@@ -315,3 +315,36 @@ input[type="image"]:hover {
     height: auto;
     max-height: 20px; /* Limit the height to ensure consistent size */
 }
+
+/* Add this CSS to your existing stylesheet */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    position: absolute;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+}
+
+/* Position the icons as desired */
+.icon:nth-of-type(1) {
+    top: 10px;
+    left: 10px;
+}
+
+.icon:nth-of-type(2) {
+    top: 10px;
+    right: 10px;
+}
+
+.icon:nth-of-type(3) {
+    bottom: 10px;
+    left: 10px;
+}
+
+.icon:nth-of-type(4) {
+    bottom: 10px;
+    right: 10px;
+}
