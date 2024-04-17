@@ -191,24 +191,25 @@ body {
 }
 
 .review {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 10px;
-    color: #000;
-    margin-bottom: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #000; /* black background */
+    border-radius: 10px; /* smoother edges */
+    padding: 20px; /* more padding for a luxurious feel */
+    color: #fff; /* white text for high contrast */
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* softer shadow for depth */
 }
 
 .review p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    font-size: 22px; /* slightly larger text for emphasis */
+    line-height: 1.8; /* increased line height for readability */
+    margin-bottom: 15px;
 }
 
 .review .author {
-    font-style: italic;
-    color: #333;
+    font-style: normal; /* no italics for a clean look */
+    color: #999; /* subdued color for author name */
     font-weight: bold;
+    text-transform: uppercase; /* modern touch with uppercase author names */
 }
 
 /* Navigation Bar Styles */
