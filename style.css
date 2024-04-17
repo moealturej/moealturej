@@ -301,7 +301,7 @@ input[type="image"]:hover {
 .social-icons {
     text-align: center;
     margin-top: 20px;
-    line-height: 2; /* Adjust line height for vertical alignment */
+    line-height: 100; /* Adjust line height for vertical alignment */
 }
 
 .social-icons a {
