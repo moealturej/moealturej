@@ -17,9 +17,9 @@ body {
 
 /* Define custom properties for gradient colors */
 :root {
-    --color-1: #1a1a1a; /* Very Dark Gray */
-    --color-2: #0d0d0d; /* Very Dark Gray */
-    --color-3: #030303; /* Almost Black */
+    --color-1: #000000; 
+    --color-2: #000000; 
+    --color-3: #000000; 
 }
 
 /* Animation for gradient background */
