@@ -332,21 +332,21 @@ input[type="image"]:hover {
 
 /* Position the icons as desired */
 .icon:nth-of-type(1) {
-    top: 10px;
+    bottom: 10px;
     left: 10px;
 }
 
 .icon:nth-of-type(2) {
-    top: 10px;
-    right: 10px;
+    bottom: 10px;
+    right: 60px; /* Adjust spacing as needed */
 }
 
 .icon:nth-of-type(3) {
     bottom: 10px;
-    left: 10px;
+    right: 110px; /* Adjust spacing as needed */
 }
 
 .icon:nth-of-type(4) {
     bottom: 10px;
-    right: 10px;
+    right: 160px; /* Adjust spacing as needed */
 }
