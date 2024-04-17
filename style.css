@@ -301,16 +301,17 @@ input[type="image"]:hover {
 .social-icons {
     text-align: center;
     margin-top: 20px;
+    line-height: 1; /* Adjust line height for vertical alignment */
 }
 
 .social-icons a {
     display: inline-block;
     margin: 0 10px;
+    vertical-align: middle; /* Align the icons vertically */
 }
 
 .social-icons img {
     width: 20px; /* Adjust the width as needed */
     height: auto;
     max-height: 20px; /* Limit the height to ensure consistent size */
-    vertical-align: middle; /* Align the icons vertically */
 }
