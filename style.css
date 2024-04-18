@@ -9,11 +9,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #1a1a1a;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Set the background color */
-}
+    overflow-x: hidden;
 }
 
 /* Container Styles */
