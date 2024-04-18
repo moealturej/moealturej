@@ -9,7 +9,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #1a1a1a;
-    overflow-x: hidden; /* Removed redundant margin and padding */
+    overflow-x: hidden;
+    background-color: #1a1a1a; /* Set the background color */
 }
 
 /* Container Styles */
