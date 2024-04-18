@@ -8,10 +8,31 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #1a1a1a;
+    color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: gradientBackground 30s infinite linear; /* Apply animation to body */
+}
+
+/* Define custom properties for gradient colors */
+:root {
+    --color-1: #1a1a1a; 
+    --color-2: #1a1a1a; 
+    --color-3: #1a1a1a; 
+}
+
+/* Animation for gradient background */
+@keyframes gradientBackground {
+    0%, 100% {
+        background: var(--color-1);
+    }
+    33.33% {
+        background: var(--color-2);
+    }
+    66.66% {
+        background: var(--color-3);
+    }
 }
 
 /* Container Styles */
