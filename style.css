@@ -9,9 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #1a1a1a;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Removed redundant margin and padding */
 }
 
 /* Container Styles */
@@ -170,25 +168,25 @@ body {
 }
 
 .review {
-    background-color: #0D0D0D; /* black background */
-    border-radius: 10px; /* smoother edges */
-    padding: 20px; /* more padding for a luxurious feel */
-    color: #fff; /* white text for high contrast */
+    background-color: #0D0D0D;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
     margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* softer shadow for depth */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .review p {
-    font-size: 22px; /* slightly larger text for emphasis */
-    line-height: 1.8; /* increased line height for readability */
+    font-size: 22px;
+    line-height: 1.8;
     margin-bottom: 15px;
 }
 
 .review .author {
-    font-style: normal; /* no italics for a clean look */
-    color: #999; /* subdued color for author name */
+    font-style: normal;
+    color: #999;
     font-weight: bold;
-    text-transform: uppercase; /* modern touch with uppercase author names */
+    text-transform: uppercase;
 }
 
 /* Navigation Bar Styles */
@@ -203,7 +201,7 @@ input[type="image"] {
     margin: 0 auto;
     margin-top: 17px;
     border-radius: 17px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition property */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="image"]:hover {
@@ -214,7 +212,7 @@ input[type="image"]:hover {
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
-    top: 10;
+    top: 10px; /* Added 'px' to ensure valid property value */
     left: -200px;
     width: 200px;
     height: 25%;
