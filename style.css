@@ -8,18 +8,20 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: gradientBackground 30s infinite linear; /* Apply animation to body */
+    animation: gradientBackground 30s infinite linear;
+    background-color: #121212; /* Dark background color */
 }
 
 /* Define custom properties for gradient colors */
 :root {
-    --color-1: #1a1a1a; 
-    --color-2: #1a1a1a; 
-    --color-3: #1a1a1a; 
+    --color-background: #121212; /* Dark background color */
+    --color-primary: #3498db; /* Accent color */
 }
 
 /* Animation for gradient background */
@@ -60,7 +62,7 @@ body {
 }
 
 .header-title {
-    font-size: 48px;
+    font-size: 3rem; /* Adjust as needed */
     margin-bottom: 20px;
 }
 
@@ -94,15 +96,16 @@ body {
 }
 
 .services-section {
-    background-color: #0D0D0D;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .services-section:hover {
     transform: translateY(-5px);
+    filter: brightness(110%);
 }
 
 .showcase {
@@ -148,14 +151,7 @@ body {
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-button {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-}
-
-.download-button {
-    background: #34fe00;
+    background: linear-gradient(135deg, #3498db, #2980b9);
 }
 
 .service-button:hover, .download-button:hover {
@@ -200,7 +196,7 @@ body {
 }
 
 .review p {
-    font-size: 22px; /* slightly larger text for emphasis */
+    font-size: 1.2rem; /* slightly larger text for emphasis */
     line-height: 1.8; /* increased line height for readability */
     margin-bottom: 15px;
 }
