@@ -1,19 +1,41 @@
 /* Reset CSS */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: gradientBackground 30s infinite linear; /* Apply animation to body */
     background-color: #1a1a1a; /* Dark background color */
+}
+
+/* Define custom properties for gradient colors */
+:root {
+    --color-1: #1a1a1a; 
+    --color-2: #1a1a1a; 
+    --color-3: #1a1a1a; 
+}
+
+/* Animation for gradient background */
+@keyframes gradientBackground {
+    0%, 100% {
+        background: var(--color-1);
+    }
+    33.33% {
+        background: var(--color-2);
+    }
+    66.66% {
+        background: var(--color-3);
+    }
 }
 
 /* Container Styles */
@@ -25,11 +47,10 @@ body {
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
     color: #fff;
     padding: 80px 20px;
     text-align: center;
-    border-radius: 20px; /* Rounded corners */
 }
 
 .header h1 {
@@ -42,27 +63,54 @@ body {
 }
 
 .header-title {
-    font-size: 2.5rem; /* Adjusted size */
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .header-description {
-    font-size: 1.2rem; /* Adjusted size */
+    font-size: 1.2rem;
     margin-bottom: 40px;
 }
 
 /* Services Styles */
+.category-section {
+    margin-bottom: 40px;
+}
+
+.services-heading {
+    border: 1.5px solid #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -17px;
+}
+
+.col {
+    flex: 0 0 calc(50% - 40px);
+    margin: 18px;
+}
+
 .services-section {
-    background-color: #0D0D0D; /* Darker background color */
+    background-color: #0D0D0D;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .services-section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.showcase {
+    position: relative;
+    overflow: hidden;
 }
 
 .show-image {
@@ -89,71 +137,122 @@ body {
     color: #fff;
 }
 
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .service-button, .download-button {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
-    font-size: 1rem;
+    font-size: 18px;
     border: none;
     border-radius: 30px;
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-button {
     background: linear-gradient(135deg, #2c3e50, #2980b9);
 }
 
+.download-button {
+    background: #34fe00;
+}
+
 .service-button:hover, .download-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
     color: #fff;
     text-align: center;
     padding: 60px 20px;
-    border-radius: 20px; /* Rounded corners */
 }
 
 .footer p {
     margin: 10px 0;
 }
 
+/* Animation Classes */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+}
+
 /* Reviews Section Styles */
+.customer-reviews {
+    margin-top: 10px;
+    text-align: center;
+}
+
 .review {
-    background-color: #0D0D0D; /* Darker background color */
+    background-color: #0D0D0D;
     border-radius: 10px;
     padding: 20px;
     color: #fff;
     margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .review p {
-    font-size: 1rem; /* Adjusted size */
-    line-height: 1.6;
+    font-size: 22px;
+    line-height: 1.8;
     margin-bottom: 15px;
 }
 
 .review .author {
+    font-style: normal;
+    color: #999;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: none;
+}
+
+input[type="image"] {
+    width: 171px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    border-radius: 17px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="image"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
-    top: 10px;
-    right: 10px; /* Moved to the right */
+    top: 10;
+    left: -200px;
     width: 200px;
     height: 25%;
-    background-color: #1a1a1a; /* Darker background color */
-    transition: right 0.3s ease; /* Changed transition */
+    background-color: #000;
+    transition: left 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    border-radius: 20px; /* Rounded corners */
+}
+
+.sidebar-list {
+    padding: 40px 0;
+    margin: 0;
 }
 
 .sidebar-item a {
@@ -165,7 +264,7 @@ body {
 }
 
 .sidebar-item a:hover {
-    background-color: #292929; /* Darker hover color */
+    background-color: #333;
     color: #fff;
 }
 
@@ -185,24 +284,13 @@ body {
     background-color: #fff;
 }
 
-/* Social Media Icons Styles */
-.social-icons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 20px;
-    height: auto;
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
 }
 
 .toggle-sidebar {
-    background-color: #2c3e50; /* Darker toggle button color */
+    background-color: #0D0D0D;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -211,5 +299,23 @@ body {
     top: 20px;
     left: 20px;
     z-index: 1002;
-    border-radius: 20px; /* Rounded corners */
+}
+
+/* Social Media Icons Styles */
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 0.01;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.social-icons img {
+    width: 20px;
+    height: auto;
+    max-height: 20px;
 }
