@@ -1,0 +1,40 @@
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: 
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build static content
+        run: |
+          # Add your build commands here to generate your static content
+          # For example, if you're using npm:
+          # npm install
+          # npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public # Specify the directory where your static content is generated
+          cname: example.com # Optional: Specify custom domain (remove if not needed)
+          user_name: GitHub Actions # Optional: Specify commit user name (remove if not needed)
+          user_email: actions@users.noreply.github.com # Optional: Specify commit user email (remove if not needed)
+          commit_message: Deploy static content to GitHub Pages
