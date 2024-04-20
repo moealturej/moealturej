@@ -9,32 +9,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    line-height: 1.6;
     color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: gradientBackground 30s infinite linear;
-    background-color: #121212; /* Dark background color */
-}
-
-/* Define custom properties for gradient colors */
-:root {
-    --color-background: #121212; /* Dark background color */
-    --color-primary: #3498db; /* Accent color */
-}
-
-/* Animation for gradient background */
-@keyframes gradientBackground {
-    0%, 100% {
-        background: var(--color-1);
-    }
-    33.33% {
-        background: var(--color-2);
-    }
-    66.66% {
-        background: var(--color-3);
-    }
+    background-color: #1f1f1f; /* Dark background color */
 }
 
 /* Container Styles */
@@ -46,7 +25,7 @@ body {
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: #fff;
     padding: 80px 20px;
     text-align: center;
@@ -67,50 +46,22 @@ body {
 }
 
 .header-description {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-bottom: 40px;
 }
 
 /* Services Styles */
-.category-section {
-    margin-bottom: 40px;
-}
-
-.services-heading {
-    border: 1.5px solid #fff;
-    padding: 5px 10px;
-    display: inline-block;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -17px;
-}
-
-.col {
-    flex: 0 0 calc(50% - 40px);
-    margin: 18px;
-}
-
 .services-section {
-    background: linear-gradient(135deg, #121212, #1a1a1a);
+    background-color: #292929;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
 .services-section:hover {
     transform: translateY(-5px);
-    filter: brightness(110%);
-}
-
-.showcase {
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .show-image {
@@ -136,32 +87,34 @@ body {
     color: #fff;
 }
 
-.button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
 .service-button, .download-button {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
-    font-size: 18px;
+    font-size: 1rem;
     border: none;
     border-radius: 30px;
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-button {
     background: linear-gradient(135deg, #3498db, #2980b9);
 }
 
+.download-button {
+    background: #34fe00;
+}
+
 .service-button:hover, .download-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: #fff;
     text-align: center;
     padding: 60px 20px;
@@ -171,80 +124,39 @@ body {
     margin: 10px 0;
 }
 
-/* Animation Classes */
-.animate__animated {
-    animation-duration: 1s;
-}
-
-.animate__fadeInDown {
-    animation-name: fadeInDown;
-}
-
 /* Reviews Section Styles */
-.customer-reviews {
-    margin-top: 10px;
-    text-align: center;
-}
-
 .review {
-    background-color: #0D0D0D; /* black background */
-    border-radius: 10px; /* smoother edges */
-    padding: 20px; /* more padding for a luxurious feel */
-    color: #fff; /* white text for high contrast */
+    background-color: #292929;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
     margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* softer shadow for depth */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .review p {
-    font-size: 1.2rem; /* slightly larger text for emphasis */
-    line-height: 1.8; /* increased line height for readability */
+    font-size: 1.2rem;
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
 .review .author {
-    font-style: normal; /* no italics for a clean look */
-    color: #999; /* subdued color for author name */
     font-weight: bold;
-    text-transform: uppercase; /* modern touch with uppercase author names */
-}
-
-/* Navigation Bar Styles */
-.navbar {
-    display: none;
-}
-
-input[type="image"] {
-    width: 171px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-top: 17px;
-    border-radius: 17px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition property */
-}
-
-input[type="image"]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
 }
 
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
-    top: 10;
+    top: 10px;
     left: -200px;
     width: 200px;
     height: 25%;
-    background-color: #000;
+    background-color: #1f1f1f;
     transition: left 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.sidebar-list {
-    padding: 40px 0;
-    margin: 0;
 }
 
 .sidebar-item a {
@@ -256,7 +168,7 @@ input[type="image"]:hover {
 }
 
 .sidebar-item a:hover {
-    background-color: #333;
+    background-color: #292929;
     color: #fff;
 }
 
@@ -276,13 +188,8 @@ input[type="image"]:hover {
     background-color: #fff;
 }
 
-.main-content {
-    margin-left: 0;
-    transition: margin-left 0.3s ease;
-}
-
 .toggle-sidebar {
-    background-color: #0D0D0D;
+    background-color: #292929;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -297,17 +204,14 @@ input[type="image"]:hover {
 .social-icons {
     text-align: center;
     margin-top: 20px;
-    line-height: 0.01; /* Adjust line height for vertical alignment */
 }
 
 .social-icons a {
     display: inline-block;
     margin: 0 10px;
-    vertical-align: middle; /* Align the icons vertically */
 }
 
 .social-icons img {
-    width: 20px; /* Adjust the width as needed */
+    width: 20px;
     height: auto;
-    max-height: 20px; /* Limit the height to ensure consistent size */
 }
