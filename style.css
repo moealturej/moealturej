@@ -216,13 +216,33 @@ body {
     text-transform: uppercase;
 }
 
+/* Navigation Bar Styles */
+.navbar {
+    display: none;
+}
+
+input[type="image"] {
+    width: 171px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    border-radius: 17px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="image"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 10;
     left: -200px;
     width: 200px;
-    height: 100%;
+    height: 25%;
     background-color: #000;
     transition: left 0.3s ease;
     z-index: 1000;
