@@ -326,3 +326,35 @@ input[type="image"]:hover {
         margin-left: 0;
     }
 }
+
+/* Social Media Icons Styles */
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 0.01;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.social-icons img {
+    width: 40px; /* Adjusted width */
+    height: auto;
+    max-height: 40px; /* Adjusted max-height */
+}
+
+/* Image Label Styles */
+.image-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1; /* Ensure the label is above the image */
+}
