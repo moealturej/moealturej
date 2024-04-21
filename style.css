@@ -293,29 +293,36 @@ input[type="image"]:hover {
     background-color: #0D0D0D;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    font-size: 20px;
+    padding: 10px 15px;
     cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 20px;
-    z-index: 1002;
+    z-index: 1100;
 }
 
-/* Social Media Icons Styles */
-.social-icons {
-    text-align: center;
-    margin-top: 20px;
-    line-height: 0.01;
+.toggle-sidebar:hover {
+    background-color: #333;
 }
 
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: middle;
-}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .col {
+        flex: 0 0 calc(100% - 40px);
+    }
 
-.social-icons img {
-    width: 20px;
-    height: auto;
-    max-height: 20px;
+    .toggle-sidebar {
+        display: block;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
 }
