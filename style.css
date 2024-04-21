@@ -14,18 +14,16 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: gradientBackground 30s infinite linear; /* Apply animation to body */
-    background-color: #1a1a1a; /* Dark background color */
+    animation: gradientBackground 30s infinite linear;
+    background-color: #1a1a1a;
 }
 
-/* Define custom properties for gradient colors */
 :root {
-    --color-1: #1a1a1a; 
-    --color-2: #1a1a1a; 
-    --color-3: #1a1a1a; 
+    --color-1: #1a1a1a;
+    --color-2: #1a1a1a;
+    --color-3: #1a1a1a;
 }
 
-/* Animation for gradient background */
 @keyframes gradientBackground {
     0%, 100% {
         background: var(--color-1);
@@ -108,18 +106,13 @@ body {
     transform: translateY(-5px);
 }
 
-.showcase {
-    position: relative;
-    overflow: hidden;
-}
-
 .show-image {
     width: 100%;
-    height: 200px; /* Smaller image height */
+    height: 200px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     transition: transform 0.3s ease;
-    position: relative; /* Relative positioning for image label */
+    position: relative;
 }
 
 .show-image:hover {
@@ -131,7 +124,7 @@ body {
     top: 10px;
     left: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px; /* Adjusted padding */
+    padding: 5px 10px;
     border-radius: 10px;
     font-weight: bold;
     color: #fff;
@@ -216,33 +209,13 @@ body {
     text-transform: uppercase;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-    display: none;
-}
-
-input[type="image"] {
-    width: 171px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-top: 17px;
-    border-radius: 17px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-input[type="image"]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
-    top: 10;
+    top: 0; /* Adjusted positioning */
     left: -200px;
     width: 200px;
-    height: 25%;
+    height: 100%; /* Adjusted height */
     background-color: #000;
     transition: left 0.3s ease;
     z-index: 1000;
