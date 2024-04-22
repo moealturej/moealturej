@@ -39,11 +39,6 @@
                                 </div>
                             </div>
                             <div class="button-container">
-                                <button id="toggle-images-button" onclick="toggleImages()">Toggle Images</button>
-                                <div class="row">
-                                    <img src="website/352.jpg" alt="Image 1" class="show-image show-image-10">
-                                    <img src="website/4563.jpg" alt="Image 2" class="show-image show-image-10">
-                                    <!-- Add show-image-10 class to all images you want to toggle -->
                                 <form action="https://www.paypal.com/donate" method="post" target="_top">
                                     <input type="hidden" name="business" value="3N5JTW6SEY5SL" />
                                     <input type="hidden" name="amount" value="30" />
@@ -261,18 +256,6 @@ toggleSidebar();
                 reviewsContainer.appendChild(reviewDiv);
             });
         }
-
-        // Define a function to toggle the visibility of the images
-    function toggleImages() {
-        var images = document.querySelectorAll('.show-image-10');
-        images.forEach(function(image) {
-            if (image.style.display === 'block') {
-                image.style.display = 'none';
-            } else {
-                image.style.display = 'block';
-            }
-        });
-    }
 
         // Fetch customer reviews when the page loads
         window.onload = fetchCustomerReviews;
