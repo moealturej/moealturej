@@ -10,6 +10,7 @@ body {
     background-color: #121212;
     color: #fff;
     overflow-x: hidden;
+    line-height: 1.6; /* Improved readability */
 }
 
 .container {
@@ -20,14 +21,17 @@ body {
 header {
     padding: 20px 0;
     border-bottom: 1px solid #444;
+    text-align: center; /* Center align the header content */
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 3rem; /* Larger header size */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 nav ul {
     list-style-type: none;
+    text-align: center; /* Center align the navigation */
 }
 
 nav ul li {
@@ -39,6 +43,11 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Change link color on hover */
 }
 
 main {
@@ -46,82 +55,86 @@ main {
 }
 
 .section-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Larger section title */
+    margin-bottom: 30px; /* Increased margin */
+    text-align: center; /* Center align the section title */
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted grid layout */
+    gap: 40px; /* Increased gap between grid items */
 }
 
 .service {
     background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 20px; /* Increased border radius */
     text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth hover transition */
 }
 
 .service:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.02); /* Adjusted hover effect */
 }
 
 .service img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 80%;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .image-container img {
-    width: 150px; /* Adjust width as needed */
+    width: 100%; /* Full-width images in image container */
     height: auto; /* Maintain aspect ratio */
 }
 
 .customer-reviews {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Center align reviews */
 }
 
 .review {
     background-color: #333;
-    padding: 20px;
-    margin: 10px;
-    flex-basis: calc(33.33% - 20px);
-    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    flex-basis: calc(33.33% - 40px);
+    border-radius: 20px;
+    text-align: center;
 }
 
 .review p {
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Increased margin between review paragraphs */
 }
 
 .footer {
-    padding: 20px 0;
+    padding: 40px 0; /* Increased padding */
     background-color: #222;
+    text-align: center; /* Center align footer content */
 }
 
 .footer p {
-    text-align: center;
+    margin-bottom: 20px; /* Increased margin between footer paragraphs */
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Increased margin from top */
 }
 
 .social-icons a {
-    margin: 0 10px;
+    margin: 0 15px; /* Increased margin between social icons */
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .social-icons img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1); /* Slightly increased hover scale */
 }
