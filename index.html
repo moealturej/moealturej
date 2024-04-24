@@ -11,27 +11,24 @@
     <meta http-equiv="Expires" content="0">
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <nav class="sidebar" id="sidebar">
-            <ul class="sidebar-list">
-                <li class="sidebar-item"><a href="#paid-services">Paid Services</a></li>
-                <li class="sidebar-item"><a href="#free-services">Free Services</a></li>
-                <li class="sidebar-item"><a href="#customer-reviews">Feedback</a></li>
-            </ul>
-        </nav>
-
-        <!-- Main content -->
-        <div class="main-content">
-            <nav class="navbar">
-                <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+    <header>
+        <div class="container">
+            <h1>moealturej Services</h1>
+            <nav>
+                <ul>
+                    <li><a href="#paid-services">Paid Services</a></li>
+                    <li><a href="#free-services">Free Services</a></li>
+                    <li><a href="#customer-reviews">Feedback</a></li>
+                </ul>
             </nav>
+        </div>
+    </header>
 
-            <section id="paid-services" class="category-section">
-                <h2 class="section-title">Paid Services</h2>
-                <div class="row">
-                    <div class="col">
-                        <section id="service1" class="section services-section animate__animated animate__fadeIn">
+    <main>
+        <section id="paid-services" class="category-section">
+            <h2 class="section-title">Paid Services</h2>
+            <div class="services-grid">
+                 <section id="service1" class="section services-section animate__animated animate__fadeIn">
                             <div class="showcase">
                                 <div class="image-container">
                                     <p class="image-label">$30USD - 3 Camos Per Weapon On All Weapons</p>
@@ -68,12 +65,13 @@
                                     <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
                                 </form>
                             </div>
-                        </section>
-                    </div>
-                </div>
-                </section>
-            <!-- Free Services Section -->
-            <section id="free-services" class="category-section">
+                        </div>
+                    </section>
+
+        <section id="free-services" class="category-section">
+            <h2 class="section-title">Free Services</h2>
+            <div class="services-grid">
+                <section id="free-services" class="category-section">
                 <h2 class="section-title">Free Services</h2>
                 <div class="row">
                     <!-- Service 7: Combat Master -->
@@ -158,31 +156,28 @@
                 </div> <!-- End of Row 4 -->
             </section> <!-- End of Free Services Section -->
 
-            <!-- Reviews Section -->
-            <section id="customer-reviews" class="category-section">
-                <h2 class="section-title">Reviews</h2>
-                <div id="customer-reviews-container" class="customer-reviews">
-                    <!-- Reviews will be dynamically added here -->
-                </div>
-            </section>
-        </div>
-    </div>
+        <section id="customer-reviews" class="category-section">
+            <h2 class="section-title">Reviews</h2>
+            <div class="customer-reviews">
+                <!-- Reviews will be dynamically added here -->
+            </div>
+        </section>
+    </main>
 
-    <footer class="animate__animated animate__fadeInUp">
+    <footer>
         <div class="container">
             <p>&copy; 2024 moealturej services. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/moealturej" target="_blank"><img src="icons/youtube.png" alt="Youtube"></a>
+                <a href="https://discord.gg/3cwsamjKvQ" target="_blank"><img src="icons/discord.png" alt="Discord"></a>
+                <a href="https://www.tiktok.com/@moealturej_services" target="_blank"><img src="icons/tiktok.png" alt="Tiktok"></a>
+                <a href="https://www.instagram.com/moealturej_services1/?hl=en" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="mailto:moealturej@gmail.com" target="_blank"><img src="icons/email.png" alt="Email"></a>
+            </div>
         </div>
-    <!-- Social Media Icons -->
-    <div class="social-icons">
-        <a href="https://www.youtube.com/moealturej" target="_blank"><img src="Website/1384060.png" alt="Youtube"></a>
-        <a href="https://discord.gg/3cwsamjKvQ" target="_blank"><img src="Website/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord"></a>
-        <a href="https://www.tiktok.com/@moealturej_services" target="_blank"><img src="Website/f50a6974b1c32deab8c613c9bf893d07.png" alt="Tiktok"></a>
-        <a href="https://www.instagram.com/moealturej_services1/?hl=en" target="_blank"><img src="Website/2437730f7e3a5705e205e67fa2cd1020.jpg" alt="Instagram"></a>
-        <a href="mailto:moealturej@gmail.com" target="_blank"><img src="Website/Yahoo-icon-design-on-transparent-background-PNG.png" alt="Email"></a>
-    </div>
- </footer>
+    </footer>
 
-    <script>
+<script>
         // Variable to keep track of the last service details shown
         var lastShownDetailsId = null;
 
