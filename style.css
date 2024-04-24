@@ -341,9 +341,9 @@ input[type="image"]:hover {
 }
 
 .social-icons img {
-    width: 40px; /* Adjusted width */
+    width: 20px; /* Adjusted width */
     height: auto;
-    max-height: 40px; /* Adjusted max-height */
+    max-height: 20px; /* Adjusted max-height */
 }
 
 /* Image Label Styles */
