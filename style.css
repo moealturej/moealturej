@@ -74,6 +74,11 @@ main {
     margin-bottom: 10px;
 }
 
+.image-container img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .customer-reviews {
     display: flex;
     flex-wrap: wrap;
