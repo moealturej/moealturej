@@ -37,6 +37,46 @@
                     <!-- Reviews will be dynamically added here -->
                 </div>
             </section>
+
+            <!-- Contact Form Section -->
+            <section id="contact-form-section" class="category-section">
+                <h2 class="section-title">Contact Us</h2>
+                <form id="contact-form" class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <!-- News Section -->
+            <section id="news" class="category-section">
+                <h2 class="section-title">News</h2>
+                <div id="news-container" class="news-container">
+                    <!-- News articles will be dynamically added here -->
+                </div>
+            </section>
+
+            <!-- Carousel Section -->
+            <section id="carousel" class="category-section">
+                <h2 class="section-title">Carousel</h2>
+                <div id="carousel-container" class="carousel-container">
+                    <!-- Carousel items will be dynamically added here -->
+                </div>
+            </section>
         </div>
     </div>
 
@@ -161,12 +201,82 @@
             });
         }
 
+        // Function to fetch news articles
+        function fetchNewsArticles() {
+            // Fetch data from the news API
+            fetch('https://api.example.com/news')
+                .then(response => response.json())
+                .then(data => {
+                    var newsContainer = document.getElementById('news-container');
+
+                    // Clear any existing news articles
+                    newsContainer.innerHTML = '';
+
+                    // Loop through the retrieved data and display news articles
+                    data.articles.forEach(article => {
+                        var articleDiv = document.createElement('div');
+                        articleDiv.classList.add('article');
+                        articleDiv.innerHTML = `
+                            <h3>${article.title}</h3>
+                            <p>${article.description}</p>
+                            <a href="${article.url}" target="_blank">Read more</a>
+                        `;
+                        newsContainer.appendChild(articleDiv);
+                    });
+                })
+                .catch(error => console.error('Error fetching news articles:', error));
+        }
+
+        // Function to implement carousel
+        function implementCarousel() {
+            // Initialize the Slick Carousel
+            $('#carousel-container').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+                nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }
+
+        // Function to handle form submission
+        function handleFormSubmission() {
+            // Implement form submission logic here
+            alert('Form submitted successfully!');
+        }
+
         // Fetch data when the page loads
         window.onload = function() {
             fetchPaidServices();
             fetchFreeServices();
             fetchCustomerReviews();
+            fetchNewsArticles();
+            implementCarousel();
+
+            // Attach form submission handler
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                handleFormSubmission();
+            });
         };
     </script>
+    <!-- Include jQuery and Slick Carousel libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>
