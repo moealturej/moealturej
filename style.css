@@ -1,5 +1,7 @@
 /* Reset CSS */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -357,8 +359,8 @@ input[type="image"]:hover {
     }
 
     .image-label {
-        top: 5px;
-        left: 5px;
+        top: 10px;
+        left: 10px;
         font-size: 0.8rem;
     }
 
