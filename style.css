@@ -158,6 +158,19 @@ body {
     margin: 10px 0;
 }
 
+/* Price Label Styles */
+.price-label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1; /* Ensure the label is above the image */
+}
+
 /* Animation Classes */
 .animate__animated {
     animation-duration: 1s;
