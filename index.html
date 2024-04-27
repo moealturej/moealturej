@@ -235,8 +235,9 @@
                 reviewDiv.innerHTML = '<p>"' + review.review + '"</p><p class="author">' + review.author + '</p>';
                 reviewsContainer.appendChild(reviewDiv);
             });
+        }
 
-            // Function to show the popup
+        // Function to show the popup
         function showPopup() {
             var popup = document.getElementById('popup');
             popup.style.display = 'block';
@@ -253,12 +254,12 @@
             // Add your logic here to continue with the purchase
             console.log('Continuing with purchase...');
             hidePopup(); // Hide the popup after confirmation
-        });
-            
         }
 
         // Fetch customer reviews when the page loads
-        window.onload = fetchCustomerReviews;
+        window.onload = function() {
+            fetchCustomerReviews();
+        };
     </script>
 </body>
 </html>
