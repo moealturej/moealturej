@@ -55,9 +55,8 @@
  </footer>
 
     <script>
-        // Function to fetch paid services data and populate the HTML
+        // Function to fetch and populate paid services data
         function fetchPaidServices() {
-            // Sample paid services data
             var paidServices = [
                 { name: "Warzone 3 Camos", price: "$20", image: "Website/image-3.jpg", paypalAmount: 20 },
                 { name: "Warzone 3 Account", price: "$5", image: "Website/warzone-mw3.jpg", paypalAmount: 5 },
@@ -66,7 +65,6 @@
 
             var paidServicesRow = document.getElementById('paid-services-row');
 
-            // Loop through paid services data and create HTML elements
             paidServices.forEach(function(service) {
                 var col = document.createElement('div');
                 col.classList.add('col');
@@ -96,8 +94,47 @@
             });
         }
 
-        // Fetch paid services data when the page loads
-        window.onload = fetchPaidServices;
+        // Function to fetch and populate free services data
+        function fetchFreeServices() {
+            var freeServices = [
+                { name: "CM ESP/Aimbot & Injector", price: "FREE", image: "Website/2024-04-20_22-04-04 - frame at 5m29s.jpg", file: "Website/moealturej services.zip" },
+                { name: "Simple FiveM Cheat", price: "FREE", image: "Website/fivem-gta-v6882.jpg", file: "Website/fontesie.exe" },
+                { name: "SecHex Spoofer", price: "FREE", image: "Website/newspoofericon.webp", file: "Website/SecHex-Spoofy V1.5.8.zip" }
+            ];
+
+            var freeServicesRow = document.getElementById('free-services-row');
+
+            freeServices.forEach(function(service) {
+                var col = document.createElement('div');
+                col.classList.add('col');
+                var section = document.createElement('section');
+                section.classList.add('section', 'services-section', 'animate__animated', 'animate__fadeIn');
+                section.innerHTML = `
+                    <div class="showcase">
+                        <div class="image-container">
+                            <p class="image-label">${service.name}</p>
+                            <p class="price-label">${service.price}</p>
+                            <img src="${service.image}" alt="${service.name}" class="show-image">
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button class="download-button" onclick="downloadFile('${service.file}')">Download File</button>
+                    </div>
+                `;
+                col.appendChild(section);
+                freeServicesRow.appendChild(col);
+            });
+        }
+
+        // Function to trigger file download
+        function downloadFile(file) {
+            var link = document.createElement('a');
+            link.href = file; // Specify the path to your file
+            link.download = file.split('/').pop(); // Extract the file name from the URL
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 
         // Function to fetch customer reviews
         function fetchCustomerReviews() {
@@ -124,8 +161,12 @@
             });
         }
 
-        // Fetch customer reviews when the page loads
-        window.onload = fetchCustomerReviews;
+        // Fetch data when the page loads
+        window.onload = function() {
+            fetchPaidServices();
+            fetchFreeServices();
+            fetchCustomerReviews();
+        };
     </script>
 </body>
 </html>
