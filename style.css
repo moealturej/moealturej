@@ -93,7 +93,7 @@ body {
 }
 
 .show-image {
-    width: 80%;
+    width: 95%;
     height: 280px; /* Adjusted image height */
     object-fit: cover;
     border-radius: 20px 20px 0 0;
