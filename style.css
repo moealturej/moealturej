@@ -161,13 +161,14 @@ body {
 /* Price Label Styles */
 .price-label {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    border-radius: 10px;
+    padding: 10px 15px; /* Adjusted padding */
+    border-radius: 15px; /* Adjusted border radius */
     font-weight: bold;
     color: #fff;
+    font-size: 20px; /* Adjusted font size */
     z-index: 1; /* Ensure the label is above the image */
 }
 
