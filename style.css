@@ -1,7 +1,5 @@
 /* Reset CSS */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -14,8 +12,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: gradientBackground 30s infinite linear; /* Apply animation to body */
-    background-color: #1a1a1a; /* Dark background color */
+    animation: gradientBackground 30s infinite linear;
+    background-color: #1a1a1a;
 }
 
 /* Define custom properties for gradient colors */
@@ -115,11 +113,11 @@ body {
 
 .show-image {
     width: 100%;
-    height: 200px; /* Smaller image height */
+    height: 200px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     transition: transform 0.3s ease;
-    position: relative; /* Relative positioning for image label */
+    position: relative;
 }
 
 .show-image:hover {
@@ -131,7 +129,7 @@ body {
     top: 10px;
     left: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px; /* Adjusted padding */
+    padding: 5px 10px;
     border-radius: 10px;
     font-weight: bold;
     color: #fff;
@@ -239,8 +237,8 @@ input[type="image"]:hover {
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
-    top: 10px; /* Fixed position from top */
-    left: -200px; /* Initially hidden */
+    top: 10px; 
+    left: -200px; 
     width: 200px;
     height: 25%;
     background-color: #000;
@@ -325,36 +323,56 @@ input[type="image"]:hover {
     .main-content {
         margin-left: 0;
     }
-}
 
-/* Social Media Icons Styles */
-.social-icons {
-    text-align: center;
-    margin-top: 20px;
-    line-height: 0.01;
-}
+    /* Adjustments for smaller screens */
+    .header {
+        padding: 50px 10px;
+    }
 
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: middle;
-}
+    .header h1 {
+        padding: 15px 30px;
+        font-size: 2rem;
+    }
 
-.social-icons img {
-    width: 25px; /* Adjusted width */
-    height: auto;
-    max-height: 25px; /* Adjusted max-height */
-}
+    .header-title {
+        font-size: 2rem;
+    }
 
-/* Image Label Styles */
-.image-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    color: #fff;
-    z-index: 1; /* Ensure the label is above the image */
+    .header-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        margin: -10px;
+    }
+
+    .col {
+        flex: 0 0 calc(100% - 20px);
+        margin: 10px;
+    }
+
+    .show-image {
+        height: 150px;
+    }
+
+    .image-label {
+        top: 5px;
+        left: 5px;
+        font-size: 0.8rem;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .service-button, .download-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        max-height: 20px;
+    }
 }
