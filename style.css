@@ -279,3 +279,26 @@ input[type="image"]:hover {
     color: #fff;
     z-index: 1; /* Ensure the label is above the image */
 }
+
+/* Top Bar Styles */
+.top-bar {
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
+    color: #fff;
+    padding: 10px 20px; /* Adjusted padding */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px; /* Adjusted width */
+    height: auto;
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.logo-text {
+    font-size: 1.5rem; /* Adjusted font size */
+    font-weight: bold;
+}
