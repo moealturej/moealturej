@@ -175,15 +175,6 @@
         </div>
     </div>
 
-     <!-- Popup Message -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="hidePopup()">&times;</span>
-            <p>PLEASE CONTACT THE OWNER ON DISCORD OR INSTAGRAM BEFORE PURCHASE</p>
-            <button onclick="continuePurchase()">OK</button>
-        </div>
-    </div>
-
     <footer class="animate__animated animate__fadeInUp">
         <div class="container">
             <p>&copy; 2024 moealturej services. All rights reserved.</p>
@@ -237,29 +228,8 @@
             });
         }
 
-        // Function to show the popup
-        function showPopup() {
-            var popup = document.getElementById('popup');
-            popup.style.display = 'block';
-        }
-
-        // Function to hide the popup
-        function hidePopup() {
-            var popup = document.getElementById('popup');
-            popup.style.display = 'none';
-        }
-
-        // Function to continue with the purchase after clicking OK
-        function continuePurchase() {
-            // Add your logic here to continue with the purchase
-            console.log('Continuing with purchase...');
-            hidePopup(); // Hide the popup after confirmation
-        }
-
         // Fetch customer reviews when the page loads
-        window.onload = function() {
-            fetchCustomerReviews();
-        };
+        window.onload = fetchCustomerReviews;
     </script>
 </body>
 </html>
