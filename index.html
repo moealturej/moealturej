@@ -47,6 +47,18 @@
                     <!-- Reviews will be dynamically added here -->
                 </div>
             </section>
+
+            <!-- Features Section -->
+            <section id="features-section" class="category-section">
+                <h2 class="section-title">Features</h2>
+                <button onclick="toggleFeatures()">Features</button>
+                <ul id="features-list" class="features-list">
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                    <!-- Add more features as needed -->
+                </ul>
+            </section>
         </div>
     </div>
 
@@ -65,6 +77,12 @@
     </footer>
 
     <script>
+        // Function to toggle features list visibility
+        function toggleFeatures() {
+            var featuresList = document.getElementById('features-list');
+            featuresList.style.display = (featuresList.style.display === 'none') ? 'block' : 'none';
+        }
+
         // Function to fetch and populate paid services data
         function fetchPaidServices() {
             var paidServices = [
