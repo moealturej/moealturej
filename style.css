@@ -14,28 +14,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    animation: gradientBackground 30s infinite linear;
-    background-color: #1a1a1a;
-}
-
-/* Define custom properties for gradient colors */
-:root {
-    --color-1: #1a1a1a;
-    --color-2: #2c3e50;
-    --color-3: #2980b9;
-}
-
-/* Animation for gradient background */
-@keyframes gradientBackground {
-    0%, 100% {
-        background: var(--color-1);
-    }
-    33.33% {
-        background: var(--color-2);
-    }
-    66.66% {
-        background: var(--color-3);
-    }
+    background-color: #1a1a1a; /* Set background color */
 }
 
 /* Container Styles */
@@ -60,7 +39,7 @@ body {
     border-radius: 20px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2rem; /* Adjusted font size */
+    font-size: 2rem;
 }
 
 .header-title {
@@ -89,12 +68,12 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: -17px;
+    margin: -10px; /* Adjusted margin */
 }
 
 .col {
-    flex: 0 0 calc(50% - 40px);
-    margin: 18px;
+    flex: 0 0 calc(50% - 20px); /* Adjusted column width */
+    margin: 10px; /* Adjusted margin */
 }
 
 .services-section {
@@ -109,18 +88,13 @@ body {
     transform: translateY(-5px);
 }
 
-.showcase {
-    position: relative;
-    overflow: hidden;
-}
-
 .show-image {
     width: 100%;
-    height: 200px;
+    height: 250px; /* Adjusted image height */
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     transition: transform 0.3s ease;
-    position: relative;
+    position: relative; /* Relative positioning for image label */
 }
 
 .show-image:hover {
@@ -132,11 +106,10 @@ body {
     top: 10px;
     left: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
+    padding: 5px 10px; /* Adjusted padding */
     border-radius: 10px;
     font-weight: bold;
     color: #fff;
-    z-index: 1;
 }
 
 .button-container {
@@ -144,8 +117,7 @@ body {
     margin-top: 20px;
 }
 
-.service-button,
-.download-button {
+.service-button, .download-button {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
@@ -165,8 +137,7 @@ body {
     background: #34fe00;
 }
 
-.service-button:hover,
-.download-button:hover {
+.service-button:hover, .download-button:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -208,8 +179,8 @@ body {
 }
 
 .review p {
-    font-size: 1.2rem; /* Adjusted font size */
-    line-height: 1.6; /* Adjusted line height */
+    font-size: 22px;
+    line-height: 1.8;
     margin-bottom: 15px;
 }
 
@@ -225,10 +196,97 @@ body {
     display: none;
 }
 
+input[type="image"] {
+    width: 171px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    border-radius: 17px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="image"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 10px; /* Fixed position from top */
+    left: -200px; /* Initially hidden */
+    width: 200px;
+    height: 25%;
+    background-color: #000;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-list {
+    padding: 40px 0;
+    margin: 0;
+}
+
+.sidebar-item a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 15px 20px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-item a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar-item a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+}
+
+.sidebar-item a:hover::before {
+    background-color: #fff;
+}
+
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.toggle-sidebar {
+    background-color: #0D0D0D;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 1100;
+}
+
+.toggle-sidebar:hover {
+    background-color: #333;
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .col {
-        flex: 0 0 calc(100% - 40px);
+        flex: 0 0 calc(100% - 20px); /* Adjusted column width */
     }
 
     .toggle-sidebar {
@@ -258,9 +316,9 @@ body {
 }
 
 .social-icons img {
-    width: 25px;
+    width: 25px; /* Adjusted width */
     height: auto;
-    max-height: 25px;
+    max-height: 25px; /* Adjusted max-height */
 }
 
 /* Image Label Styles */
@@ -273,5 +331,5 @@ body {
     border-radius: 10px;
     font-weight: bold;
     color: #fff;
-    z-index: 1;
+    z-index: 1; /* Ensure the label is above the image */
 }
