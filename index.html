@@ -54,26 +54,6 @@
         </div>
     </footer>
 
-    <!-- Contact Form Section -->
-    <section id="contact-form-section">
-        <h2 class="section-title">Contact Us</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required><br>
-
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
     <script>
         // Function to fetch and populate paid services data
         function fetchPaidServices() {
@@ -180,28 +160,6 @@
                 reviewsContainer.appendChild(reviewDiv);
             });
         }
-
-        // Function to handle form submission
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var formData = new FormData(this);
-            fetch("https://formspree.io/f/moqgkler", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert("Form submitted successfully!");
-                    document.getElementById("contact-form").reset();
-                } else {
-                    alert("Form submission failed. Please try again later.");
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("An error occurred. Please try again later.");
-            });
-        });
 
         // Fetch data when the page loads
         window.onload = function() {
