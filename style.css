@@ -110,6 +110,7 @@ body {
     border-radius: 10px;
     font-weight: bold;
     color: #fff;
+    z-index: 1; /* Ensure the label is above the image */
 }
 
 .button-container {
