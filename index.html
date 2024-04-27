@@ -12,21 +12,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
-        <nav class="sidebar" id="sidebar">
-            <ul class="sidebar-list">
-                <li class="sidebar-item"><a href="#paid-services">Paid Services</a></li>
-                <li class="sidebar-item"><a href="#free-services">Free Services</a></li>
-                <li class="sidebar-item"><a href="#customer-reviews">Feedback</a></li>
-            </ul>
-        </nav>
-
         <!-- Main content -->
         <div class="main-content">
-            <nav class="navbar">
-                <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
-            </nav>
-
             <section id="paid-services" class="category-section">
                 <h2 class="section-title">Paid Services</h2>
                 <div class="row">
@@ -206,23 +193,6 @@
         // Variable to keep track of the last service details shown
         var lastShownDetailsId = null;
 
-        // Toggle service details visibility
-        function toggleServiceDetails(id) {
-            var details = document.getElementById('service-details-' + id);
-            if (details.style.display === 'block') {
-                details.style.display = 'none';
-            } else {
-                // If another service details is already shown, hide it first
-                if (lastShownDetailsId !== null) {
-                    var lastShownDetails = document.getElementById('service-details-' + lastShownDetailsId);
-                    lastShownDetails.style.display = 'none';
-                }
-                details.style.display = 'block';
-                renderPayPalButtons(id); // Render PayPal buttons for the selected service
-            }
-            lastShownDetailsId = id;
-        }
-
         // Function to trigger file download
         function downloadFile(file) {
             var link = document.createElement('a');
@@ -232,26 +202,6 @@
             link.click();
             document.body.removeChild(link);
         }
-
-        // Function to toggle sidebar
-        function toggleSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            var mainContent = document.querySelector('.main-content');
-            var toggleButton = document.querySelector('.toggle-sidebar');
-
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px'; // Hide sidebar
-                mainContent.style.marginLeft = '0'; // Shift main content back to original position
-                toggleButton.textContent = 'Open Sidebar';
-            } else {
-                sidebar.style.left = '0px'; // Show sidebar
-                mainContent.style.marginLeft = '250px'; // Shift main content to accommodate sidebar
-                toggleButton.textContent = 'Close Sidebar';
-            }
-        }
-
-        // Ensure sidebar is initially shown
-        toggleSidebar();
 
         // Function to fetch customer reviews
         function fetchCustomerReviews() {
