@@ -19,16 +19,6 @@
                 moealturej Services
             </div>
         </div>
-        
-    <div class="container">
-        <!-- Main content -->
-        <div class="main-content">
-            <!-- Buttons for navigation -->
-            <div class="navigation-buttons">
-                <button onclick="navigateTo('paid-services')">Paid Services</button>
-                <button onclick="navigateTo('free-services')">Free Services</button>
-                <button onclick="navigateTo('customer-reviews')">Reviews</button>
-            </div>
 
     <div class="container">
         <!-- Main content -->
@@ -191,12 +181,6 @@
             fetchFreeServices();
             fetchCustomerReviews();
         };
-
-        // Function to navigate to a specific section
-        function navigateTo(sectionId) {
-            var section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
     </script>
 </body>
 </html>
