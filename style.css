@@ -4,7 +4,7 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box; /* Use border-box to include padding and border in the element's total width and height */
 }
 
 /* Global Styles */
@@ -121,7 +121,7 @@ body {
     margin-top: 20px;
 }
 
-.service-button, .download-button {
+.button {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
@@ -141,7 +141,7 @@ body {
     background: #34fe00;
 }
 
-.service-button:hover, .download-button:hover {
+.button:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -234,18 +234,6 @@ input[type="image"]:hover {
     .col {
         flex: 0 0 calc(100% - 20px); /* Adjusted column width */
     }
-
-    .toggle-sidebar {
-        display: block;
-    }
-
-    .sidebar {
-        height: 100%;
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
 }
 
 /* Social Media Icons Styles */
@@ -301,38 +289,4 @@ input[type="image"]:hover {
 .logo-text {
     font-size: 4.5rem; /* Adjusted font size */
     font-weight: bold;
-}
-
-/* Navigation Buttons */
-.navigation-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.navigation-buttons button {
-    padding: 15px 30px;
-    margin: 0 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-}
-
-.navigation-buttons button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Paid, Free, and Reviews Sections */
-#paid-services, #free-services, #customer-reviews {
-    display: none;
-}
-
-/* Show active section */
-.active-section {
-    display: block;
 }
