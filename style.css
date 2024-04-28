@@ -302,3 +302,37 @@ input[type="image"]:hover {
     font-size: 4.5rem; /* Adjusted font size */
     font-weight: bold;
 }
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.navigation-buttons button {
+    padding: 15px 30px;
+    margin: 0 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
+}
+
+.navigation-buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Paid, Free, and Reviews Sections */
+#paid-services, #free-services, #customer-reviews {
+    display: none;
+}
+
+/* Show active section */
+.active-section {
+    display: block;
+}
