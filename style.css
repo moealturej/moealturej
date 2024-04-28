@@ -4,7 +4,7 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Use border-box to include padding and border in the element's total width and height */
+    box-sizing: inherit;
 }
 
 /* Global Styles */
@@ -121,7 +121,7 @@ body {
     margin-top: 20px;
 }
 
-.button {
+.service-button, .download-button {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
@@ -141,7 +141,7 @@ body {
     background: #34fe00;
 }
 
-.button:hover {
+.service-button:hover, .download-button:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -233,6 +233,18 @@ input[type="image"]:hover {
 @media screen and (max-width: 768px) {
     .col {
         flex: 0 0 calc(100% - 20px); /* Adjusted column width */
+    }
+
+    .toggle-sidebar {
+        display: block;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+
+    .main-content {
+        margin-left: 0;
     }
 }
 
