@@ -234,7 +234,7 @@ body {
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .col {
-        flex: 0 0 calc(50% - 20px); /* Adjusted column width */
+        flex: 0 0 calc(100% - 20px); /* Adjusted column width */
         margin: 10px 0; /* Adjusted margin for smaller screens */
     }
 }
