@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #1a1a1a; /* Set background color */
+    background-color: #f0f0f0; /* Changed background color to light gray */
 }
 
 /* Container Styles */
@@ -24,11 +24,20 @@ body {
     padding: 20px;
 }
 
+/* Top Bar Styles */
+.top-bar {
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
+    color: #fff;
+    padding: 10px 20px; /* Adjusted padding */
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
 /* Header Styles */
 .header {
     background: linear-gradient(135deg, #2c3e50, #2980b9);
     color: #fff;
-    padding: 80px 20px;
+    padding: 40px 20px; /* Adjusted padding */
     text-align: center;
 }
 
@@ -123,11 +132,11 @@ body {
 
 .button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 20px 40px; /* Increased padding */
     margin: 10px;
     font-size: 18px;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px; /* Made buttons round */
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -253,40 +262,4 @@ input[type="image"]:hover {
     width: 25px; /* Adjusted width */
     height: auto;
     max-height: 25px; /* Adjusted max-height */
-}
-
-/* Image Label Styles */
-.image-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    color: #fff;
-    z-index: 1; /* Ensure the label is above the image */
-}
-
-/* Top Bar Styles */
-.top-bar {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-    color: #fff;
-    padding: 10px 20px; /* Adjusted padding */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 40px; /* Adjusted width */
-    height: auto;
-    margin-right: 10px; /* Adjusted margin */
-}
-
-.logo-text {
-    font-size: 4.5rem; /* Adjusted font size */
-    font-weight: bold;
 }
