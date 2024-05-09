@@ -302,3 +302,12 @@ input[type="image"]:hover {
     font-size: 4.5rem; /* Adjusted font size */
     font-weight: bold;
 }
+
+.details-button {
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
+}
+
+.details-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
