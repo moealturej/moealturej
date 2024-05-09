@@ -346,11 +346,10 @@ input[type="image"]:hover {
         }
 
         /* CSS for buttons */
-        .details-button,
-        .download-button {
+        .details-button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #4CAF50;
+            background-color: #0000FF;
             color: white;
             border: none;
             border-radius: 5px;
@@ -359,7 +358,6 @@ input[type="image"]:hover {
             margin-top: 10px;
         }
 
-        .details-button:hover,
-        .download-button:hover {
-            background-color: #45a049;
+        .details-button:hover {
+            background-color: #0000FF;
         }
