@@ -121,7 +121,7 @@ body {
     margin-top: 20px;
 }
 
-.service-button, .download-button {
+.download-button {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
@@ -133,15 +133,11 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-button {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-}
-
 .download-button {
     background: #34fe00;
 }
 
-.service-button:hover, .download-button:hover {
+.download-button:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -359,5 +355,6 @@ input[type="image"]:hover {
         }
 
         .details-button:hover {
-            background-color: #0000FF;
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
