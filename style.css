@@ -342,4 +342,5 @@ input[type="image"]:hover {
 .details-text {
     font-size: 18px; /* Adjust font size as needed */
     line-height: 1.6; /* Adjust line height for readability */
+    color: black; /* Change font color to black */
 }
