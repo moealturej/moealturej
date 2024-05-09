@@ -282,19 +282,32 @@ Remove Config`, image: "Website/9DpQb8dq3xRZapOA8aMvRCSGfGey8x3FAGWMPwuu.png" },
             document.body.removeChild(link);
         }
 
-       // Function to fetch customer reviews
-function fetchCustomerReviews() {
-    var customerReviews = [
-        { review: "REP LEGIT/FAST SERVICE, got me hooked up with 5 camos", author: "- iday" },
-        { review: "Rep+ legit and would definitely buy again", author: "- Jukkiesalt" },
-        { review: "REP+++ this dude hooked me up with my favorite camo", author: "- Kewt'n" },
-        { review: "He tha best he got me right with the camos", author: "- synaq_8" },
-        { review: "I would like to thank you the owner and his hole team to for helping me I appreciate them it was fast and simple all I did was pay and show them I paid and I got the account 👍", author: "- 𝙸𝚌𝚘𝚗 💫" },
-        { review: "Rep+ thank u for the help fast respond time helped me with everything was kind and helpful also very understandable we love moe -moes ekitten", author: "- ekittenmek." },
-        { review: "rep+ got me all my skins that i wanted for mw3/warzone. Legit, fast and consistent def reccomend", author: "- Godelic" },
-        { review: "vouch got me hooked up with all meta weapons + camos, I would def buy again !", author: "- iday" },
-        { review: "weapons + camos, I would def buy again!", author: "- synaq_8" }
-    ];
+        // Function to fetch customer reviews
+        function fetchCustomerReviews() {
+            var customerReviews = [
+                { review: "REP LEGIT/FAST SERVICE, got me hooked up with 5 camos", author: "- iday" },
+                { review: "Rep+ legit and would definitely buy again", author: "- Jukkiesalt" },
+                { review: "REP+++ this dude hooked me up with my favorite camo", author: "- Kewt'n" },
+                { review: "He tha best he got me right with the camos", author: "- synaq_8" },
+                { review: "I would like to thank you the owner and his hole team to for helping me I appreciate them it was fast and simple all I did was pay and show them I paid and I got the account 👍", author: "- 𝙸𝚌𝚘𝚗 💫" },
+                { review: "Rep+ thank u for the help fast respond time helped me with everything was kind and helpful also very understandable we love moe -moes ekitten", author: "- ekittenmek." },
+                { review: "rep+ got me all my skins that i wanted for mw3/warzone. Legit, fast and consistent def reccomend", author: "- Godelic" },
+                { review: "vouch got me hooked up with all meta weapons + camos, I would def buy again !", author: "- iday" },
+                { review: "weapons + camos, I would def buy again!", author: "- synaq_8" }
+            ];
+
+            var customerReviewsContainer = document.getElementById('customer-reviews-container');
+
+            customerReviews.forEach(function(review) {
+                var div = document.createElement('div');
+                div.classList.add('review');
+                div.innerHTML = `
+                    <p>${review.review}</p>
+                    <p class="author">${review.author}</p>
+                `;
+                customerReviewsContainer.appendChild(div);
+            });
+        }
 
         // Fetch data when the page loads
         window.onload = function() {
