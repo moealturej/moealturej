@@ -134,11 +134,17 @@ function showDetails(details) {
 
     modalContent.appendChild(closeButton);
 
-    // Add service details
-    var detailsText = document.createElement('p');
-    detailsText.classList.add('details-text');
-    detailsText.textContent = details; // Adding the service details to the paragraph element
-    modalContent.appendChild(detailsText);
+    // Parse details into a list
+    var detailsList = document.createElement('ul');
+    detailsList.classList.add('details-list');
+
+    details.split('\n').forEach(function(detail) {
+        var listItem = document.createElement('li');
+        listItem.textContent = detail.trim();
+        detailsList.appendChild(listItem);
+    });
+
+    modalContent.appendChild(detailsList);
 
     // Append modal content to modal container
     modalContainer.appendChild(overlay);
