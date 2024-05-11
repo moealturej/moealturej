@@ -144,7 +144,14 @@ function showDetails(details) {
         detailsList.appendChild(listItem);
     });
 
+
     modalContent.appendChild(detailsList);
+
+    // Add service details
+    var detailsText = document.createElement('p');
+    detailsText.classList.add('details-text');
+    detailsText.textContent = details; // Adding the service details to the paragraph element
+    modalContent.appendChild(detailsText);
 
     // Append modal content to modal container
     modalContainer.appendChild(overlay);
