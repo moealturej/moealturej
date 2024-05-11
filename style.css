@@ -358,3 +358,74 @@ input[type="image"]:hover {
             transform: scale(1.1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
+
+/* CSS for modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: 1001; /* Higher z-index than modal content */
+    display: none; /* Hidden by default */
+}
+
+/* CSS for showing modal */
+.modal-container.show {
+    display: block;
+}
+
+/* CSS for modal content */
+.modal-content {
+    position: relative; /* Ensure proper positioning of close button */
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Limit maximum width for better readability */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+    transform: translateY(-50%); /* Center modal vertically */
+    top: 50%;
+}
+
+/* CSS for close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #333; /* Darken color on hover for better visibility */
+}
+
+/* CSS for service details text */
+.details-text {
+    font-size: 16px; /* Decrease font size slightly for better readability */
+    line-height: 1.5;
+    color: #333; /* Darken font color for better contrast */
+}
+
+/* CSS for modal animation */
+.modal-container.show .modal-content {
+    animation: modalFadeIn 0.3s ease-out; /* Apply fade in animation */
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8); /* Start slightly scaled down */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1); /* Scale back to normal */
+    }
+}
