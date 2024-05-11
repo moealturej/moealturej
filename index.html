@@ -97,39 +97,69 @@
             });
         }
 
-        // Function to show service details in a modal
+       // Function to show service details in a modal
 function showDetails(details) {
-    // Create a modal container
+    // Create modal container
     var modalContainer = document.createElement('div');
     modalContainer.classList.add('modal-container');
-
+    
+    // Create modal overlay
+    var overlay = document.createElement('div');
+    overlay.classList.add('modal-overlay');
+    
     // Create modal content
     var modalContent = document.createElement('div');
     modalContent.classList.add('modal-content');
 
     // Add close button
-    var closeButton = document.createElement('span');
+    var closeButton = document.createElement('button');
     closeButton.classList.add('close-button');
+    closeButton.setAttribute('aria-label', 'Close modal');
     closeButton.innerHTML = '&times;'; // × symbol for close button
     closeButton.onclick = function() {
-        modalContainer.style.display = 'none'; // Hide the modal when close button is clicked
+        closeModal(modalContainer); // Close the modal when close button is clicked
     };
+
+    // Add event listener to close modal when overlay is clicked
+    overlay.addEventListener('click', function() {
+        closeModal(modalContainer);
+    });
+
+    // Add event listener to close modal when 'Esc' key is pressed
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal(modalContainer);
+        }
+    });
+
     modalContent.appendChild(closeButton);
 
     // Add service details
     var detailsText = document.createElement('p');
     detailsText.classList.add('details-text');
-    detailsText.textContent = details;
+    detailsText.textContent = details; // Adding the service details to the paragraph element
     modalContent.appendChild(detailsText);
 
     // Append modal content to modal container
+    modalContainer.appendChild(overlay);
     modalContainer.appendChild(modalContent);
 
     // Append modal container to body
     document.body.appendChild(modalContainer);
 
-    // Display the modal
-    modalContainer.style.display = 'block';
+    // Display the modal with animation
+    setTimeout(function() {
+        modalContainer.classList.add('show');
+    }, 100);
+}
+
+// Function to close the modal
+function closeModal(modalContainer) {
+    modalContainer.classList.remove('show');
+    // Remove modal from the DOM after animation completes
+    setTimeout(function() {
+        modalContainer.remove();
+    }, 300);
 }
 
         // Function to fetch and populate free services data
