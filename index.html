@@ -260,18 +260,15 @@ function closeModal(modalContainer) {
             fetchPaidServices();
             fetchFreeServices();
             fetchCustomerReviews();
-        // Adding event listeners to "Show Purchase Options" buttons
-        var showButtons = document.querySelectorAll('.show-purchase-buttons-button');
-        showButtons.forEach(function(button) {
-            button.addEventListener('click', function(event) {
-                var serviceIndex = event.target.getAttribute('data-service-index');
-                var serviceContainer = document.querySelectorAll('.services-section')[serviceIndex];
-                var purchaseButtons = serviceContainer.querySelectorAll('.purchase-button');
-                purchaseButtons.forEach(function(purchaseButton) {
-                    purchaseButton.style.display = 'block';
-                });
-                button.style.display = 'none';
-            });
+       // Add event listeners to show/hide purchase buttons
+var showButtons = document.querySelectorAll('.show-purchase-buttons-button');
+showButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        var buttonContainer = event.target.closest('.button-container');
+        var purchaseButtons = buttonContainer.querySelectorAll('.purchase-button');
+        purchaseButtons.forEach(function(purchaseButton) {
+            purchaseButton.style.display = purchaseButton.style.display === 'none' ? 'block' : 'none';
         });
-    };
-</script>
+        button.style.display = 'none'; // Hide the "Show Purchase Options" button after displaying purchase buttons
+    });
+});
