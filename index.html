@@ -103,18 +103,34 @@
     });
 
     // Add event listeners to show/hide purchase buttons
-    var showButtons = document.querySelectorAll('.show-purchase-buttons-button');
-    showButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            var buttonContainer = event.target.closest('.button-container');
-            var purchaseButtons = buttonContainer.querySelectorAll('.purchase-button');
-            purchaseButtons.forEach(function(purchaseButton) {
-                purchaseButton.style.display = 'block';
-            });
-            button.style.display = 'none'; // Hide the "Show Purchase Options" button after displaying purchase buttons
+var showButtons = document.querySelectorAll('.show-purchase-buttons-button');
+showButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        var buttonContainer = event.target.closest('.button-container');
+        var purchaseButtons = buttonContainer.querySelectorAll('.purchase-button');
+        var hideButton = buttonContainer.querySelector('.hide-purchase-buttons-button');
+        purchaseButtons.forEach(function(purchaseButton) {
+            purchaseButton.style.display = 'block';
         });
+        hideButton.style.display = 'block'; // Show the "Close Purchase Options" button
+        button.style.display = 'none'; // Hide the "Show Purchase Options" button after displaying purchase buttons
     });
-}
+});
+
+// Add event listeners to hide purchase buttons
+var hideButtons = document.querySelectorAll('.hide-purchase-buttons-button');
+hideButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        var buttonContainer = event.target.closest('.button-container');
+        var purchaseButtons = buttonContainer.querySelectorAll('.purchase-button');
+        var showButton = buttonContainer.querySelector('.show-purchase-buttons-button');
+        purchaseButtons.forEach(function(purchaseButton) {
+            purchaseButton.style.display = 'none';
+        });
+        showButton.style.display = 'block'; // Show the "Show Purchase Options" button
+        button.style.display = 'none'; // Hide the "Close Purchase Options" button after hiding purchase buttons
+    });
+});
 
        // Function to show service details in a modal
 function showDetails(details) {
