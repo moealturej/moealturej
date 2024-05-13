@@ -415,7 +415,12 @@ input[type="image"]:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.purchase-buttons {
+    margin-top: 10px; /* Adjusted margin */
+}
+
 .purchase-button {
+    display: block; /* Change display property to block */
     padding: 10px 20px;
     font-size: 16px;
     background-color: #0000FF; /* Choose your desired background color */
@@ -429,24 +434,6 @@ input[type="image"]:hover {
 
 .purchase-button:hover {
     background-color: #0096FF; /* Change color on hover */
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.show-options-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #FF0000; /* Choose your desired background color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.show-options-button:hover {
-    background-color: #EE4B2B; /* Change color on hover */
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
