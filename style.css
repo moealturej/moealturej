@@ -429,3 +429,22 @@ input[type="image"]:hover {
         transform: translateY(-50%) scale(1); /* Scale back to normal */
     }
 }
+
+/* CSS for buttons */
+.details-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF5733; /* Different color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.details-button:hover {
+    background-color: #FF8C00; /* Different color on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
