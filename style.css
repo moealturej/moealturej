@@ -119,7 +119,7 @@ body {
 .button-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items starting from the left */
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -418,9 +418,9 @@ input[type="image"]:hover {
 }
 
 .purchase-buttons {
-    display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap to the next row */
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .purchase-button {
@@ -432,7 +432,12 @@ input[type="image"]:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 0 10px 10px 0; /* Add margin to create space between buttons */
+    margin-bottom: 10px; /* Add margin bottom to create space between buttons */
+    align-self: flex-start; /* Align buttons to start from the left */
+}
+
+.purchase-button:last-child {
+    margin-bottom: 0; /* Remove margin bottom from the last button */
 }
 
 .purchase-button:hover {
