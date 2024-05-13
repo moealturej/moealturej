@@ -414,3 +414,21 @@ input[type="image"]:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
+.purchase-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF5733; /* Choose your desired background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.purchase-button:hover {
+    background-color: #FF8C00; /* Change color on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
