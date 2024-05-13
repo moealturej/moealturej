@@ -106,29 +106,28 @@
 ];
             var paidServicesRow = document.getElementById('paid-services-row');
 
-            paidServices.forEach(function(service, index) {
-                var col = document.createElement('div');
-                col.classList.add('col');
-                var section = document.createElement('section');
-                section.classList.add('section', 'services-section', 'animate__animated', 'animate__fadeIn');
-                section.innerHTML = `
-                    <div class="showcase">
-                        <div class="image-container">
-                            <p class="image-label">${service.name}</p>
-                            <img src="${service.image}" alt="${service.name}" class="show-image">
-                        </div>
-                    </div>
-                    <div class="button-container">
-                        <button class="details-button" onclick="showDetails('${service.details}')">Details</button>
-                        <button class="show-purchase-buttons-button" data-service-index="${index}">Show Purchase Options</button>
-                        ${Array.isArray(service.purchaseLinks) ? service.purchaseLinks.map((link, idx) => `
-                        <a href="${link}" class="purchase-button" target="_blank" style="display:none;">${service.purchaseOptions[idx]}</a>
-                        `).join('') : `<a href="${service.purchaseLinks}" class="purchase-button" target="_blank" style="display:none;">Purchase</a>`}
-                    </div>
-                `;
-                col.appendChild(section);
-                paidServicesRow.appendChild(col);
-            });
+    paidServices.forEach(function(service, index) {
+        var col = document.createElement('div');
+        col.classList.add('col');
+        var section = document.createElement('section');
+        section.classList.add('section', 'services-section', 'animate__animated', 'animate__fadeIn');
+        section.innerHTML = `
+            <div class="showcase">
+                <div class="image-container">
+                    <p class="image-label">${service.name}</p>
+                    <img src="${service.image}" alt="${service.name}" class="show-image">
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="details-button" onclick="showDetails('${service.details}')">Details</button>
+                ${Array.isArray(service.purchaseLinks) ? service.purchaseLinks.map((link, idx) => `
+                <a href="${link}" class="purchase-button">${service.purchaseOptions[idx]}</a>
+                `).join('') : `<a href="${service.purchaseLinks}" class="purchase-button">${service.purchaseOptions}</a>`}
+            </div>
+        `;
+        col.appendChild(section);
+        paidServicesRow.appendChild(col);
+    });
 
             // Add event listeners to show/hide purchase buttons
             var showButtons = document.querySelectorAll('.show-purchase-buttons-button');
