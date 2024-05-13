@@ -419,7 +419,7 @@ input[type="image"]:hover {
 
 .purchase-buttons {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next row */
     margin-top: 10px;
 }
 
@@ -432,7 +432,7 @@ input[type="image"]:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 0 10px;
+    margin: 0 10px 10px 0; /* Add margin to create space between buttons */
 }
 
 .purchase-button:hover {
