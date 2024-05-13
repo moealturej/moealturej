@@ -416,12 +416,12 @@ input[type="image"]:hover {
 }
 
 .purchase-buttons {
-    margin-top: 10px; /* Adjusted margin */
+    margin-top: 20px; /* Adjusted margin */
 }
 
 .purchase-button {
-    display: block; /* Change display property to block */
-    padding: 10px 20px;
+    display: inline-block; /* Change display property to inline-block */
+    padding: 12px 24px; /* Adjusted padding */
     font-size: 16px;
     background-color: #0000FF; /* Choose your desired background color */
     color: white;
@@ -429,7 +429,7 @@ input[type="image"]:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 10px;
+    margin: 0 10px; /* Adjusted margin */
 }
 
 .purchase-button:hover {
