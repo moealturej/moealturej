@@ -400,7 +400,7 @@ input[type="image"]:hover {
 .details-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #FF5733; /* Different color for the button */
+    background-color: #800080; /* Different color for the button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -410,7 +410,7 @@ input[type="image"]:hover {
 }
 
 .details-button:hover {
-    background-color: #FF8C00; /* Different color on hover */
+    background-color: #BF40BF; /* Different color on hover */
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -418,7 +418,7 @@ input[type="image"]:hover {
 .purchase-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #0096FF; /* Choose your desired background color */
+    background-color: #0000FF; /* Choose your desired background color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -428,7 +428,25 @@ input[type="image"]:hover {
 }
 
 .purchase-button:hover {
-    background-color: #FF8C00; /* Change color on hover */
+    background-color: #0096FF; /* Change color on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.show-options-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF0000; /* Choose your desired background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.show-options-button:hover {
+    background-color: #EE4B2B; /* Change color on hover */
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
