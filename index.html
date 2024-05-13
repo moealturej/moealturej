@@ -92,9 +92,10 @@
             <div class="button-container">
                 <button class="details-button" onclick="showDetails('${service.details}')">Details</button>
                 <button class="show-purchase-buttons-button">Show Purchase Options</button>
-                ${service.purchaseLinks.map((link, index) => `
-                    <a href="${link}" class="purchase-button" target="_blank" style="display:none;">Purchase Option ${index + 1}</a>
-                `).join('')}
+                ${Array.isArray(service.purchaseLinks) ? service.purchaseLinks.map((link, index) => `
+                <a href="${link}" class="purchase-button" target="_blank" style="display:none;">Purchase Option ${index + 1}</a>
+                `).join('') : `<a href="${service.purchaseLinks}" class="purchase-button" target="_blank" style="display:none;">Purchase</a>`}
+
             </div>
         `;
         col.appendChild(section);
