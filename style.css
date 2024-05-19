@@ -196,6 +196,12 @@ body {
     text-align: center;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .social-icons img {
     width: 30px;
     margin: 0 10px;
@@ -203,7 +209,7 @@ body {
 }
 
 .modal {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -218,9 +224,10 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    text-align: center;
+    text-align: left;
     max-width: 500px;
     width: 80%;
+    position: relative;
 }
 
 .close-button {
