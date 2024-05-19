@@ -1,443 +1,205 @@
-/* Reset CSS */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+/* style.css */
 
-/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #fff;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    background-color: #1a1a1a; /* Set background color */
+    background-color: #f5f5f5;
 }
 
-/* Container Styles */
 .container {
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
 }
 
-/* Header Styles */
-.header {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-    color: #fff;
-    padding: 80px 20px;
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
     text-align: center;
 }
 
-.header h1 {
-    border: 4px solid #fff;
-    padding: 20px 40px;
-    display: inline-block;
-    border-radius: 20px;
-    text-transform: uppercase;
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.top-bar {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
     font-weight: bold;
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.header-title {
-    font-size: 2.5rem;
+.main-content {
+    padding: 20px 0;
+}
+
+.section-title {
+    font-size: 2em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.header-description {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
-
-/* Services Styles */
 .category-section {
     margin-bottom: 40px;
-}
-
-.services-heading {
-    border: 1.5px solid #fff;
-    padding: 5px 10px;
-    display: inline-block;
-    border-radius: 10px;
-    font-weight: bold;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: -10px; /* Adjusted margin */
+    justify-content: space-around;
 }
 
 .col {
-    flex: 0 0 calc(50% - 20px); /* Adjusted column width */
-    margin: 10px; /* Adjusted margin */
+    flex: 1 1 30%;
+    margin: 10px;
 }
 
-.services-section {
-    background-color: #0D0D0D;
-    border-radius: 20px;
+.section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.services-section:hover {
-    transform: translateY(-5px);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
 .showcase {
     position: relative;
+    overflow: hidden;
 }
 
 .show-image {
-    width: 100%;
-    height: 280px; /* Adjusted image height */
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-    transition: transform 0.3s ease;
-}
-
-.show-image:hover {
-    transform: scale(1.05);
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .image-label {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px; /* Adjusted padding */
-    border-radius: 10px;
-    font-weight: bold;
-    color: #fff;
-    z-index: 1; /* Ensure the label is above the image */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 .button-container {
+    margin-top: 10px;
+}
+
+.details-button, .purchase-button, .download-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.details-button:hover, .purchase-button:hover, .download-button:hover {
+    background-color: #0056b3;
+}
+
+.customer-reviews {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-}
-
-.download-button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #34fe00; /* Color for download button */
-}
-
-.download-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Footer Styles */
-.footer {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.footer p {
-    margin: 10px 0;
-}
-
-/* Price Label Styles */
-.price-label {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 15px; /* Adjusted padding */
-    border-radius: 15px; /* Adjusted border radius */
-    font-weight: bold;
-    color: #fff;
-    font-size: 20px; /* Adjusted font size */
-    z-index: 1; /* Ensure the label is above the image */
-}
-
-/* Animation Classes */
-.animate__animated {
-    animation-duration: 1s;
-}
-
-.animate__fadeInDown {
-    animation-name: fadeInDown;
-}
-
-/* Reviews Section Styles */
-.customer-reviews {
-    margin-top: 10px;
-    text-align: center;
 }
 
 .review {
-    background-color: #0D0D0D;
-    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     padding: 20px;
-    color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.review p {
-    font-size: 22px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.review .author {
-    font-style: normal;
-    color: #999;
+.author {
     font-weight: bold;
-    text-transform: uppercase;
+    text-align: right;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-    display: none;
-}
-
-input[type="image"] {
-    width: 171px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-top: 17px;
-    border-radius: 17px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-input[type="image"]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .col {
-        flex: 0 0 calc(100% - 20px); /* Adjusted column width */
-    }
-
-    .toggle-sidebar {
-        display: block;
-    }
-
-    .sidebar {
-        height: 100%;
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
-}
-
-/* Social Media Icons Styles */
-.social-icons {
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    margin-top: 20px;
-    line-height: 0.01;
 }
 
-.social-icons a {
-    display: inline-block;
+.social-icons img {
+    width: 30px;
     margin: 0 10px;
     vertical-align: middle;
 }
 
-.social-icons img {
-    width: 25px; /* Adjusted width */
-    height: auto;
-    max-height: 25px; /* Adjusted max-height */
-}
-
-/* Top Bar Styles */
-.top-bar {
-    background: linear-gradient(135deg, #2c3e50, #2980b9);
-    color: #fff;
-    padding: 10px 20px; /* Adjusted padding */
-}
-
-.logo {
+.modal {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.logo img {
-    width: 40px; /* Adjusted width */
-    height: auto;
-    margin-right: 10px; /* Adjusted margin */
-}
-
-.logo-text {
-    font-size: 4.5rem; /* Adjusted font size */
-    font-weight: bold;
-}
-
-/* CSS for modal */
-.modal-container {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px; /* Location of the modal content */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.details-text {
-    font-size: 18px; /* Adjust font size as needed */
-    line-height: 1.6; /* Adjust line height for readability */
-    color: black; /* Change font color to black */
-}
-
-/* CSS for modal overlay */
-.modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
-    z-index: 1001; /* Higher z-index than modal content */
-    display: none; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* CSS for showing modal */
-.modal-container.show {
-    display: block;
-}
-
-/* CSS for modal content */
 .modal-content {
-    position: relative; /* Ensure proper positioning of close button */
-    background-color: #fefefe;
-    margin: auto;
+    background-color: white;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px; /* Limit maximum width for better readability */
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
-    transform: translateY(-50%); /* Center modal vertically */
-    top: 50%;
+    text-align: center;
+    max-width: 500px;
+    width: 80%;
 }
 
-/* CSS for close button */
 .close-button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.5em;
     position: absolute;
     top: 10px;
     right: 10px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
 }
 
 .close-button:hover {
-    color: #333; /* Darken color on hover for better visibility */
-}
-
-/* CSS for service details text */
-.details-text {
-    font-size: 16px; /* Decrease font size slightly for better readability */
-    line-height: 1.5;
-    color: #333; /* Darken font color for better contrast */
-}
-
-/* CSS for modal animation */
-.modal-container.show .modal-content {
-    animation: modalFadeIn 0.3s ease-out; /* Apply fade in animation */
-}
-
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50%) scale(0.8); /* Start slightly scaled down */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(-50%) scale(1); /* Scale back to normal */
-    }
-}
-
-/* CSS for buttons */
-.details-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #800080; /* Different color for the button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.details-button:hover {
-    background-color: #BF40BF; /* Different color on hover */
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.purchase-buttons {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap; /* Wrap items to next row when they exceed container width */
-    justify-content: flex-start; /* Align items starting from the left */
-}
-
-.purchase-button {
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: #0000FF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 5px; /* Add margin to create space between buttons */
-}
-
-.purchase-button:hover {
-    background-color: #0096FF;
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: #aaa;
 }
