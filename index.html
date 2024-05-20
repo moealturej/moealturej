@@ -17,6 +17,7 @@
             <div class="logo">
                 <img src="Website/channels4_profile.jpg" alt="moealturej Services Logo">
                 moealturej Services
+                <button id="dark-mode-toggle">Toggle Dark Mode</button>
             </div>
         </div>
     </div>
@@ -271,6 +272,23 @@
                 modalContainer.classList.add('show');
             }, 100);
         }
+
+        // Function to toggle dark mode
+    function toggleDarkMode() {
+        var body = document.body;
+        body.classList.toggle('dark-mode');
+    }
+
+    // Fetch data when the page loads
+    window.onload = function() {
+        fetchPaidServices();
+        fetchFreeServices();
+        fetchCustomerReviews();
+
+        // Add event listener to toggle dark mode
+        var darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    }
 
         // Function to close the modal
         function closeModal(modalContainer) {
