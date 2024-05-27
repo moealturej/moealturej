@@ -120,7 +120,24 @@ body {
     margin-top: 15px;
 }
 
-.details-button, .purchase-button, .download-button {
+.details-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #ff9800;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.details-button:hover {
+    background-color: #e68900;
+}
+
+.purchase-button {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px;
@@ -133,8 +150,25 @@ body {
     transition: background 0.3s;
 }
 
-.details-button:hover, .purchase-button:hover, .download-button:hover {
+.purchase-button:hover {
     background-color: #45a049;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2196F3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background-color: #1976D2;
 }
 
 /* Reviews Section */
