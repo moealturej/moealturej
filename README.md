@@ -65,10 +65,6 @@ This project is licensed under the **GNU Affero General Public License v3.0** - 
 
 ---
 
-💻 **Moealturej Services** – Empowering Gamers Everywhere! 🌍
-
----
-
 ### Screenshots
 
 <img src="Website/cheatengine_logo_234.jpg" width="250"> <img src="Website/newspoofericon.webp" width="250"> <img src="Website/Screenshot 2024-09-01 120040.jpg" width="250">
