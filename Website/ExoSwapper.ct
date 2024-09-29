@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries/>
+  <UserdefinedSymbols/>
+  <Comments>Info about this table:
+</Comments>
+  <LuaScript>local form = createForm(false)
+--[[form.OnClose = function()
+    closeCE()
+end]]
+form.Caption = "ExoSwapper | V1.5"
+panel = createPanel(form)
+local Log = createLabel(panel)
+Log.Font.Size = 8
+Log.Caption = "Have Fun"
+Log.Font.Style = "[fsBold,fsItalic]"
+Log.Left = 320
+Log.Top = 432.5
+Log.Font.Color = 0x00DF00
+function UpdateLog(text)
+Log.Caption = text
+end
+form.Height = 450
+form.Width = 800
+panel.Width = form.Width
+panel.Height = form.Height
+local label = createLabel(panel)
+label.Font.Size = 24
+label.Caption = "Camo Swapper"
+label.Font.Style = fsBold
+label.Top = 20
+label.Left = 40
+local label2 = createLabel(panel)
+label2.Font.Size = 24
+label2.Caption = "Detail Swapper"
+label2.Font.Style = fsBold
+label2.Top = 220
+label2.Left = 40
+
+local label5 = createLabel(panel)
+label5.Font.Size = 20
+label5.Caption = "Operator Swapper"
+label5.Font.Style = fsBold
+label5.Top = 220
+label5.Left = 520
+local label6 = createLabel(panel)
+label6.Font.Size = 20
+label6.Caption = "Weapon Swapper"
+label6.Font.Style = fsBold
+label6.Top = 20
+label6.Left = 520
+
+local label3 = createLabel(panel)
+label3.Font.Size = 24
+label3.Caption = "CP Swapper"
+label3.Font.Style = fsBold
+label3.Top = 20
+label3.Left = 280
+local label4 = createLabel(panel)
+label4.Font.Size = 24
+label4.Caption = "Icon Swapper"
+label4.Font.Style = fsBold
+label4.Top = 220
+label4.Left = 270
+
+function scanAndReplace(value, target)
+    local scan = createMemScan()
+    local foundList = createFoundList(scan)
+    scan.setOnlyOneResult(false)
+    scan.firstScan(
+        soExactValue,
+        vtDword,
+        rtRounded,
+        tostring(value),
+        nil,
+        "0",
+        "7FFFFFFFFFFFFFFF",
+        "+W-C",
+        fsmAligned,
+        "4",
+        false,
+        true,
+        false,
+        false
+    )
+    scan.waitTillDone()
+    foundList.initialize()
+    local Amount = 0
+    for i = 0, foundList.Count - 1 do
+        local address = foundList.Address[i]
+        writeInteger(address, target)
+        Amount = Amount + 1
+        UpdateLog("Successfully Changed "..value.." To "..target.." (x"..Amount..")")
+    end
+    foundList.destroy()
+    scan.destroy()
+end
+
+CamoSelector = createComboBox(panel)
+CamoSelector.Left = 40
+CamoSelector.Top = 70
+CamoSelector.Width = 200
+CamoSelector.Font.Size = 12
+CamoSelector.Items.Add('Gold')
+CamoSelector.Items.Add('Rose Gold')
+CamoSelector.Items.Add('Platinum')
+CamoSelector.Items.Add('Slayer Tempered')
+CamoSelector.Items.Add('Demon Ruby')
+CamoSelector.Items.Add('CZ Topo')
+CamoSelector.Items.Add('Burning Iron')
+CamoSelector.Items.Add('Night')
+CamoSelector.Items.Add('Aquamarine')
+CamoSelector.Items.Add('Sunrise')
+
+DetailSelector = createComboBox(panel)
+DetailSelector.Left = 40
+DetailSelector.Top = 270
+DetailSelector.Width = 200
+DetailSelector.Font.Size = 12
+DetailSelector.Items.Add('Copper')
+DetailSelector.Items.Add('Silver')
+DetailSelector.Items.Add('Gold')
+DetailSelector.Items.Add('Platinum')
+
+IconSelector = createComboBox(panel)
+IconSelector.Left = 270
+IconSelector.Top = 270
+IconSelector.Width = 200
+IconSelector.Font.Size = 12
+IconSelector.Items.Add('#1 Hardcore')
+IconSelector.Items.Add('#1 Masters')
+IconSelector.Items.Add('#1 Premier')
+IconSelector.Items.Add('S1 Completionist')
+IconSelector.Items.Add('S2 Bling')
+IconSelector.Items.Add('S2 Coat Of Arms')
+
+OldOperatorSelector = createComboBox(panel)
+OldOperatorSelector.Left = 530
+OldOperatorSelector.Top = 270
+OldOperatorSelector.Width = 200
+OldOperatorSelector.Font.Size = 12
+OldOperatorSelector.Items.Add('Ranger')
+OldOperatorSelector.Items.Add('Rush')
+OldOperatorSelector.Items.Add('Viper')
+OldOperatorSelector.Items.Add('Skull Face')
+OldOperatorSelector.Items.Add('Lightning')
+OldOperatorSelector.Items.Add('Echo')
+OldOperatorSelector.Items.Add('Echo Elite')
+OldOperatorSelector.Items.Add('Jagermeister')
+OldOperatorSelector.Items.Add('Shadow Rider')
+OldOperatorSelector.Items.Add('Wolverine')
+OldOperatorSelector.Items.Add('Blacksmith')
+OldOperatorSelector.Items.Add('Kestrel')
+OldOperatorSelector.Items.Add('Hunter')
+OldOperatorSelector.Items.Add('Crusader')
+OldOperatorSelector.Items.Add('Foreward')
+OldOperatorSelector.Items.Add('Street Fighter')
+OldOperatorSelector.Items.Add('Demon Slayer Operator')
+
+OperatorSelector = createComboBox(panel)
+OperatorSelector.Left = 530
+OperatorSelector.Top = 310
+OperatorSelector.Width = 200
+OperatorSelector.Font.Size = 12
+OperatorSelector.Items.Add('Ranger')
+OperatorSelector.Items.Add('Rush')
+OperatorSelector.Items.Add('Viper')
+OperatorSelector.Items.Add('Skull Face')
+OperatorSelector.Items.Add('Lightning')
+OperatorSelector.Items.Add('Echo')
+OperatorSelector.Items.Add('Echo Elite')
+OperatorSelector.Items.Add('Jagermeister')
+OperatorSelector.Items.Add('Shadow Rider')
+OperatorSelector.Items.Add('Wolverine')
+OperatorSelector.Items.Add('Blacksmith')
+OperatorSelector.Items.Add('Kestrel')
+OperatorSelector.Items.Add('Hunter')
+OperatorSelector.Items.Add('Crusader')
+OperatorSelector.Items.Add('Foreward')
+OperatorSelector.Items.Add('Street Fighter')
+OperatorSelector.Items.Add('Demon Slayer Operator')
+
+OldWeaponSelector = createComboBox(panel)
+OldWeaponSelector.Left = 530
+OldWeaponSelector.Top = 70
+OldWeaponSelector.Width = 200
+OldWeaponSelector.Font.Size = 12
+
+WeaponSelector = createComboBox(panel)
+WeaponSelector.Left = 530
+WeaponSelector.Top = 110
+WeaponSelector.Width = 200
+WeaponSelector.Font.Size = 12
+
+local IconButton = createButton(panel)
+IconButton.Left = 270
+IconButton.top = 310
+IconButton.Width = CamoSelector.Width
+IconButton.Caption = "Switch Icon"
+
+local WeaponButton = createButton(panel)
+WeaponButton.Left = 530
+WeaponButton.top = 150
+WeaponButton.Width = CamoSelector.Width
+WeaponButton.Caption = "Switch Weapon"
+
+
+local OperatorButton = createButton(panel)
+OperatorButton.Left = 530
+OperatorButton.top = 350
+OperatorButton.Width = CamoSelector.Width
+OperatorButton.Caption = "Switch Operator"
+
+local CamoButton = createButton(panel)
+CamoButton.Left = 40
+CamoButton.top = 110
+CamoButton.Width = CamoSelector.Width
+CamoButton.Caption = "Switch Camo"
+local DetailButton = createButton(panel)
+DetailButton.Left = 40
+DetailButton.top = 310
+DetailButton.Width = CamoSelector.Width
+DetailButton.Caption = "Switch Detail"
+local OverwriteButton1 = createButton(panel)
+OverwriteButton1.Left = 280
+OverwriteButton1.top = 70
+OverwriteButton1.Width = CamoSelector.Width-20
+OverwriteButton1.Caption = "Overwrite 10CP"
+local OverwriteButton2 = createButton(panel)
+OverwriteButton2.Left = 280
+OverwriteButton2.top = 100
+OverwriteButton2.Width = CamoSelector.Width-20
+OverwriteButton2.Caption = "Overwrite 20CP"
+local OverwriteButton3 = createButton(panel)
+OverwriteButton3.Left = 280
+OverwriteButton3.top = 130
+OverwriteButton3.Width = CamoSelector.Width-20
+OverwriteButton3.Caption = "Overwrite 30CP"
+local OverwriteButton4 = createButton(panel)
+OverwriteButton4.Left = 280
+OverwriteButton4.top = 160
+OverwriteButton4.Width = CamoSelector.Width-20
+OverwriteButton4.Caption = "Overwrite 80CP"
+local T1 = createLabel(panel)
+T1.Caption = "1. Equip Dune Camo on any weapons."
+T1.Left = 40
+T1.Top = 140
+local T2 = createLabel(panel)
+T2.Caption = "2. Select a Camo From the drop down."
+T2.Left = 40
+T2.Top = 160
+local T3 = createLabel(panel)
+T3.Caption = "3. Click the 'Switch Camo' Button and wait."
+T3.Left = 40
+T3.Top = 180
+local T4 = createLabel(panel)
+T4.Caption = "1. Equip Urban Green Detail."
+T4.Left = 40
+T4.Top = 340
+local T5 = createLabel(panel)
+T5.Caption = "2. Select a Detail From the drop down."
+T5.Left = 40
+T5.Top = 360
+local T6 = createLabel(panel)
+T6.Caption = "3. Click The 'Switch Detail' Button and wait."
+T6.Left = 40
+T6.Top = 380
+local T7 = createLabel(panel)
+T7.Caption = "4. Save to cloud and restart your game."
+T7.Left = 40
+T7.Top = 400
+local T = createLabel(panel)
+T.Caption = "4. Save to cloud and restart your game."
+T.Left = 40
+T.Top = 200
+local T8 = createLabel(panel)
+T8.Caption = "Made By Exodia (exodiaforce6 on UnKnoWnCheaTs.me) |"
+T8.Left = 10
+T8.Top = 430
+local T9 = createLabel(panel)
+T9.Caption = "1. Equip Ranger Icon."
+T9.Left = 270
+T9.Top = 340
+local T10 = createLabel(panel)
+T10.Caption = "2. Select an Icon from the drop down."
+T10.Left = 270
+T10.Top = 360
+local T11 = createLabel(panel)
+T11.Caption = "3. Click 'Switch Icon' and wait."
+T11.Left = 270
+T11.Top = 380
+local T12 = createLabel(panel)
+T12.Caption = "4. Save to cloud and restart your game."
+T12.Left = 270
+T12.Top = 400
+local T13 = createLabel(panel)
+T13.Caption = "1. Enter the Current (Top) and Target (Bottom) Operator"
+T13.Font.Size = 8
+T13.Left = 490
+T13.Top = 380
+local T14 = createLabel(panel)
+T14.Caption = "2. Click 'Change Operator' And Wait."
+T14.Font.Size = 8
+T14.Left = 490
+T14.Top = 400
+local T15 = createLabel(panel)
+T15.Caption = "3. Save to cloud and restart your game."
+T15.Font.Size = 8
+T15.Left = 490
+T15.Top = 420
+
+Dune_ID =168296448
+Gold_ID = 168298752
+RGold_ID = 168298753
+Plat_ID = 168298754
+Slayer_ID = 168298755
+Ruby_ID = 168298756
+CZ_ID = 168298757
+Burning_ID = 168298764
+Night_ID = 168299008
+Aquamarine_ID = 168299009
+Sunrise_ID = 168299010
+
+Copper_ID = 168690688
+Silver_ID = 168690689
+D_Gold_ID = 168690690
+Platinum_ID = 168690691
+UrbanGreen_ID = 168689664
+CamoButton.OnClick = function()
+openProcess("CombatMaster.exe")
+local processID = getOpenedProcessID()
+if processID == nil then
+    print("Please open Combat Master.")
+    return
+end
+if CamoSelector.Text == "Gold" then
+scanAndReplace(Dune_ID,Gold_ID)
+end
+if CamoSelector.Text == "Rose Gold" then
+scanAndReplace(Dune_ID,RGold_ID)
+end
+if CamoSelector.Text == "Platinum" then
+scanAndReplace(Dune_ID,Plat_ID)
+end
+if CamoSelector.Text == "Slayer Tempered" then
+scanAndReplace(Dune_ID,Slayer_ID)
+end
+if CamoSelector.Text == "Demon Ruby" then
+scanAndReplace(Dune_ID,Ruby_ID)
+end
+if CamoSelector.Text == "CZ Topo" then
+scanAndReplace(Dune_ID,CZ_ID)
+end
+if CamoSelector.Text == "Burning Iron" then
+scanAndReplace(Dune_ID,Burning_ID)
+end
+if CamoSelector.Text == "Night" then
+scanAndReplace(Dune_ID,Night_ID)
+end
+if CamoSelector.Text == "Aquamarine" then
+scanAndReplace(Dune_ID,Aquamarine_ID)
+end
+if CamoSelector.Text == "Sunrise" then
+scanAndReplace(Dune_ID,Sunrise_ID)
+end
+end
+DetailButton.OnClick = function()
+openProcess("CombatMaster.exe")
+local processID = getOpenedProcessID()
+if processID == nil then
+    print("Please open Combat Master.")
+    return
+end
+if DetailSelector.Text == "Copper" then
+scanAndReplace(UrbanGreen_ID,Copper_ID)
+end
+if DetailSelector.Text == "Silver" then
+scanAndReplace(UrbanGreen_ID,Silver_ID)
+end
+if DetailSelector.Text == "Gold" then
+scanAndReplace(UrbanGreen_ID,D_Gold_ID)
+end
+if DetailSelector.Text == "Platinum" then
+scanAndReplace(UrbanGreen_ID,Platinum_ID)
+end
+end
+OverwriteButton1.OnClick = function()
+openProcess("CombatMaster.exe")
+local processID = getOpenedProcessID()
+if processID == nil then
+    print("Please open Combat Master.")
+    return
+end
+scanAndReplace(67108865,67108883)
+end
+OverwriteButton2.OnClick = function()
+openProcess("CombatMaster.exe")
+local processID = getOpenedProcessID()
+if processID == nil then
+    print("Please open Combat Master.")
+    return
+end
+scanAndReplace(67108866,67108883)
+end
+OverwriteButton3.OnClick = function()
+openProcess("CombatMaster.exe")
+local processID = getOpenedProcessID()
+if processID == nil then
+    print("Please open Combat Master.")
+    return
+end
+scanAndReplace(67108867,67108883)
+end
+OverwriteButton4.OnClick = function()
+openProcess("CombatMaster.exe")
+local processID = getOpenedProcessID()
+if processID == nil then
+    print("Please open Combat Master.")
+    return
+end
+scanAndReplace(67108868,67108883)
+end
+IconButton.OnClick = function()
+openProcess("CombatMaster.exe")
+local processID = getOpenedProcessID()
+if processID == nil then
+    print("Please open Combat Master.")
+    return
+end
+if IconSelector.Text == "#1 Hardcore" then
+scanAndReplace(83886106,83886141)
+end
+if IconSelector.Text == "#1 Masters" then
+scanAndReplace(83886106,83886135)
+end
+if IconSelector.Text == "#1 Premier" then
+scanAndReplace(83886106,83886129)
+end
+if IconSelector.Text == "S1 Completionist" then
+scanAndReplace(83886106,83886110)
+end
+if IconSelector.Text == "S2 Coat Of Arms" then
+scanAndReplace(83886106,83886144)
+end
+if IconSelector.Text == "S2 Bling" then
+scanAndReplace(83886106,83886153)
+end
+end
+OpNames = {"Ranger","Rush","Viper","Alisa Lynx","Skull Face","Lightning","Echo","Echo Elite","Jägermeister","Polar Star","Shadow Rider","Wolverine","gd_operators_operator_12 [Demon Slayer Operator]","Street Fighter","Blacksmith","Kestrel","Hunter","Crusader","Foreward"}
+OpIds = {"33554432","33554433","33554434","33554435","33554436","33554437","33554438","33554439","33554440","33554441","33554442","33554443","33554444","33554445","33554446","33554447","33554448","33554449","33554453"}
+weaponNames =   {"AK", "M4", "Sig MCX", "MP.V", "P90", "Dual Mac 10", "VKTR", "M3 Super", "R7000", "AWM", "R7000 Skelton", "P-18", "XFive", "G18", "1911", "1911Compact", "Desert Eagle", "KTech", "Karambit", "Punch Daggers", "Butterfly Knife", "Claws", "Dual Katanas", "Axe", "Dual Swords", "GL-9", "M69 Grenade", "Throwing Knife", "Kunai", "Impact Grenade", "Dart", "Shuriken", "Throwing Axe", "Purification Dart", "Minigun", "AUG A3", "M1 SOCOM", "MP7", "KSG Tactical", "Shot Stom AUTO", "AS VAL", "M87.50", "Rhino 60DS", "Fists", "PS5 Controller", "Atomic", "C4(S&amp;D)", "Armor Plate", "Parachute", "Ballistic Shield", "C4(Lethal)"}
+WeaponIds = {"17039872", "17039360", "17039616", "17104896", "17106176", "17105664", "17105920", "16908288", "16973824", "16974336", "16974080", "16842752", "16843008", "16843776", "16843264", "16843520", "16844032", "16777216", "16777728", "16777984", "16777472", "16779008", "16778240", "16778752", "16778496", "17301504", "17170432", "17367040", "17367552", "17170688", "17367296", "17368064", "17367808", "17235976", "17235973", "17040384", "17040383", "17105408", "16908544", "16908800", "16974848", "16974592", "16844288", "17235969", "17235975", "17235968", "17235974", "17235971", "17235970", "17235972", "17170944"}
+for i,name in ipairs(weaponNames) do
+    WeaponSelector.Items.Add(name)
+    OldWeaponSelector.Items.Add(name)
+end
+WeaponButton.OnClick = function()
+    openProcess("CombatMaster.exe")
+    local processID = getOpenedProcessID()
+    if processID == nil then
+        print("Please open Combat Master.")
+    return
+    end
+    local Current = nil
+    local target = nil
+    for Int,Name in ipairs(weaponNames) do
+        if OldWeaponSelector.Text == Name then
+            Current = WeaponIds[Int]
+        end
+        if WeaponSelector.Text == Name then
+                Target = WeaponIds[Int]
+        end
+    end
+    if Current ~= nil and Target ~= nil then
+       scanAndReplace(Current,Target)
+    end
+end
+OperatorButton.OnClick = function()
+    openProcess("CombatMaster.exe")
+    local processID = getOpenedProcessID()
+    if processID == nil then
+        print("Please open Combat Master.")
+    return
+    end
+    local Current = nil
+    local target = nil
+    for Int,Name in ipairs(OpNames) do
+        if OldOperatorSelector.Text == Name then
+            Current = OpIds[Int]
+        end
+        if OperatorSelector.Text == Name then
+                Target = OpIds[Int]
+        end
+    end
+    if Current ~= nil and Target ~= nil then
+       scanAndReplace(Current,Target)
+    end
+end
+form.Show()
+</LuaScript>
+</CheatTable>
