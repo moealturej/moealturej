@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moealturej Services offers top-quality paid and free services for gaming enthusiasts. Explore our shop, enjoy free tools.">
+    <meta name="keywords" content="Moealturej, gaming services, paid services, free tools, customer reviews, Combat Master, FiveM Cheat, SecHex-Spoofer, Spotify Premium, Windows Activation">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Moealturej Services">
+    <title>Moealturej Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Website/favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <img src="Website/standard11.gif" alt="Moealturej Services Logo">
+                    <h1>moealturej services</h1>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#paid-services">Paid Services Shop</a></li>
+                    <li><a href="#free-services">Free Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Paid Services Section -->
+        <section id="paid-services" class="category-section">
+            <h2 class="section-title">Paid Services</h2>
+            <div class="row" id="paid-services-row">
+                <div class="col">
+                    <div class="section services-section animate__animated animate__fadeIn">
+                        <div class="showcase">
+                            <div class="image-container">
+                                <p class="image-label">Visit Our Shop</p>
+                                <img src="Website/standard.gif" alt="Paid Services Shop" class="show-image">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="https://moealturej.bgng.io/" class="shop-link">Go to Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Services Section -->
+        <section id="free-services" class="category-section">
+            <h2 class="section-title">Free Services</h2>
+            <div class="row" id="free-services-row">
+                <!-- Free services dynamically added here -->
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Moealturej Services. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@moealturej" target="_blank" aria-label="YouTube"><img src="Website/Screenshot 2024-07-31 233727.png" alt="YouTube"></a>
+                <a href="https://discord.gg/3cwsamjKvQ" target="_blank" aria-label="Discord"><img src="Website/Screenshot 2024-07-31 233727(1).png" alt="Discord"></a>
+                <a href="https://www.tiktok.com/@moealturej_services" target="_blank" aria-label="TikTok"><img src="Website/Screenshot 2024-07-31 233727(2).png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchFreeServices();
+            setupGunSelector();
+        });
+
+        function fetchFreeServices() {
+            const freeServices = [
+                { name: "Cheat Engine 7.5", price: "FREE", image: "Website/cheatengine_logo_234.jpg", file: "Website/Cheat Engine.bat" },
+                { name: "Combat Master ExoSwapper", price: "FREE", image: "Website/2024-08-09 21-40-51 - frame at 12m42s.jpg", file: "Website/ExoSwapper.ct" },
+                { name: "Combat Master Free Bundles Cheat", price: "FREE", image: "Website/Screenshot 2024-09-01 120040.jpg", file: "Website/CombatMaster v0.18.34 by ZoDDeL.ct" },
+                { name: "SecHex-Spoofer", price: "FREE", image: "Website/newspoofericon.webp", file: "Website/SecHex-Spoofy V1.5.8.zip" },
+                { name: "Spotify Premium Tool", price: "FREE", image: "Website/open-graph-default.png", file: "Website/Spotify-Premium-Tool.exe" },
+                { name: "Windows Activation Tool", price: "FREE", image: "Website/microsoft_windows_10x_logo_glowing_blue_circuits_by_vchal_gettyimages-1186902469_2400x1600-100882265-large.webp", file: "Website/Windows-Activation-Tool.exe" }
+            ];
+            const freeServicesRow = document.getElementById('free-services-row');
+            freeServices.forEach(service => {
+                const col = document.createElement('div');
+                col.classList.add('col');
+                const section = document.createElement('section');
+                section.classList.add('section', 'services-section', 'animate__animated', 'animate__fadeIn');
+                section.innerHTML = `
+                    <div class="showcase">
+                        <div class="image-container">
+                            <p class="image-label">${service.name}</p>
+                            <img src="${service.image}" alt="${service.name}" class="show-image">
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button class="download-button" onclick="downloadFile('${service.file}')">Download File</button>
+                    </div>
+                `;
+                col.appendChild(section);
+                freeServicesRow.appendChild(col);
+            });
+        }
+
+        function downloadFile(file) {
+            const link = document.createElement('a');
+            link.href = file;
+            link.download = file.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+            closeButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
