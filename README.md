@@ -71,7 +71,7 @@ This project is licensed under the **MIT License** - feel free to explore, modif
 
 ### Screenshots
 
-<img src="Website/Screenshot 2024-07-31 233727.png" width="250"> <img src="Website/Screenshot 2024-09-01 120040.jpg" width="250"> <img src="Website/cheatengine_logo_234.jpg" width="250">
+<img src="Website/cheatengine_logo_234.jpg" width="250"> <img src="Website/newspoofericon.webp" width="250"> <img src="Website/Screenshot 2024-09-01 120040.jpg" width="250">
 
 ---
 
