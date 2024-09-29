@@ -61,7 +61,7 @@ We love hearing from our users! If you have suggestions or want to contribute to
 
 ## 📜 License
 
-This project is licensed under the **MIT License** - feel free to explore, modify, and share! See the full license [here](LICENSE).
+This project is licensed under the **GNU Affero General Public License v3.0** - feel free to explore, modify, and share! See the full license [here](LICENSE).
 
 ---
 
