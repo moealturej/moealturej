@@ -74,9 +74,9 @@
         <div class="container">
             <p>&copy; 2024 Moealturej Services. All rights reserved.</p>
             <div class="social-icons">
-                <a href="https://www.youtube.com/@moealturej" target="_blank" aria-label="YouTube"><img src="Website/Screenshot 2024-07-31 233727.png" alt="YouTube"></a>
-                <a href="https://discord.gg/3cwsamjKvQ" target="_blank" aria-label="Discord"><img src="Website/Screenshot 2024-07-31 233727(1).png" alt="Discord"></a>
-                <a href="https://www.tiktok.com/@moealturej_services" target="_blank" aria-label="TikTok"><img src="Website/Screenshot 2024-07-31 233727(2).png" alt="TikTok"></a>
+                <a href="https://www.youtube.com/@moealturej" target="_blank" aria-label="YouTube"><img src="Website/Screenshot 2024-07-31 233727.png" alt="YouTube Icon"></a>
+                <a href="https://discord.gg/3cwsamjKvQ" target="_blank" aria-label="Discord"><img src="Website/Screenshot 2024-07-31 233727(1).png" alt="Discord Icon"></a>
+                <a href="https://www.tiktok.com/@moealturej_services" target="_blank" aria-label="TikTok"><img src="Website/Screenshot 2024-07-31 233727(2).png" alt="TikTok Icon"></a>
             </div>
         </div>
     </footer>
@@ -119,6 +119,10 @@
         }
 
         function downloadFile(file) {
+            if (!file) {
+                alert("Error: File not found!");
+                return;
+            }
             const link = document.createElement('a');
             link.href = file;
             link.download = file.split('/').pop();
