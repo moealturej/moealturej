@@ -4,7 +4,7 @@
 
 Welcome to **Moealturej Services** – your one-stop shop for gaming enthusiasts worldwide! 🎮 Whether you're looking for premium tools to enhance your gaming experience or exploring our collection of free resources, we've got you covered.
 
-🌐 **Website**: [Moealturej Services](https://moealturej.github.io/moealturej/)
+🌐 **Website**: [Moealturej Services](https://moealturej.github.io/moealturej)
 
 ## 🔥 About Moealturej Services
 
@@ -21,7 +21,7 @@ Our mission? **Empowering gamers** with tools that make gameplay more exciting, 
   - Spotify Premium Tool
   - Windows Activation Tool
 
-Check out our [Free Services Section](https://moealturej.github.io/moealturej/#free-services) to get these amazing tools!
+Check out our [Free Services Section](https://moealturej.github.io/moealturej/#downloads) to get these amazing tools!
 
 ---
 
@@ -30,13 +30,13 @@ Check out our [Free Services Section](https://moealturej.github.io/moealturej/#f
 - **Premium & Free Services**: Tailored for the gaming community.
 - **Download with Ease**: Simple and quick downloads for all users.
 - **Modern & Responsive Design**: Seamless browsing experience on any device.
-- **Social Integration**: Connect with us on [YouTube](https://www.youtube.com/@moealturej), [Discord](https://discord.gg/3cwsamjKvQ), and [TikTok](https://www.tiktok.com/@moealturej_services).
+- **Social Integration**: Connect with us on [YouTube](https://www.youtube.com/@moealturej), [Discord](https://discord.gg/moealturej), and [TikTok](https://www.tiktok.com/@moealturej_services).
 
 ---
 
 ## 🚀 How to Use
 
-1. Visit our [website](https://moealturej.github.io/moealturej/) and browse our services.
+1. Visit our [website](https://moealturej.github.io/moealturej) and browse our services.
 2. For paid services, visit the shop and explore the tools we have for sale.
 3. Download free services directly from the **Free Services** section.
 4. Join our community on Discord and YouTube to stay updated with new tools and cheats!
@@ -48,7 +48,7 @@ Check out our [Free Services Section](https://moealturej.github.io/moealturej/#f
 We constantly update our site with new features, tools, and services. Follow us on our social platforms to keep up with the latest news:
 
 - 📺 **YouTube**: [@moealturej](https://www.youtube.com/@moealturej)
-- 🎮 **Discord**: [Join our server](https://discord.gg/3cwsamjKvQ)
+- 🎮 **Discord**: [Join our server](https://discord.gg/moealturej)
 - 🎵 **TikTok**: [@moealturej_services](https://www.tiktok.com/@moealturej_services)
 
 ---
@@ -65,15 +65,15 @@ This project is licensed under the **GNU Affero General Public License v3.0** - 
 
 ---
 
-### Screenshots
+### Screenshot
 
-<img src="Website/cheatengine_logo_234.jpg" width="250"> <img src="Website/newspoofericon.webp" width="250"> <img src="Website/Screenshot 2024-09-01 120040.jpg" width="250">
+<img src="https://i.postimg.cc/PxvtZbD8/Screenshot-2025-01-21-220308.png" width="250">
 
 ---
 
 ### Contact Us
 
-For any questions or support, feel free to reach out via [Discord](https://discord.gg/3cwsamjKvQ).
+For any questions or support, feel free to reach out via [Discord](https://discord.gg/moealturej).
 
 --- 
 
