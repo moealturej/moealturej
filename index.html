@@ -1,133 +1,676 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Moealturej Services – Professional gaming tools, cheat menus, and free services for enthusiasts">
-    <meta name="author" content="Moealturej">
+    <meta name="description" content="Moealturej Services - Professional gaming tools and premium software">
+    <meta name="author" content="moealturej">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Cache Control -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-
-    <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="Moealturej Services">
-    <meta property="og:description" content="Explore our premium services and tools for gamers worldwide. Unlock better tools, cheats, and more!">
-    <meta property="og:image" content="https://i.postimg.cc/zXcgY7k9/standard-4.gif"> <!-- Add your image URL -->
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="moealturej services">
+    <meta property="og:description" content="Herramientas profesionales para gaming y software premium">
+    <meta property="og:image" content="https://i.postimg.cc/zXcgY7k9/standard-4.gif">
     <meta property="og:url" content="https://www.moealturej.com">
-
-    <!-- Twitter Card for social media -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Moealturej Services">
-    <meta name="twitter:description" content="Explore our premium services and tools for gamers worldwide. Unlock better tools, cheats, and more!">
-    <meta name="twitter:image" content="https://i.postimg.cc/zXcgY7k9/standard-4.gif"> <!-- Add your image URL -->
-    
-    <title>moealturej services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 
-    <!-- Canonical link to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.moealturej.com">
+    <title>Moealturej Services - Premium Tools</title>
     
-    <!-- Favicon -->
-    <link rel="icon" href="https://i.postimg.cc/mDCx97nZ/New-logo.jpg" type="image/jpg">
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Integrated Styles -->
+    <style>
+    :root {
+        --primary: #6a11ff;
+        --secondary: #2575fc;
+        --accent: #ff2d55;
+        --dark: #0a0a0a;
+        --glass: rgba(255, 255, 255, 0.08);
+        --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
+        --modal-bg: rgba(0, 0, 0, 0.95);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: var(--dark);
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    /* Efecto de Partículas */
+    #particles {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    /* Barra de Navegación */
+    .navbar {
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 1rem 5%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+    }
+
+    .logo img {
+        height: 50px;
+        border-radius: 12px;
+        transition: transform 0.3s;
+    }
+
+    .logo:hover img {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s;
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    /* Sección Hero */
+    .hero {
+        padding: 180px 5% 100px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient);
+        opacity: 0.1;
+        z-index: -1;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+        background: linear-gradient(45deg, #fff, #ddd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 30px rgba(106, 17, 255, 0.5);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+
+    /* Service Cards */
+    .services {
+        padding: 5rem 5%;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background: var(--glass);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    .card.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        transition: 0.5s;
+    }
+
+    .card:hover::before {
+        left: 100%;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Botones */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        background: var(--gradient);
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+        );
+        transition: 0.5s;
+    }
+
+    .btn:hover::after {
+        left: 100%;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 5rem 5%;
+        text-align: center;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .socials a {
+        font-size: 1.5rem;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--glass);
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    .socials a:hover {
+        background: var(--primary);
+        transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+        background: rgba(10, 10, 10, 0.98);
+        padding: 3rem 5%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Modales */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--modal-bg);
+        backdrop-filter: blur(15px);
+        z-index: 9999;
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        background: var(--dark);
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 20px;
+        border: 1px solid var(--primary);
+        position: relative;
+        animation: modalOpen 0.5s ease;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.3s;
+        padding: 0.5rem;
+    }
+
+    .modal-close:hover {
+        transform: rotate(90deg);
+        color: var(--accent);
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes modalOpen {
+        from { opacity: 0; transform: translateY(-50px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem 5%;
+        }
+
+        .nav-links {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .modal-content {
+            margin: 1rem;
+            padding: 1.5rem;
+        }
+    }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="Website/standard11.gif" alt="Moealturej Logo">
-                <h1>moealturej services</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#downloads">Downloads</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div id="particles"></div>
 
-    <section id="hero" class="hero-section">
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('privacyModal')">&times;</span>
+        <h2>🔒 Privacy Policy</h2>
+        <div class="modal-text">
+            <p>Last updated: January 25, 2025</p>
+            
+            <h3>1. Use of Information</h3>
+            <p>We use the information you provide to personalize your experience, process transactions, communicate updates, and improve our services. 
+               Additionally, we may use your information to send promotional offers or important notifications related to your account.</p>
+            
+            <h3>2. Sharing of Information</h3>
+            <p>Your information will only be shared with trusted third parties who assist in running our services, such as payment processors, 
+               customer support tools, or analytics providers. These third parties are bound by strict confidentiality agreements.</p>
+            
+            <h3>3. Data Security</h3>
+            <p>We take your data security seriously. All sensitive information is encrypted using industry-standard methods. However, while we strive to protect your data, 
+               no online platform can guarantee complete security. Please exercise caution when sharing sensitive information.</p>
+            
+            <h3>4. Changes to Privacy Policy</h3>
+            <p>We reserve the right to modify this Privacy Policy at any time. In case of significant changes, we will notify you via email or prominently display a notice 
+               on our website. Please review this page periodically to stay informed of any updates.</p>
+            
+            <p>If you have any questions or concerns, contact us at <a href="mailto:support@moealturej.com">support@moealturej.com</a>.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('termsModal')">&times;</span>
+        <h2>📜 Terms of Service</h2>
+        <div class="modal-text">
+            <p>Effective Date: January 25, 2025</p>
+            
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing or using our services, you agree to these terms. If you do not accept these terms, you must refrain from using our services. 
+               Continued use of our services implies your acceptance of any updates or changes.</p>
+            
+            <h3>2. Acceptable Use</h3>
+            <p>You agree to use our services for lawful purposes only. You may not use the platform to distribute malicious software, engage in spamming, 
+               or perform activities that harm other users. Violation of these rules may result in immediate suspension of your account.</p>
+            
+            <h3>3. User Accounts</h3>
+            <p>You are responsible for safeguarding your account credentials. In the event of unauthorized access, you must notify us immediately. 
+               We reserve the right to suspend accounts that show signs of unauthorized use or fraudulent activity.</p>
+            
+            <h3>4. Limitation of Liability</h3>
+            <p>We are not liable for damages arising from your use of our services, including but not limited to data loss, service interruptions, 
+               or any financial losses. Your use of the platform is at your own risk.</p>
+            
+            <h3>5. Changes to Terms</h3>
+            <p>We may revise these terms at any time. If significant changes are made, we will notify users through email or a notice on the site. 
+               Continued use of the platform signifies your acceptance of the updated terms.</p>
+            
+            <p>For further inquiries, please contact us at <a href="mailto:support@moealturej.com">support@moealturej.com</a>.</p>
+        </div>
+    </div>
+</div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://i.postimg.cc/mDCx97nZ/New-logo.jpg" alt="Moealturej Logo">
+            <h2>moealturej services</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://moealturej.mysellauth.com" target="_blank" class="btn">Premium Store</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
         <div class="hero-content">
-            <h2>Paid Tools & Services</h2>
-            <p>Explore our premium services and tools for gamers worldwide. Unlock better tools, cheats, and more!</p>
-            <a href="https://moealturej.mysellauth.com" class="cta-btn" target="_blank">Paid Shop</a>
+            <h1>Boost your Gaming Experience</h1>
+            <p>Professional tools and premium software for demanding users</p>
+            <a href="#tools" class="btn" style="margin-top: 2rem;">
+                <i class="fas fa-arrow-down"></i> see tools
+            </a>
         </div>
     </section>
 
-    <section id="downloads" class="downloads-section">
-        <h2 class="section-title">Downloads</h2>
-
-        <div class="service-grid">
-            <!-- Free Services Section -->
-            <div class="service-card">
-                <img src="https://i.postimg.cc/sgZ9T6YZ/final.jpg" alt="Combat Master Internal Menu">
+    <section class="services" id="tools">
+        <div class="grid">
+            <!-- Combat Master Internal Menu -->
+            <div class="card">
+                <img src="https://i.postimg.cc/sgZ9T6YZ/final.jpg" alt="Combat Master Menu">
                 <h3>Combat Master Internal Menu</h3>
-                <a href="https://mega.nz/folder/YSkwUbqQ#4WdFb-Wlv_oq0sQULzg4ig" class="btn">Download Now</a>
+                <a href="https://mega.nz/folder/YSkwUbqQ#4WdFb-Wlv_oq0sQULzg4ig" class="btn" target="_blank">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
 
-            <div class="service-card">
-                <img src="Website/cheatengine_logo_234.jpg" alt="Cheat Engine 7.5">
+            <!-- Cheat Engine 7.5 -->
+            <div class="card">
+                <img src="Website/cheatengine_logo_234.jpg" alt="Cheat Engine">
                 <h3>Cheat Engine 7.5</h3>
-                <a href="https://mega.nz/folder/ZCkSGZrB#gTYt5WcEy5xU5nWqTHG1AQ" class="btn">Download Now</a>
+                <a href="https://mega.nz/folder/ZCkSGZrB#gTYt5WcEy5xU5nWqTHG1AQ" class="btn" target="_blank">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
-
-            <div class="service-card">
-                <img src="Website/2024-08-09 21-40-51 - frame at 12m42s.jpg" alt="Combat Master ExoSwapper">
+            <!-- Combat Master ExoSwapper -->
+            <div class="card">
+                <img src="Website/2024-08-09 21-40-51 - frame at 12m42s.jpg" alt="ExoSwapper">
                 <h3>Combat Master ExoSwapper</h3>
-                <a href="Website/ExoSwapper.ct" class="btn">Download Now</a>
+                <a href="Website/ExoSwapper.ct" class="btn">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
 
-            <div class="service-card">
-                <img src="Website/Screenshot 2024-09-01 120040.jpg" alt="Combat Master Cheat Table">
+            <!-- Combat Master Cheat Table -->
+            <div class="card">
+                <img src="Website/Screenshot 2024-09-01 120040.jpg" alt="Cheat Table">
                 <h3>Combat Master Cheat Table</h3>
-                <a href="Website/CM_Ultimate.CT" class="btn">Download Now</a>
+                <a href="Website/CM_Ultimate.CT" class="btn">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
 
-            <div class="service-card">
-                <img src="Website/newspoofericon.webp" alt="SecHex-Spoofer">
+            <!-- SecHex-Spoofer -->
+            <div class="card">
+                <img src="Website/newspoofericon.webp" alt="Spoofer">
                 <h3>SecHex-Spoofer</h3>
-                <a href="Website/SecHex-Spoofy V1.5.8.zip" class="btn">Download Now</a>
+                <a href="Website/SecHex-Spoofy V1.5.8.zip" class="btn">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
 
-            <div class="service-card">
-                <img src="Website/open-graph-default.png" alt="Spotify Premium Tool">
+            <!-- Spotify Premium Tool -->
+            <div class="card">
+                <img src="Website/open-graph-default.png" alt="Spotify">
                 <h3>Spotify Premium Tool</h3>
-                <a href="Website/Spotify-Premium-Tool.exe" class="btn">Download Now</a>
+                <a href="Website/Spotify-Premium-Tool.exe" class="btn">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
 
-            <div class="service-card">
-                <img src="Website/microsoft_windows_10x_logo_glowing_blue_circuits_by_vchal_gettyimages-1186902469_2400x1600-100882265-large.webp" alt="Windows Activation Tool">
+            <!-- Windows Activation Tool -->
+            <div class="card">
+                <img src="Website/microsoft_windows_10x_logo_glowing_blue_circuits_by_vchal_gettyimages-1186902469_2400x1600-100882265-large.webp" alt="Windows">
                 <h3>Windows Activation Tool</h3>
-                <a href="Website/Windows_Activation_Tool.exe" class="btn">Download Now</a>
+                <a href="Website/Windows_Activation_Tool.exe" class="btn">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
 
-            <div class="service-card">
-                <img src="https://i.postimg.cc/7YyShkct/5555872-e793-2-1024x576.jpg" alt="Adobe Premiere Pro">
+            <!-- Adobe Premiere Pro -->
+            <div class="card">
+                <img src="https://i.postimg.cc/7YyShkct/5555872-e793-2-1024x576.jpg" alt="Premiere Pro">
                 <h3>Adobe Premiere Pro 25.0</h3>
-                <a href="https://drive.google.com/file/d/1Rqn4ewYKwpNmXvas8KmTwyTCxHi0_rXh/view" class="btn">Download Now</a>
+                <a href="https://drive.google.com/file/d/1Rqn4ewYKwpNmXvas8KmTwyTCxHi0_rXh/view" class="btn" target="_blank">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </a>
             </div>
         </div>
     </section>
+            <!-- Other tools... -->
 
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <p>Feel free to join the discord server and create a support ticket for help! For other inquiries, you can contact me at <a href="mailto:sales@moealturej.com">sales@moealturej.com</a></p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Support</h2>
+        <p>Join our community for support and updates</p>
+        <div class="socials">
+            <a href="https://discord.gg/moealturej" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://youtube.com/@moealturej" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com/@moealturej_services" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="mailto:sales@moealturej.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Moealturej Services | All rights reserved</p>
-            <div class="social-icons">
-                <a href="https://youtube.com/@moealturej" target="_blank">YouTube</a>
-                <a href="https://discord.gg/moealturej" target="_blank">Discord</a>
-                <a href="https://tiktok.com/@moealturej_services" target="_blank">TikTok</a>
-            </div>
-        </div>
-    </footer>
-    
+    <p>&copy; 2024 Moealturej Services. All rights reserved</p>
+    <div class="socials">
+        <a href="javascript:void(0)" onclick="openModal('privacyModal')">
+            <i class="fas fa-shield-alt"></i>
+        </a>
+        <a href="javascript:void(0)" onclick="openModal('termsModal')">
+            <i class="fas fa-file-contract"></i>
+        </a>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles', {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#6a11ff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "window",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Funciones para modales
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar modales
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+
+        // Scroll observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Efecto escritura título
+        const heroTitle = document.querySelector('.hero h1');
+        const originalText = heroTitle.innerText;
+        heroTitle.innerHTML = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < originalText.length) {
+                heroTitle.innerHTML += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        typeWriter();
+    </script>
 </body>
 </html>
