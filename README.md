@@ -67,7 +67,7 @@ This project is licensed under the **GNU Affero General Public License v3.0** - 
 
 ### Screenshot
 
-<img src="https://i.postimg.cc/PxvtZbD8/Screenshot-2025-01-21-220308.png" width="250">
+<img src="https://i.postimg.cc/NfgqzJFR/Screenshot-2025-01-25-214218.png" width="250">
 
 ---
 
