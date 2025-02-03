@@ -351,4 +351,15 @@ footer {
         margin: 1rem;
         padding: 1.5rem;
     }
+
+    .on-hold .btn {
+    background-color: #ff4d4d !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+    }
+
+.btn.disabled {
+    pointer-events: none;
+  }
+
 }
