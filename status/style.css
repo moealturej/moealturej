@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,23 +10,48 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000;
+  color: #fff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
+/* Home Button */
+.home-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #ff00ff;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+  background: #e600e6;
+  transform: scale(1.05);
+}
+
+/* Main Container */
 .container {
-  width: 60%;
-  background-color: #000;
+  width: 90%;
+  max-width: 600px;
+  background-color: #111;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.3);
   text-align: center;
+  margin-top: 60px;
 }
 
+/* Header */
 header h1 {
   font-size: 32px;
   text-transform: uppercase;
@@ -37,6 +64,7 @@ header h1 {
   margin: 10px auto 20px;
 }
 
+/* Status List */
 .status-list {
   display: flex;
   flex-direction: column;
@@ -54,17 +82,17 @@ header h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect: Scale Up and Glow */
+/* Hover Effects */
 .status-item:hover {
   transform: scale(1.02);
   box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
 }
 
-/* Hover Effect: Brighten Status Text */
 .status-item:hover .status-text {
   filter: brightness(1.5);
 }
 
+/* Status Dots */
 .status-dot {
   width: 18px;
   height: 18px;
@@ -73,62 +101,40 @@ header h1 {
   animation: pulse 1.5s infinite;
 }
 
-.status-text {
-  font-size: 16px;
-  font-weight: bold;
-  transition: filter 0.3s ease;
-}
-
 /* Status Colors */
-.up {
-  background-color: #00ff00;
-  box-shadow: 0 0 15px #00ff00;
-}
+.up { background-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+.down { background-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
+.updating { background-color: #ffcc00; box-shadow: 0 0 15px #ffcc00; }
+.working { background-color: #0099ff; box-shadow: 0 0 15px #0099ff; }
 
-.down {
-  background-color: #ff0000;
-  box-shadow: 0 0 15px #ff0000;
-}
-
-.updating {
-  background-color: #ffcc00;
-  box-shadow: 0 0 15px #ffcc00;
-}
-
-.working {
-  background-color: #0099ff;
-  box-shadow: 0 0 15px #0099ff;
-}
-
-/* Glowing Pulsation Effect */
+/* Glowing Animation */
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 2.5px rgba(255, 255, 255, 0.3);
+  0%, 100% { transform: scale(1); box-shadow: 0 0 2.5px rgba(255, 255, 255, 0.3); }
+  50% { transform: scale(1.2); box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+}
+
+/* Status Text Colors */
+.status-text.red { color: #ff0000; } /* Outdated */
+.status-text.blue { color: #0099ff; } /* Working */
+.status-text.green { color: #00ff00; } /* Undetected */
+.status-text.yellow { color: #ffcc00; } /* Updating */
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 20px;
   }
-  50% {
-    transform: scale(1.2);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+
+  .status-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 2.5px rgba(255, 255, 255, 0.3);
+
+  .home-btn {
+    font-size: 14px;
+    padding: 10px 14px;
   }
-}
-
-/* Color Text */
-.green {
-  color: #00ff00;
-}
-
-.red {
-  color: #ff0000;
-}
-
-.yellow {
-  color: #ffcc00;
-}
-
-.blue {
-  color: #0099ff;
 }
