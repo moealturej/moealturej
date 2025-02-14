@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #000000;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.donate-section {
+    text-align: center;
+    padding: 3rem;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(186, 85, 211, 0.5); /* Purple glow effect */
+    border: 2px solid rgba(186, 85, 211, 0.8); /* Pink/Purple outline */
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.donate-section h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #d1bfff;
+    text-align: center;
+}
+
+.donate-section p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.donation-info {
+    text-align: center; /* Centering the entire section */
+    margin: 1.5rem 0;
+}
+
+.donation-info ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block; /* Keeps the list centered */
+}
+
+.donation-info li {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.donation-info li::before {
+    content: "✔";
+    color: #a864ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Donation Button */
+.donation-button {
+    margin-top: 1.5rem;
+}
+
+.donation-button .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #6a11ff, #a864ff);
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.donation-button .btn:hover {
+    background: linear-gradient(135deg, #5209c1, #8f45e2);
+}
+
+/* Home Button */
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3); /* Light pink glow */
+}
+
+.home-btn i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.home-btn:hover {
+    background: #666;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.6); /* Stronger pink glow */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
