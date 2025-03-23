@@ -4,7 +4,7 @@
 
 Welcome to **Moealturej Services** – your one-stop shop for gaming enthusiasts worldwide! 🎮 Whether you're looking for premium tools to enhance your gaming experience or exploring our collection of free resources, we've got you covered.
 
-🌐 **Website**: [Moealturej Services](https://moealturej.github.io/moealturej)
+🌐 **Website**: [Moealturej Services](https://www.moealturej.com)
 
 ## 🔥 About Moealturej Services
 
@@ -21,7 +21,7 @@ Our mission? **Empowering gamers** with tools that make gameplay more exciting, 
   - Spotify Premium Tool
   - Windows Activation Tool
 
-Check out our [Free Services Section](https://moealturej.github.io/moealturej/#downloads) to get these amazing tools!
+Check out our [Free Services Section](https://www.moealturej.com) to get these amazing tools!
 
 ---
 
